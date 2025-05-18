@@ -383,29 +383,29 @@ def correctness_reward_func(completions, references, **kwargs):
             output_str = pat.search(pred_str).group(1).strip()
         else:
             output_str = pred_str[-300:]
-        print(f"[{i}-Pred] {output_str}")
-        print(f"[{i}-Target] {ref}")
+
+        if VERBOSE:
+            print(f"[{i}-Pred] {output_str}")
+            print(f"[{i}-Target] {ref}")
         try:
-            # print(pred_str)
-            # pred = extract_json_block(pred_str)
-            # print(pred)
             pred = json.loads(output_str)
             evaluation_output = evaluator.evaluate(pred, ref)
             r = evaluation_output.get("reward")
             
-            x = evaluator_filter.evaluate(pred, ref) 
-            print(f"[{i}-Filter] {x['keep']}, {x['score']}")
-            total_em += float(x.get("keep") == True)
-            total_pm += x.get("score")
+            if VERBOSE:
+                x = evaluator_filter.evaluate(pred, ref) 
+                print(f"[{i}-Filter] {x['keep']}, {x['score']}")
+                total_em += float(x.get("keep") == True)
+                total_pm += x.get("score")
 
         except Exception:
-            # print("bye")
             r = evaluator.calculator.get_min_possible_reward(ref)
         rewards.append(r)
-
-    em = total_em / len(references)
-    pm = total_pm / len(references)
-    print(f'Scores: EM {em:.4f}, PM {pm:.4f} | Rewards: {", ".join([f"{r:.4f}" for r in rewards])}')
+    
+    if VERBOSE:
+        em = total_em / len(references)
+        pm = total_pm / len(references)
+        print(f'Scores: EM {em:.4f}, PM {pm:.4f} | Rewards: {", ".join([f"{r:.4f}" for r in rewards])}')
 
     return rewards
 
@@ -428,10 +428,13 @@ def format_reward_fn(completions, **kwargs):
         else:
             reward -= 0.5
         rewards.append(reward)
-    print(f"Format rewards: {', '.join([f'{r:.4f}' for r in rewards])}")
+        
+    if VERBOSE:
+        print(f"Format rewards: {', '.join([f'{r:.4f}' for r in rewards])}")
     return rewards
 
 if __name__ == "__main__":
+    VERBOSE = False
     max_seq_length = 5500
     dtype = None
     load_in_4bit = True
@@ -451,11 +454,10 @@ if __name__ == "__main__":
         dtype = dtype,
         max_lora_rank = lora_rank,
         fast_inference = True,
-        gpu_memory_utilization = 0.5
+        gpu_memory_utilization = 0.65
     )
     EOS_TOKEN = tokenizer.eos_token  # used for format_reward_fn
 
-    print("#### Model loaded successfully")
     max_prompt_length = 2700
 
     training_args = GRPOConfig(
@@ -469,11 +471,12 @@ if __name__ == "__main__":
         optim = "paged_adamw_8bit",
         logging_steps = 1,
         per_device_train_batch_size = 1,
-        gradient_accumulation_steps = 1, # Increase to 4 for smoother training
+        gradient_accumulation_steps = 4, # Increase to 4 for smoother training
         num_generations = 4, # Decrease if out of memory
         max_prompt_length = max_prompt_length,
         max_completion_length = max_seq_length - max_prompt_length,
-        num_train_epochs = 3, # Set to 1 for a full training run
+        num_train_epochs = 1, # Set to 1 for a full training run
+        max_steps = 8000,
         save_steps = 1,
         save_total_limit = 2,
         max_grad_norm = 0.1,
