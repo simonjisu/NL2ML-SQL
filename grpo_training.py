@@ -496,9 +496,9 @@ if __name__ == "__main__":
         lr_scheduler_type = "cosine",
         optim = "paged_adamw_8bit",
         logging_steps = 1,
-        per_device_train_batch_size = 1,
+        per_device_train_batch_size = 6,
         gradient_accumulation_steps = 2, # Increase to 4 for smoother training
-        num_generations = 4, # Decrease if out of memory
+        num_generations = 3, # Decrease if out of memory
         max_prompt_length = max_prompt_length,
         max_completion_length = max_seq_length - max_prompt_length,
         num_train_epochs = 1, # Set to 1 for a full training run
@@ -525,7 +525,7 @@ if __name__ == "__main__":
         train_dataset = train_dataset,
     )
     trainer.train(
-        resume_from_checkpoint = False  if train_path == "train_1_CoT_final.jsonl" else True
+        resume_from_checkpoint = False # if train_path == "train_1_CoT_final.jsonl" else True
     )
 
     import os
