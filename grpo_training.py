@@ -442,13 +442,13 @@ def length_reward_func(completions, **kwargs):
             n_thought_tokens = len(tokenizer.encode(thought))
             if n_thought_tokens > 100:
                 reward += 0.25
-            if n_thought_tokens < 500:
+            if n_thought_tokens < 700:
                 reward += 0.25
-            if n_thought_tokens > 600:
-                reward -= n_thought_tokens * 0.001
+            if n_thought_tokens > 700:
+                reward -= (n_thought_tokens - 700) * 0.0005
         if output:
             output = output.group(1).strip()
-            garbage = len(tokenizer.encode(completion.split(output)[1]))
+            garbage = len(tokenizer.encode(''.join(completion.split(output)[1:])))
             reward -= garbage * 0.001
         
         rewards.append(reward)
