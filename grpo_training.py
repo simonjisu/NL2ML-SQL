@@ -3,7 +3,8 @@ from difflib import SequenceMatcher
 import json
 from unsloth import FastLanguageModel #, PatchFastRL
 from trl import GRPOConfig, GRPOTrainer
-
+import mlflow
+from datetime import datetime as dt
 
 user_prompt = """
 We aim to extract structured machine learning configuration arguments and conditions from a natural language question and a given data dictionary.
@@ -335,33 +336,33 @@ def prepare_dataset(data):
     return dataset
 
 
-def extract_json_block(text):
-    """
-    Extracts and parses the first JSON object from a string.
-    It assumes that the JSON block starts with '{' and attempts to find a balanced block.
-    """
+# def extract_json_block(text):
+#     """
+#     Extracts and parses the first JSON object from a string.
+#     It assumes that the JSON block starts with '{' and attempts to find a balanced block.
+#     """
 
-# find the position of the last open brace
-    start = text.rfind('{')
-    if start == -1:
-        return None
+# # find the position of the last open brace
+#     start = text.rfind('{')
+#     if start == -1:
+#         return None
 
-    # now scan forward to find the matching closing brace
-    brace_count = 0
-    for i, c in enumerate(text[start:], start):
-        if c == '{':
-            brace_count += 1
-        elif c == '}':
-            brace_count -= 1
-            if brace_count == 0:
-                candidate = text[start:i+1]
-                try:
-                    return json.loads(candidate.replace('None','null'))
-                except json.JSONDecodeError:
-                    return None
+#     # now scan forward to find the matching closing brace
+#     brace_count = 0
+#     for i, c in enumerate(text[start:], start):
+#         if c == '{':
+#             brace_count += 1
+#         elif c == '}':
+#             brace_count -= 1
+#             if brace_count == 0:
+#                 candidate = text[start:i+1]
+#                 try:
+#                     return json.loads(candidate.replace('None','null'))
+#                 except json.JSONDecodeError:
+#                     return None
 
-    # if we never balanced off
-    return None
+#     # if we never balanced off
+#     return None
 
 def correctness_reward_func(completions, references, **kwargs):
     """
@@ -410,18 +411,12 @@ def format_reward_fn(completions, **kwargs):
     rewards = []
     for completion in completions:
         reward = 0.0
-        if completion.count("### Chain of Thought") == 1:
+        if completion.count("### Chain of Thought") >= 1:
             reward += 0.5
-        if completion.count("### Chain of Thought") > 1:
             reward -= 0.5 * (completion.count("### Chain of Thought") - 1)
-        if completion.count("### Output") == 1:
+        if completion.count("### Output") >= 1:
             reward += 0.5
-        if completion.count("### Output") > 1:
             reward -= 0.5 * (completion.count("### Output") - 1)
-        # if completion.count(EOS_TOKEN) == 1:
-        #     reward += 0.5
-        # else:
-        #     reward -= 0.5
         rewards.append(reward)
 
     if VERBOSE:
@@ -462,12 +457,15 @@ def length_reward_func(completions, **kwargs):
     return rewards
 
 if __name__ == "__main__":
+    mlflow.set_experiment("GRPO Training")
+
     VERBOSE = False
     max_seq_length = 4096
     dtype = None
     load_in_4bit = True
     lora_rank = 16
     # Load and prepare the dataset
+    # train_path = "train_1_CoT_final.jsonl" 
     train_path = "./train_merged_CoT_final.jsonl"
     train_data = load_jsonl(train_path)
     train_dataset = prepare_dataset(train_data)
@@ -482,16 +480,14 @@ if __name__ == "__main__":
         dtype = dtype,
         max_lora_rank = lora_rank,
         fast_inference = True,
-        gpu_memory_utilization = 0.5
+        gpu_memory_utilization = 0.6
     )
     # useful for reward functions
-    EOS_TOKEN = tokenizer.eos_token  
-    
-
-    max_prompt_length = 2700
+    # EOS_TOKEN = tokenizer.eos_token  
+    max_prompt_length = 2200
 
     training_args = GRPOConfig(
-        learning_rate = 5e-6,
+        learning_rate = 2e-5,
         adam_beta1 = 0.9,
         adam_beta2 = 0.99,
         weight_decay = 0.01,
@@ -506,13 +502,13 @@ if __name__ == "__main__":
         max_prompt_length = max_prompt_length,
         max_completion_length = max_seq_length - max_prompt_length,
         num_train_epochs = 1, # Set to 1 for a full training run
-        # max_steps = 8000,
         save_steps = 1,
         save_total_limit = 2,
         max_grad_norm = 0.1,
-        report_to = "none", # Can use Weights & Biases
+        report_to = "mlflow",
+        run_name=f"GRPO-Llama-3.1B-{dt.now().strftime('%Y-%m-%d-%H-%M-%s')}",
         output_dir = "./grpo_outputs",
-        vllm_max_model_len = max_seq_length - max_prompt_length,
+        vllm_max_model_len = max_seq_length,
         # use_vllm=True,
         # vllm_gpu_memory_utilization = 0.6, # Reduce if out of memory
     )
@@ -528,11 +524,13 @@ if __name__ == "__main__":
         args = training_args,
         train_dataset = train_dataset,
     )
-    trainer.train()
+    trainer.train(
+        resume_from_checkpoint = False  if train_path == "train_1_CoT_final.jsonl" else True
+    )
 
     import os
-
-    save_directory = "./GRPO_fine_tuned_llama_3.1_8B"
+    number = train_path.split("_")[1]
+    save_directory = f"./GRPO_fine_tuned_llama_3.1_8B-{number}"
     os.makedirs(save_directory, exist_ok=True)
     trainer.model.save_pretrained(save_directory)
     trainer.tokenizer.save_pretrained(save_directory)
