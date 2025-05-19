@@ -368,19 +368,16 @@ def correctness_reward_func(completions, references, **kwargs):
     completions: list of generated outputs (strings)
     reference:   list of ground truth dicts (one per prompt)
     """
-    # keep, score
-
-    pat = re.compile(
-        r"^###\s*Output:?\s*[\r\n]+(.*)",
-        flags=re.I | re.S | re.M       #  I = case-insensitive, S = DOTALL, M = ^ at every line
-    )
-    # matches = [pat.search(r).group(1).strip() for r in responses]
     rewards = []
     total_em = 0.0
     total_pm = 0.0
+    PAT = re.compile(
+        r"^###\s*Output:?\s*[\r\n]+(.*?)(?=^\s*###|\Z)",
+        flags=re.I | re.S | re.M       #  I = case-insensitive, S = DOTALL, M = ^ at every line
+    )
     for i, (pred_str, ref) in enumerate(zip(completions, references)):
-        if pat.search(pred_str):
-            output_str = pat.search(pred_str).group(1).strip()
+        if PAT.search(pred_str):
+            output_str = PAT.search(pred_str).group(1).strip()
         else:
             output_str = pred_str[-300:]
 
@@ -415,27 +412,58 @@ def format_reward_fn(completions, **kwargs):
         reward = 0.0
         if completion.count("### Chain of Thought") == 1:
             reward += 0.5
-        else:
+        if completion.count("### Chain of Thought") > 1:
             reward -= 0.5 * (completion.count("### Chain of Thought") - 1)
         if completion.count("### Output") == 1:
             reward += 0.5
-            reward -= len(completion.split("### Output")[0].split("### Chain of Thought")[1]) * 0.0001
-            reward -= len(''.join(completion.split("### Output")[1].split("### Chain of Thought")[1:])) * 0.0001
-        else:
+        if completion.count("### Output") > 1:
             reward -= 0.5 * (completion.count("### Output") - 1)
-        if completion.count(EOS_TOKEN) == 1:
-            reward += 0.5
-        else:
-            reward -= 0.5
+        # if completion.count(EOS_TOKEN) == 1:
+        #     reward += 0.5
+        # else:
+        #     reward -= 0.5
         rewards.append(reward)
-        
+
     if VERBOSE:
         print(f"Format rewards: {', '.join([f'{r:.4f}' for r in rewards])}")
     return rewards
 
+def length_reward_func(completions, **kwargs):
+    rewards = []
+    COT_PAT = re.compile(
+        r"^###\s*Chain of Thought:?\s*[\r\n]+(.*?)(?=^\s*###|\Z)",
+        flags = re.I | re.S | re.M
+    )
+    OUT_PAT = re.compile(
+        r"^###\s*Output:?\s*[\r\n]+(.*?)(?=^\s*###|\Z)",
+        flags = re.I | re.S | re.M
+    )
+    for completion in completions:
+        reward = 0.0
+        thought = COT_PAT.search(completion)
+        output = OUT_PAT.search(completion)
+        if thought:
+            thought = thought.group(1).strip()
+            n_thought_tokens = len(tokenizer.encode(thought))
+            if n_thought_tokens > 100:
+                reward += 0.25
+            if n_thought_tokens < 500:
+                reward += 0.25
+            if n_thought_tokens > 600:
+                reward -= n_thought_tokens * 0.001
+        if output:
+            output = output.group(1).strip()
+            garbage = len(tokenizer.encode(completion.split(output)[1]))
+            reward -= garbage * 0.001
+        
+        rewards.append(reward)
+    if VERBOSE:
+        print(f"length rewards: {', '.join([f'{r:.4f}' for r in rewards])}")
+    return rewards
+
 if __name__ == "__main__":
     VERBOSE = False
-    max_seq_length = 5500
+    max_seq_length = 4096
     dtype = None
     load_in_4bit = True
     lora_rank = 16
@@ -454,9 +482,11 @@ if __name__ == "__main__":
         dtype = dtype,
         max_lora_rank = lora_rank,
         fast_inference = True,
-        gpu_memory_utilization = 0.65
+        gpu_memory_utilization = 0.5
     )
-    EOS_TOKEN = tokenizer.eos_token  # used for format_reward_fn
+    # useful for reward functions
+    EOS_TOKEN = tokenizer.eos_token  
+    
 
     max_prompt_length = 2700
 
@@ -466,17 +496,17 @@ if __name__ == "__main__":
         adam_beta2 = 0.99,
         weight_decay = 0.01,
         warmup_ratio = 0.1,
-        warmup_steps=5,
+        warmup_steps = 0,
         lr_scheduler_type = "cosine",
         optim = "paged_adamw_8bit",
         logging_steps = 1,
         per_device_train_batch_size = 1,
-        gradient_accumulation_steps = 4, # Increase to 4 for smoother training
+        gradient_accumulation_steps = 2, # Increase to 4 for smoother training
         num_generations = 4, # Decrease if out of memory
         max_prompt_length = max_prompt_length,
         max_completion_length = max_seq_length - max_prompt_length,
         num_train_epochs = 1, # Set to 1 for a full training run
-        max_steps = 8000,
+        # max_steps = 8000,
         save_steps = 1,
         save_total_limit = 2,
         max_grad_norm = 0.1,
@@ -493,6 +523,7 @@ if __name__ == "__main__":
         reward_funcs=[
             correctness_reward_func,
             format_reward_fn,
+            length_reward_func,
         ],
         args = training_args,
         train_dataset = train_dataset,
@@ -506,3 +537,9 @@ if __name__ == "__main__":
     trainer.model.save_pretrained(save_directory)
     trainer.tokenizer.save_pretrained(save_directory)
     print(f"✅ GRPO 모델이 '{save_directory}'에 저장되었습니다!")
+
+
+    """
+    Num examples = 6,420 | Num Epochs = 3 | Total steps = 19,260
+     
+    """
