@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "/home/jsjang/code/NL2ML-SQL/.venv/bin/python",
+    "python.analysis.extraPaths": [
+        "/home/jsjang/code/NL2ML-SQL"
+    ]
+}

@@ -172,3 +172,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+Merged_Model/*
+Seed_fine_tuned_llama_3.1_8B/*
+SFT_fine_tuned_llama_3.1_8B/*
+unsloth_compiled_cache/*
+outputs/*
+*.tar

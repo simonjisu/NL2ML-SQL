@@ -1,0 +1,362 @@
+run_id,run_type,model_name,model_family,model_type,dataset_name,is_time_series,column_size,row_size,evaluation_metric,evaluation_value,duration,sql,explainability
+29a2a689-fa12-4c1d-a114-d5086a2affc5,training,crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_linear_combined_regressor_07d57eaa,regression,DNN_LINEAR_COMBINED_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,0.17205151000500174,1028.39,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_linear_combined_regressor_07d57eaa`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['lat_max'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE lat_max IS NOT NULL)",None
+a332e083-b0e6-45ab-9b88-725caf084158,training,crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_regressor_fbe32e64,regression,DNN_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,0.18271291509623616,1039.35,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_regressor_fbe32e64`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['lat_max'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE lat_max IS NOT NULL)",None
+034ddb42-bdd7-4111-bacb-6a0e33b0ed70,training,crypto-isotope-366706.sql_knowledge_base.lat_max_new_linear_reg_7e788b5b,regression,LINEAR_REG,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,72.8234084587446,63.36,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.lat_max_new_linear_reg_7e788b5b`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['lat_max'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE lat_max IS NOT NULL)",Intrinsic
+2789687a-68c8-4169-b2f1-1c1a00019554,training,crypto-isotope-366706.sql_knowledge_base.lat_max_new_random_forest_regressor_e0978385,regression,RANDOM_FOREST_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,0.8931770651717241,289.77,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.lat_max_new_random_forest_regressor_e0978385`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['lat_max'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE lat_max IS NOT NULL)",SHAP
+2dd042c7-bd4f-417a-8908-826f4688f076,training,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_boosted_tree_regressor_a3108c37,regression,BOOSTED_TREE_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,19495973.66985694,287.83,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_boosted_tree_regressor_a3108c37`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['number_of_panels_w'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE number_of_panels_w IS NOT NULL)",SHAP
+a4f8d14f-8628-4eac-bab1-fe1cd7f1faaa,training,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_linear_combined_regressor_de7635e3,regression,DNN_LINEAR_COMBINED_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,9852074509.90855,291.41,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_linear_combined_regressor_de7635e3`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['number_of_panels_w'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE number_of_panels_w IS NOT NULL)",None
+3b51d740-a70f-451a-ae82-abd4c866174c,training,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_regressor_89d73a3e,regression,DNN_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,9852856290.05242,299.95,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_regressor_89d73a3e`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['number_of_panels_w'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE number_of_panels_w IS NOT NULL)",None
+9b7f4f00-b2e9-4d79-baeb-266fa2240ee5,training,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_linear_reg_ab96160c,regression,LINEAR_REG,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,310110933.05859786,53.12,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_linear_reg_ab96160c`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['number_of_panels_w'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE number_of_panels_w IS NOT NULL)",Intrinsic
+a542e177-bde5-4d9e-ad11-e75e617f2627,training,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_random_forest_regressor_d778d2ad,regression,RANDOM_FOREST_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,104620583.66559106,284.7,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_random_forest_regressor_d778d2ad`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['number_of_panels_w'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE number_of_panels_w IS NOT NULL)",SHAP
+1ba3ecd6-ef3b-46af-a047-4b6d7718e6de,training,crypto-isotope-366706.sql_knowledge_base.lat_max_automl_regressor_dc0cba0b,regression,AUTOML_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,2.201124077059272,7463.88,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.lat_max_automl_regressor_dc0cba0b`
+                OPTIONS(model_type='AUTOML_REGRESSOR', INPUT_LABEL_COLS=['lat_max'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE lat_max IS NOT NULL)",None
+7cddc535-ab84-45fc-a0cb-a2bd3c065fcc,training,crypto-isotope-366706.sql_knowledge_base.lat_max_random_forest_regressor_ce7c7659,regression,RANDOM_FOREST_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,0.8902897555240216,405.69,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.lat_max_random_forest_regressor_ce7c7659`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['lat_max'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE lat_max IS NOT NULL)",SHAP
+9a6b08f5-74e6-47f5-945d-eb3496134f1a,training,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_boosted_tree_regressor_71e00b80,regression,BOOSTED_TREE_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,2727394925.281498,289.61,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_boosted_tree_regressor_71e00b80`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['yearly_sunlight_kwh_median'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE yearly_sunlight_kwh_median IS NOT NULL)",SHAP
+b83d3d14-618f-480d-95a5-f8f5bbf3934f,training,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_linear_combined_regressor_5c8982e6,regression,DNN_LINEAR_COMBINED_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,16097700314.562113,291.4,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_linear_combined_regressor_5c8982e6`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['yearly_sunlight_kwh_median'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE yearly_sunlight_kwh_median IS NOT NULL)",None
+961cae88-f73f-4397-b70f-fb42f414f410,training,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_regressor_184787a9,regression,DNN_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,16097727481.160452,407.24,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_regressor_184787a9`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['yearly_sunlight_kwh_median'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE yearly_sunlight_kwh_median IS NOT NULL)",None
+8370b840-134d-4163-8261-3cadf8712312,training,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_linear_reg_73778be1,regression,LINEAR_REG,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,mean_squared_error,741715137.946862,61.38,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_linear_reg_73778be1`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['yearly_sunlight_kwh_median'])
+                AS
+                (SELECT * EXCEPT(center_point) FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`
+                WHERE yearly_sunlight_kwh_median IS NOT NULL)",Intrinsic
+6acefb2c-4de2-45f7-bdd9-d0a627d7a280,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_automl_regressor_dc0cba0b,regression,AUTOML_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,9.09,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_automl_regressor_dc0cba0b`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",None
+e3efe878-f4f0-4276-92be-f8d51d4e4d5e,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_new_boosted_tree_regressor_069674fc,regression,BOOSTED_TREE_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,1.5,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_new_boosted_tree_regressor_069674fc`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",SHAP
+980abe6c-58a5-4058-99ee-530a74bc4e32,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_linear_combined_regressor_07d57eaa,regression,DNN_LINEAR_COMBINED_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,3.15,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_linear_combined_regressor_07d57eaa`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",None
+d93b165a-ddce-48cb-89f4-245810b60c01,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_regressor_fbe32e64,regression,DNN_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,2.92,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_new_dnn_regressor_fbe32e64`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",None
+5803369a-9fba-4fc3-96ff-b0d33b3308ac,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_new_linear_reg_7e788b5b,regression,LINEAR_REG,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,5.29,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_new_linear_reg_7e788b5b`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",Intrinsic
+d2193bc8-5904-470d-985a-c924787c50d2,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_new_random_forest_regressor_e0978385,regression,RANDOM_FOREST_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,1.71,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_new_random_forest_regressor_e0978385`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",SHAP
+ba994d4e-92c6-46a2-bfb1-28a63ff55e33,inference,crypto-isotope-366706.sql_knowledge_base.lat_max_random_forest_regressor_ce7c7659,regression,RANDOM_FOREST_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,2.27,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.lat_max_random_forest_regressor_ce7c7659`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_f > 282957))",SHAP
+602ece98-d704-4068-b854-0b3727ffa927,inference,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_boosted_tree_regressor_a3108c37,regression,BOOSTED_TREE_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,1.04,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_boosted_tree_regressor_a3108c37`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_n = 1386))",SHAP
+9ee15032-3e3a-4844-86cb-e83c7fee3d27,inference,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_linear_combined_regressor_de7635e3,regression,DNN_LINEAR_COMBINED_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,2.16,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_linear_combined_regressor_de7635e3`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_n = 1386))",None
+8cc14654-6ef3-4dbf-a1a2-e21a9908781e,inference,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_regressor_89d73a3e,regression,DNN_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,2.26,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_dnn_regressor_89d73a3e`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_n = 1386))",None
+02e03d03-5ccf-4d7e-a174-802e5f8305b8,inference,crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_random_forest_regressor_d778d2ad,regression,RANDOM_FOREST_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,1.07,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.number_of_panels_w_new_random_forest_regressor_d778d2ad`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code` WHERE number_of_panels_n = 1386))",SHAP
+80a3a925-343f-4f80-a851-f5df8f3919f9,inference,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_boosted_tree_regressor_71e00b80,regression,BOOSTED_TREE_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,2.21,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_boosted_tree_regressor_71e00b80`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`))",SHAP
+9a97b43d-5e2b-4bee-8e58-4e840ed257d6,inference,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_linear_combined_regressor_5c8982e6,regression,DNN_LINEAR_COMBINED_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,4.3,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_linear_combined_regressor_5c8982e6`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`))",None
+09602be3-b98c-4469-a545-d60858cee4a9,inference,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_regressor_184787a9,regression,DNN_REGRESSOR,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,3.58,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_dnn_regressor_184787a9`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`))",None
+ed1736a3-ea85-4516-b81e-680aaf87af5d,inference,crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_linear_reg_73778be1,regression,LINEAR_REG,sunroof_solar.solar_potential_by_postal_code,FALSE,32,11516,,,2.32,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.yearly_sunlight_kwh_median_linear_reg_73778be1`, (SELECT * FROM `bigquery-public-data.sunroof_solar.solar_potential_by_postal_code`))",Intrinsic
+205b03b5-2da8-4ef3-aa5a-8c2fd502a169,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_61958740,regression,LINEAR_REG,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,0.6542399182141366,21.47,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_61958740`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",Intrinsic
+c0b18416-08f5-4496-b62f-894adfdfb2e7,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_61958740,regression,LINEAR_REG,thelook_ecommerce.orders,TRUE,9,124429,,,0.82,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_61958740`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders` WHERE delivered_at = '2021-01-08 23:11:00+00:00' AND gender = 'F'))",Intrinsic
+91a02eac-cdfe-45bc-adbe-0183293487e3,training,crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_boosted_tree_regressor_c9a5d7e4,regression,BOOSTED_TREE_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,184379635116.8662,285.08,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_boosted_tree_regressor_c9a5d7e4`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['Employer_contrib_govt_and_social_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Employer_contrib_govt_and_social_insurance IS NOT NULL)",SHAP
+81d72c33-3ef9-4620-9a2d-67d7d7d9405b,training,crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_dnn_linear_combined_regressor_908cccfd,regression,DNN_LINEAR_COMBINED_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,122318860192499.22,286.91,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_dnn_linear_combined_regressor_908cccfd`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['Employer_contrib_govt_and_social_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Employer_contrib_govt_and_social_insurance IS NOT NULL)",None
+39773c1f-7db7-4a26-8c52-42d83951378f,training,crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_dnn_regressor_17a69415,regression,DNN_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,122318933520206.19,409.88,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_dnn_regressor_17a69415`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['Employer_contrib_govt_and_social_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Employer_contrib_govt_and_social_insurance IS NOT NULL)",None
+750b05a0-348a-494b-a107-6b37aacc8e18,training,crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_linear_reg_43f7e0e1,regression,LINEAR_REG,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,162038814001.51047,55.15,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_linear_reg_43f7e0e1`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['Employer_contrib_govt_and_social_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Employer_contrib_govt_and_social_insurance IS NOT NULL)",Intrinsic
+81249c26-bc25-4cb0-8ac7-9a86dae7d65a,training,crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_random_forest_regressor_cdc7869c,regression,RANDOM_FOREST_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,4486705025110.982,282.92,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Employer_contrib_govt_and_social_insurance_new_random_forest_regressor_cdc7869c`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['Employer_contrib_govt_and_social_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Employer_contrib_govt_and_social_insurance IS NOT NULL)",SHAP
+923a4069-77ff-4c1b-a6fa-3eaa1a21e17c,training,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_boosted_tree_regressor_e03ea9bb,regression,BOOSTED_TREE_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,10747221052.963945,1.04,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_boosted_tree_regressor_e03ea9bb`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['Unemployment_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Unemployment_insurance IS NOT NULL)",SHAP
+2d6e613e-b0e5-473c-9600-20f3f89a0b79,training,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_linear_combined_regressor_3ef78ded,regression,DNN_LINEAR_COMBINED_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,895855552347.3109,890.68,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_linear_combined_regressor_3ef78ded`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['Unemployment_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Unemployment_insurance IS NOT NULL)",None
+b39adaba-1a77-46ed-ae09-b1ca0e48c5eb,training,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_regressor_12bbc3ea,regression,DNN_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,895849225224.6813,284.91,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_regressor_12bbc3ea`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['Unemployment_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Unemployment_insurance IS NOT NULL)",None
+b7146b7d-76ca-4fbd-b7f6-d2599cf51e68,training,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_linear_reg_439f87d8,regression,LINEAR_REG,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,191590929881.61792,30.05,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_linear_reg_439f87d8`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['Unemployment_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Unemployment_insurance IS NOT NULL)",Intrinsic
+39d92b0d-4217-4975-ad31-6d3b6ebcdbf4,training,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_random_forest_regressor_d6d494e6,regression,RANDOM_FOREST_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,mean_squared_error,173411083256.60468,281.68,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_random_forest_regressor_d6d494e6`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['Unemployment_insurance'])
+                AS
+                (SELECT * EXCEPT(Year) FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+                WHERE Unemployment_insurance IS NOT NULL)",SHAP
+8e2e23de-a270-4fc0-910f-992e3a28589c,inference,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_boosted_tree_regressor_e03ea9bb,regression,BOOSTED_TREE_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,,,1.47,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_boosted_tree_regressor_e03ea9bb`, (SELECT * EXCEPT(Employer_contrib_govt_and_social_insurance), 51836 AS Employer_contrib_govt_and_social_insurance FROM `bigquery-public-data.sdoh_bea_cainc30.fips` WHERE Year = '2012-01-01' AND Employer_contrib_govt_and_social_insurance > 51835 AND Employer_contrib_govt_and_social_insurance > 51836))",SHAP
+b7edd4d2-f62d-4b33-b15b-4348c63f8438,inference,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_linear_combined_regressor_3ef78ded,regression,DNN_LINEAR_COMBINED_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,,,2.02,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_linear_combined_regressor_3ef78ded`, (SELECT * EXCEPT(Employer_contrib_govt_and_social_insurance), 51836 AS Employer_contrib_govt_and_social_insurance FROM `bigquery-public-data.sdoh_bea_cainc30.fips` WHERE Year = '2012-01-01' AND Employer_contrib_govt_and_social_insurance > 51835 AND Employer_contrib_govt_and_social_insurance > 51836))",None
+3977f99a-3f1d-4d48-a458-599fd0c25680,inference,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_regressor_12bbc3ea,regression,DNN_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,,,1.66,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_dnn_regressor_12bbc3ea`, (SELECT * EXCEPT(Employer_contrib_govt_and_social_insurance), 51836 AS Employer_contrib_govt_and_social_insurance FROM `bigquery-public-data.sdoh_bea_cainc30.fips` WHERE Year = '2012-01-01' AND Employer_contrib_govt_and_social_insurance > 51835 AND Employer_contrib_govt_and_social_insurance > 51836))",None
+97b0979f-8fe8-4d7e-b0e9-e7c8a1aa7204,inference,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_linear_reg_439f87d8,regression,LINEAR_REG,sdoh_bea_cainc30.fips,TRUE,34,22386,,,0.94,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_linear_reg_439f87d8`, (SELECT * EXCEPT(Employer_contrib_govt_and_social_insurance), 51836 AS Employer_contrib_govt_and_social_insurance FROM `bigquery-public-data.sdoh_bea_cainc30.fips` WHERE Year = '2012-01-01' AND Employer_contrib_govt_and_social_insurance > 51835 AND Employer_contrib_govt_and_social_insurance > 51836))",Intrinsic
+14e69f82-e2e6-4ba8-8df3-b5ad20ad13d4,inference,crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_random_forest_regressor_d6d494e6,regression,RANDOM_FOREST_REGRESSOR,sdoh_bea_cainc30.fips,TRUE,34,22386,,,0.93,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.Unemployment_insurance_new_random_forest_regressor_d6d494e6`, (SELECT * EXCEPT(Employer_contrib_govt_and_social_insurance), 51836 AS Employer_contrib_govt_and_social_insurance FROM `bigquery-public-data.sdoh_bea_cainc30.fips` WHERE Year = '2012-01-01' AND Employer_contrib_govt_and_social_insurance > 51835 AND Employer_contrib_govt_and_social_insurance > 51836))",SHAP
+373e4e58-f3bc-40ee-864d-198012b666b2,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_automl_regressor_bf7b18bc,regression,AUTOML_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,39605136.61074641,8059.47,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_automl_regressor_bf7b18bc`
+                OPTIONS(model_type='AUTOML_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",None
+9f48653b-708a-4403-b5b7-225a64242891,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_d577dd2b,regression,BOOSTED_TREE_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,28243248.036516957,278.85,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_d577dd2b`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",SHAP
+6f28b6c4-03f8-4945-9d72-7bf6f4358e9f,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_da51e243,regression,BOOSTED_TREE_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,28243248.036516957,287.97,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_da51e243`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",SHAP
+dc59234e-bc10-4612-8b50-4eac9185af37,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_76d92830,regression,DNN_LINEAR_COMBINED_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,39756645.29982024,163.97,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_76d92830`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",None
+a19445ef-4157-4e2e-9f1d-ae63b73d7640,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_b219dfd0,regression,DNN_LINEAR_COMBINED_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,39757605.25647453,166.29,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_b219dfd0`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",None
+c7d8dafe-5efb-475c-b394-ec4289240059,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_693921c7,regression,DNN_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,39759895.27035116,404.64,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_693921c7`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",None
+36c18641-d826-4ef7-9cc0-72cfdeaf95df,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_b506a03f,regression,DNN_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,39759679.45100097,401.66,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_b506a03f`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",None
+fb599215-d74c-4f77-a3d6-34c6413f9969,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_5dcbaadb,regression,LINEAR_REG,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,32099210.393725283,41.83,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_5dcbaadb`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",Intrinsic
+7c0b873a-8772-4954-948b-5627482294d9,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_dc0de699,regression,LINEAR_REG,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,32099210.393725287,39.29,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_dc0de699`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",Intrinsic
+461a2bed-d4b9-4f65-8124-ffed58c092d5,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_5b43847f,regression,RANDOM_FOREST_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,13629057.975644067,290.18,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_5b43847f`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",SHAP
+0102d9d3-57f3-47c8-98d5-8d7af33f15ca,training,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_c84af633,regression,RANDOM_FOREST_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,mean_squared_error,13287172.289797477,293.26,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_c84af633`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['outpatient_services'])
+                AS
+                (SELECT * FROM `bigquery-public-data.medicare.outpatient_charges_2014`
+                WHERE outpatient_services IS NOT NULL)",SHAP
+12b2e0d1-6ce8-4816-a3d4-1826081dfb09,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_automl_regressor_bf7b18bc,regression,AUTOML_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,41.71,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_automl_regressor_bf7b18bc`, (SELECT * EXCEPT(provider_street_address), '1613 NORTH MCKENZIE STREET' AS provider_street_address FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",None
+a9798fcf-c8aa-4568-8e2d-71b273d744b1,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_d577dd2b,regression,BOOSTED_TREE_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,1.7,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_d577dd2b`, (SELECT * EXCEPT(provider_street_address), '1613 NORTH MCKENZIE STREET' AS provider_street_address FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",SHAP
+1db2249f-2cd1-4c14-bccb-c492ce72d5bf,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_da51e243,regression,BOOSTED_TREE_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,1.82,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_boosted_tree_regressor_da51e243`, (SELECT * EXCEPT(provider_name), 'ATMORE COMMUNITY HOSPITAL' AS provider_name FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",SHAP
+1bf89cb5-92e6-4cd0-b6f8-c63da42e7940,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_76d92830,regression,DNN_LINEAR_COMBINED_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,3.73,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_76d92830`, (SELECT * EXCEPT(provider_name), 'ATMORE COMMUNITY HOSPITAL' AS provider_name FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",None
+7c4cf2f3-3038-41f2-b0aa-4173bc9556de,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_b219dfd0,regression,DNN_LINEAR_COMBINED_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,4.39,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_linear_combined_regressor_b219dfd0`, (SELECT * EXCEPT(provider_street_address), '1613 NORTH MCKENZIE STREET' AS provider_street_address FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",None
+34b26a5f-0efb-41c6-b686-e4f7835738a1,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_693921c7,regression,DNN_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,3.94,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_693921c7`, (SELECT * EXCEPT(provider_street_address), '1613 NORTH MCKENZIE STREET' AS provider_street_address FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",None
+94799585-abaf-4724-9f8c-4de9729768f8,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_b506a03f,regression,DNN_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,2.94,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_dnn_regressor_b506a03f`, (SELECT * EXCEPT(provider_name), 'ATMORE COMMUNITY HOSPITAL' AS provider_name FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",None
+39032661-65f4-4cc6-8eaa-e93233f602e0,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_5dcbaadb,regression,LINEAR_REG,medicare.outpatient_charges_2014,FALSE,11,35895,,,1.91,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_5dcbaadb`, (SELECT * EXCEPT(provider_name), 'ATMORE COMMUNITY HOSPITAL' AS provider_name FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",Intrinsic
+29e694a6-e50b-41cd-b29d-37d5b20a0ee4,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_dc0de699,regression,LINEAR_REG,medicare.outpatient_charges_2014,FALSE,11,35895,,,1.87,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_linear_reg_dc0de699`, (SELECT * EXCEPT(provider_street_address), '1613 NORTH MCKENZIE STREET' AS provider_street_address FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",Intrinsic
+8711fc85-9c02-4e7a-b30f-8db95da122ae,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_5b43847f,regression,RANDOM_FOREST_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,3.86,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_5b43847f`, (SELECT * EXCEPT(provider_street_address), '1613 NORTH MCKENZIE STREET' AS provider_street_address FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",SHAP
+1334cb35-3778-4f9b-9bd2-510191724321,inference,crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_c84af633,regression,RANDOM_FOREST_REGRESSOR,medicare.outpatient_charges_2014,FALSE,11,35895,,,5.03,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.outpatient_services_new_random_forest_regressor_c84af633`, (SELECT * EXCEPT(provider_name), 'ATMORE COMMUNITY HOSPITAL' AS provider_name FROM `bigquery-public-data.medicare.outpatient_charges_2014`))",SHAP
+2278f8ab-373e-474d-9ce3-7410fd329841,training,crypto-isotope-366706.sql_knowledge_base.date_new_boosted_tree_regressor_116ed313,regression,BOOSTED_TREE_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,231512589428608.03,1.08,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_boosted_tree_regressor_116ed313`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",SHAP
+d3e48470-4793-4a82-8d31-c08463900991,training,crypto-isotope-366706.sql_knowledge_base.date_new_boosted_tree_regressor_747be72d,regression,BOOSTED_TREE_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,231512589428608.03,302.96,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_boosted_tree_regressor_747be72d`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",SHAP
+2059d87e-d2a9-44ec-87af-ce6cb12e4a92,training,crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_845b6506,regression,LINEAR_REG,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,918508104916.355,1.75,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_845b6506`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",Intrinsic
+29d7ccc1-b6a7-4432-b494-4eb6a10a2131,training,crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_e1595046,regression,LINEAR_REG,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,918508104916.4313,57.47,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_e1595046`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",Intrinsic
+06b1fbec-819f-4b98-a3b6-6b6146e99920,training,crypto-isotope-366706.sql_knowledge_base.date_new_random_forest_regressor_f8fa92d8,regression,RANDOM_FOREST_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,102448050190777.31,179.2,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_random_forest_regressor_f8fa92d8`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",SHAP
+9b6eda60-79a4-4d92-8fb9-eaf1fb5f687c,training,crypto-isotope-366706.sql_knowledge_base.date_new_random_forest_regressor_fe8865ba,regression,RANDOM_FOREST_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,106492706139819.11,420.72,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_random_forest_regressor_fe8865ba`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",SHAP
+9d1ac809-b166-4cad-bd9a-fb026a033cf3,training,crypto-isotope-366706.sql_knowledge_base.date_boosted_tree_regressor_3c738c95,regression,BOOSTED_TREE_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,231512589428608.03,303.62,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_boosted_tree_regressor_3c738c95`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",SHAP
+26ae9c7e-96ad-4317-82dc-12abf3663712,training,crypto-isotope-366706.sql_knowledge_base.date_linear_reg_d59c4356,regression,LINEAR_REG,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,918508104916.4111,52.9,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_linear_reg_d59c4356`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",Intrinsic
+46247d5d-de75-4e17-9400-33e4aed52379,training,crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_845b6506,regression,LINEAR_REG,patents_dsep.disclosures_13,FALSE,20,45349,mean_squared_error,918508104916.355,54.6,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_845b6506`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['date'])
+                AS
+                (SELECT * FROM `bigquery-public-data.patents_dsep.disclosures_13`
+                WHERE date IS NOT NULL)",Intrinsic
+1f0e2245-9f70-43c9-97f5-eb21882aa02d,inference,crypto-isotope-366706.sql_knowledge_base.date_new_boosted_tree_regressor_747be72d,regression,BOOSTED_TREE_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,,,0.91,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.date_new_boosted_tree_regressor_747be72d`, (SELECT * EXCEPT(wg_name), 'Coding of moving pictures and audio' AS wg_name FROM `bigquery-public-data.patents_dsep.disclosures_13` WHERE record_id = 'REC00001'))",SHAP
+94ca2279-08ff-4a5e-832d-0c12bd0f0d42,inference,crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_e1595046,regression,LINEAR_REG,patents_dsep.disclosures_13,FALSE,20,45349,,,1.14,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.date_new_linear_reg_e1595046`, (SELECT * EXCEPT(wg_name), 'Coding of moving pictures and audio' AS wg_name FROM `bigquery-public-data.patents_dsep.disclosures_13` WHERE record_id = 'REC00001'))",Intrinsic
+10cb09ba-20e7-4783-bc63-4e0c62ed4695,inference,crypto-isotope-366706.sql_knowledge_base.date_new_random_forest_regressor_f8fa92d8,regression,RANDOM_FOREST_REGRESSOR,patents_dsep.disclosures_13,FALSE,20,45349,,,0.94,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.date_new_random_forest_regressor_f8fa92d8`, (SELECT * EXCEPT(wg_name), 'Coding of moving pictures and audio' AS wg_name FROM `bigquery-public-data.patents_dsep.disclosures_13` WHERE record_id = 'REC00001'))",SHAP
+bcfefaad-4fc7-4a10-81ec-ba6f61a1f7c0,training,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_linear_reg_d8d5613d,regression,LINEAR_REG,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,73.39235617566855,433.42,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_linear_reg_d8d5613d`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['opp_points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE opp_points_game IS NOT NULL)",Intrinsic
+49437f5c-fa9b-4079-8fef-cc86565dac97,inference,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_linear_reg_d8d5613d,regression,LINEAR_REG,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,6.14,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_linear_reg_d8d5613d`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",Intrinsic
+b839dd15-4c74-4f00-9296-5aeeaa713746,training,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_boosted_tree_regressor_4813f68a,regression,BOOSTED_TREE_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,76.08279823593178,360.05,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_boosted_tree_regressor_4813f68a`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['opp_points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE opp_points_game IS NOT NULL)",SHAP
+405b4981-1051-4bd8-829e-d3ff4784ad49,inference,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_boosted_tree_regressor_4813f68a,regression,BOOSTED_TREE_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,5.72,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_boosted_tree_regressor_4813f68a`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",SHAP
+f983429a-992f-4022-99d3-abf8c5fd45f7,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_6d53069e,regression,BOOSTED_TREE_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,0.6659872614085771,281.28,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_6d53069e`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",SHAP
+35f89c30-29d1-4574-af97-91d412ab9607,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_6d53069e,regression,BOOSTED_TREE_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,0.71,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_6d53069e`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders` WHERE delivered_at = '2021-01-08 23:11:00+00:00' AND gender = 'F'))",SHAP
+54ff3f31-ad88-41ec-a5a0-c2c7da717b66,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_15e73d6e,regression,DNN_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,8.993903818710693,781.13,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_15e73d6e`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",None
+554c80e9-cae6-42d7-bbe2-3f09090f3e14,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_15e73d6e,regression,DNN_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,1.04,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_15e73d6e`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders` WHERE delivered_at = '2021-01-08 23:11:00+00:00' AND gender = 'F'))",None
+7e7328d8-916b-467f-b264-becab155fa71,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_3311f9dc,regression,DNN_LINEAR_COMBINED_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,7.965439778475324,1024.61,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_3311f9dc`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",None
+309d4ae6-964c-47fb-b077-2a02c049deeb,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_3311f9dc,regression,DNN_LINEAR_COMBINED_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,1.16,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_3311f9dc`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders` WHERE delivered_at = '2021-01-08 23:11:00+00:00' AND gender = 'F'))",None
+55d0ed13-efe3-4017-8b99-b1aa60afb3ae,training,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_regressor_bc32c01c,regression,DNN_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,66.32905951194329,2032.12,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_regressor_bc32c01c`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['opp_points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE opp_points_game IS NOT NULL)",None
+1f0d4cbc-da1c-4337-b6b1-b50b724207e6,inference,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_regressor_bc32c01c,regression,DNN_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,11.43,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_regressor_bc32c01c`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",None
+7fcb1d47-71e1-441e-ac8d-296ab02b5c85,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_860f8c7e,regression,RANDOM_FOREST_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,0.6528170159259061,277.69,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_860f8c7e`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",SHAP
+14c39b2f-9216-449b-9d5f-a362ff7ee4f7,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_860f8c7e,regression,RANDOM_FOREST_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,0.97,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_860f8c7e`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders` WHERE delivered_at = '2021-01-08 23:11:00+00:00' AND gender = 'F'))",SHAP
+47015b2f-6b95-42d9-9ab9-c07758bb1b84,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_9c8320ae,regression,LINEAR_REG,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,0.6542399182141435,20.89,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_9c8320ae`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",Intrinsic
+08f0647c-8cfa-4bb4-b75a-719550498af6,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_9c8320ae,regression,LINEAR_REG,thelook_ecommerce.orders,TRUE,9,124429,,,1.82,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_linear_reg_9c8320ae`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders`))",Intrinsic
+efc7c6e6-633f-4a5c-a0e6-e84da351aa42,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_3abcae7f,regression,BOOSTED_TREE_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,0.6659872614085771,283.68,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_3abcae7f`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",SHAP
+470fbdc0-af61-4e62-bcb9-8d4878b6986c,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_3abcae7f,regression,BOOSTED_TREE_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,2.19,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_boosted_tree_regressor_3abcae7f`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders`))",SHAP
+665c0b1c-6706-4cb1-9dad-c37c9add22ec,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_d4f3f928,regression,DNN_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,8.413999357020687,900.31,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_d4f3f928`
+                OPTIONS(model_type='DNN_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",None
+f924b4a0-0e09-42b8-b205-e0f388b56b36,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_d4f3f928,regression,DNN_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,3.32,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_regressor_d4f3f928`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders`))",None
+7326c3fd-7b6a-4783-a23d-e9659445d6a5,training,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_linear_combined_regressor_40667828,regression,DNN_LINEAR_COMBINED_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,67.42663366673693,1675.57,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_linear_combined_regressor_40667828`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['opp_points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE opp_points_game IS NOT NULL)",None
+2d4b22c5-2ac4-4c18-9253-57aef888b4eb,inference,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_linear_combined_regressor_40667828,regression,DNN_LINEAR_COMBINED_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,26.04,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_dnn_linear_combined_regressor_40667828`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",None
+5138dd50-e72e-4fc5-8fb0-a37aadd93e06,training,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_random_forest_regressor_c84e0d30,regression,RANDOM_FOREST_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,76.15219617004306,468.06,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_random_forest_regressor_c84e0d30`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['opp_points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE opp_points_game IS NOT NULL)",SHAP
+9f5f1d7c-9d2f-475a-9003-198e2af302dc,inference,crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_random_forest_regressor_c84e0d30,regression,RANDOM_FOREST_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,7.44,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.opp_points_game_new_random_forest_regressor_c84e0d30`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",SHAP
+fc9af8b1-1624-42e6-bd4f-0d5d67aac05d,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_74da645d,regression,DNN_LINEAR_COMBINED_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,8.13127676933929,911.35,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_74da645d`
+                OPTIONS(model_type='DNN_LINEAR_COMBINED_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",None
+0bc0b343-b713-46c9-9a15-de5ec03d47b2,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_74da645d,regression,DNN_LINEAR_COMBINED_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,3.16,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_dnn_linear_combined_regressor_74da645d`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders`))",None
+bbfc6813-2e5b-43f1-9da2-14542d13f23b,training,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_ed83b2b5,regression,RANDOM_FOREST_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,mean_squared_error,0.6528970848483558,277.85,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_ed83b2b5`
+                OPTIONS(model_type='RANDOM_FOREST_REGRESSOR', INPUT_LABEL_COLS=['num_of_item'])
+                AS
+                (SELECT * EXCEPT(created_at, delivered_at, returned_at, shipped_at) FROM `bigquery-public-data.thelook_ecommerce.orders`
+                WHERE num_of_item IS NOT NULL)",SHAP
+e44d9ae3-e211-42f6-b73c-632777d287f8,inference,crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_ed83b2b5,regression,RANDOM_FOREST_REGRESSOR,thelook_ecommerce.orders,TRUE,9,124429,,,2.39,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.num_of_item_new_random_forest_regressor_ed83b2b5`, (SELECT * FROM `bigquery-public-data.thelook_ecommerce.orders`))",SHAP
+5c3c4df0-15c8-411f-9a22-919b38afa28a,training,crypto-isotope-366706.sql_knowledge_base.points_game_new_linear_reg_3443c32a,regression,LINEAR_REG,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,74.76347366347734,406.11,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.points_game_new_linear_reg_3443c32a`
+                OPTIONS(model_type='LINEAR_REG', INPUT_LABEL_COLS=['points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE points_game IS NOT NULL)",Intrinsic
+508b41b0-a11f-48ec-b94e-9094e3fe6230,inference,crypto-isotope-366706.sql_knowledge_base.points_game_new_linear_reg_3443c32a,regression,LINEAR_REG,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,7.48,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.points_game_new_linear_reg_3443c32a`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",Intrinsic
+24e6ee85-d56d-4760-bb87-850050c13f86,training,crypto-isotope-366706.sql_knowledge_base.points_game_new_boosted_tree_regressor_2df97eb2,regression,BOOSTED_TREE_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,mean_squared_error,76.28497640400758,341.96,"CREATE MODEL IF NOT EXISTS `crypto-isotope-366706.sql_knowledge_base.points_game_new_boosted_tree_regressor_2df97eb2`
+                OPTIONS(model_type='BOOSTED_TREE_REGRESSOR', INPUT_LABEL_COLS=['points_game'])
+                AS
+                (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`
+                WHERE points_game IS NOT NULL)",SHAP
+7d70d4a1-de98-4e9d-a217-3ee18da4dbb5,inference,crypto-isotope-366706.sql_knowledge_base.points_game_new_boosted_tree_regressor_2df97eb2,regression,BOOSTED_TREE_REGRESSOR,ncaa_basketball.mbb_historical_teams_games,FALSE,18,571448,,,4.8,"SELECT * FROM ML.PREDICT(MODEL `crypto-isotope-366706.sql_knowledge_base.points_game_new_boosted_tree_regressor_2df97eb2`, (SELECT * FROM `bigquery-public-data.ncaa_basketball.mbb_historical_teams_games`))",SHAP

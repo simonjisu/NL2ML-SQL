@@ -1,0 +1,400 @@
+{"question": "What was the result at dakar , senegal, on 3 september 2011, and with a Score of 2\u20130?", "label": "retrieval"}
+{"question": "How many points are obtained when a standing broad jump is 207-215 cm?", "label": "retrieval"}
+{"question": "Find the latest ride data for each region between 2014 and 2017. I want to know the name of each region, the trip ID of this ride, the ride duration, the start time, the starting station, and the gender of the rider.", "label": "retrieval"}
+{"question": "Predict which group the rider's gender will belong to over time if the trip start time changes from January 8, 2018, at 07:09:39 to January 11, 2018, at 07:09:39.", "label": "machine learning"}
+{"question": "How are data points related over time for subscribers who started their trip at LaGuardia Pl and W 3 St?", "label": "machine learning"}
+{"question": "Name the nationality of the player with an overall of 74", "label": "retrieval"}
+{"question": "Can you identify any unusual behavior in the starting station latitude coordinate over time, if the rider's year of birth changes from greater than 1973 to greater than 1974?", "label": "machine learning"}
+{"question": "What is the release date of the album written by Goss, James James Goss under Audiogo?", "label": "retrieval"}
+{"question": "What is the most likely subscription category label over time, considering the latitude of the ending station is 40.71739973 and the rider was born after 1973?", "label": "machine learning"}
+{"question": "How are the data points related over time if the nominal housing price index changes from 33.76 to 33.52?", "label": "machine learning"}
+{"question": "What deviations from normal can be predicted over time for the year the rider was born, assuming the ID of the station where the trip ended is less than 3295 and the longitude of the starting station is greater than -73.99422366?", "label": "machine learning"}
+{"question": "Flag any unusual behavior in the annual percent change in HPI over time, if the HPI deviation from the trend changes from 0.370064 to 0.38 and the long-term HPI trend changes from -1.056347 to -1.04.", "label": "machine learning"}
+{"question": "What would be the expected outcome for the name of the station where the trip ended over time, if the type of customer changes from casual to subscriber and the starting station's latitude coordinate changes from less than 40.76500525 to less than 37.46?", "label": "machine learning"}
+{"question": "What is the final score of the game on April 9?", "label": "retrieval"}
+{"question": "what is the laps when the grid is less than 2?", "label": "retrieval"}
+{"question": "How can we identify irregular patterns in the length of bike trips over time for users who reported their gender as female?", "label": "machine learning"}
+{"question": "What is the least amount of losses for the team that had more than 0 draws during the seasons earlier than 1926?", "label": "retrieval"}
+{"question": "Can you provide a breakdown of how many times each product was viewed, how many times they were added to the shopping cart, and how many times they were left in the cart without being purchased? Also, give me the count of actual purchases for each product. Ensure that products with a page id in (1, 2, 12, 13) are filtered out.", "label": "retrieval"}
+{"question": "The person who had 0 WSOP earnings had how man WSOP cashes?", "label": "retrieval"}
+{"question": "If the English translation is hello girl, what was the language?", "label": "retrieval"}
+{"question": "Can you predict subsets based on shared characteristics over time if the raw housing price index changes from 33.76 to 33.52?", "label": "machine learning"}
+{"question": "what is the max fs where the status is status and the method is method?", "label": "retrieval"}
+{"question": "Who won the mixed doubles the same year that Andrew Downes won the men's singles?", "label": "retrieval"}
+{"question": "How can we anticipate how the groupings of input features will change as time progresses?", "label": "machine learning"}
+{"question": "What's the total wins when the draws are less than 0?", "label": "retrieval"}
+{"question": "How do you expect the starting station longitude coordinate to change over time if the subscription category shifts from Subscriber to Customer?", "label": "machine learning"}
+{"question": "When did the team have a 10-8 record?", "label": "retrieval"}
+{"question": "How many different kinds of reports are there for races that Juan Manuel Fangio won?", "label": "retrieval"}
+{"question": "Can you identify similar patterns in the records over time if the identifier of the arrival station changes from 449 to 3238?", "label": "machine learning"}
+{"question": "Where does the judge whose court is in Groton reside?", "label": "retrieval"}
+{"question": "Please collect the information of the top 6 trade report with the highest closing prices. Refer to the document for all the information I want.", "label": "retrieval"}
+{"question": "Can you tell me which healthcare provider incurs the highest combined average costs for both outpatient and inpatient services in 2014?", "label": "retrieval"}
+{"question": "Who was Team 2 when Stationery Stores was Team 1?", "label": "retrieval"}
+{"question": "Name the place where adelaide oval is", "label": "retrieval"}
+{"question": "How many debut years have Years at club of 1950\u20131951, and Games larger than 14?", "label": "retrieval"}
+{"question": "When david o'doherty and katherine parkinson are both on the davids team when is the first broadcast?", "label": "retrieval"}
+{"question": "Can you find me the complete url of the most frequently used sender's address on the Cronos blockchain since January 1, 2023, where transactions were made to non-null addresses and in blocks larger than 4096 bytes?", "label": "retrieval"}
+{"question": "How will the latitude of the ending station change over time?", "label": "machine learning"}
+{"question": "How do you anticipate the monthly shift in HPI velocity will change over time?", "label": "machine learning"}
+{"question": "Name the most released for right here, right now", "label": "retrieval"}
+{"question": "What outliers can be predicted regarding the distance of the affordability metric from the long-term trend over time if the year-over-year HPI change (smoothed) shifts from less than 0.039936 to less than 0.04?", "label": "machine learning"}
+{"question": "How would you group subsets based on their common traits as time progresses?", "label": "machine learning"}
+{"question": "What do you predict the future values of the year the rider was born will be over time if the start time in NYC local time changes from May 12, 2017, at 06:53:52 to May 9, 2017, at 06:53:52, and if the longitude of the starting station changes from less than -73.99422366 to less than -72.1?", "label": "machine learning"}
+{"question": "Which Date has a Location/Attendance of verizon center 7,448?", "label": "retrieval"}
+{"question": "List all distinct molecules associated with the company 'SanofiAventis,' along with their trade name and approval date, retaining the most recent approval date for each molecule, using data from ChEMBL Release 23.", "label": "retrieval"}
+{"question": "Provide a list of the top 10 countries for the year 2020, ordered by the highest percentage of their population under 20 years old. For each country, include the total population under 20 years old, the total midyear population, and the percentage of the population that is under 20 years old.", "label": "retrieval"}
+{"question": "Retrieve the object id, title, and the formatted metadata date (as a string in 'YYYY-MM-DD' format) for objects in the \"The Libraries\" department where the cropConfidence is greater than 0.5, the object's title contains the word \"book\".", "label": "retrieval"}
+{"question": "How do the average reputation and number of badges vary among Stack Overflow users based on the number of complete years they have been members, considering only those who joined on or before October 1, 2021?", "label": "retrieval"}
+{"question": "What are the expected future values of the rider's year of birth over time, assuming the type of user is a Customer and the latitude of the starting station changes from greater than 40.71336124 to greater than 39.9?", "label": "machine learning"}
+{"question": "What is the second most frequently used module (imported library) across Python, R, and IPython script (.ipynb) files in the GitHub sample dataset?", "label": "retrieval"}
+{"question": "What year was the expansion in the city of San Juan?", "label": "retrieval"}
+{"question": "Identify the group that the user's gender fits into over time if the start time in New York City local time shifts from January 8, 2018, at 07:09:39.429 to January 11, 2018, at 07:09:39.429.", "label": "machine learning"}
+{"question": "Can you identify any irregular patterns in the longitude of the ending station as time progresses?", "label": "machine learning"}
+{"question": "How will changes in the latitude of the starting station vary over time?", "label": "machine learning"}
+{"question": "What is the lowest rank for nations with more than 3 bronze medals and more than 36 total medals?", "label": "retrieval"}
+{"question": "How can we identify outliers in the starting station latitude coordinate over time?", "label": "machine learning"}
+{"question": "Can you organize the subsets according to their shared characteristics over time, considering that the subscription category is Subscriber and the name of the station where the trip began is LaGuardia Pl & W 3 St?", "label": "machine learning"}
+{"question": "Can you identify any irregular patterns in the numeric code for the starting station over time, if the trip start time shifts from August 29, 2014, at 14:51:03 to September 1, 2014, at 14:51:03?", "label": "machine learning"}
+{"question": "who is the Visitor that has a Series of series tied 2\u20132?", "label": "retrieval"}
+{"question": "Which group does the name of the station where the trip began belong to, over time, if the rider's gender changes from unknown to male and the ending station longitude coordinate changes from greater than -73.98672378 to greater than -80.69?", "label": "machine learning"}
+{"question": "How can we categorize subsets according to their common traits as time progresses?", "label": "machine learning"}
+{"question": "How would the expected trends in the user's birth year evolve over time if the trip start time changes from May 12, 2017, at 06:53:52 to May 9, 2017, at 06:53:52, and the starting station's longitude coordinate changes from less than -73.99422366 to less than -72.1?", "label": "machine learning"}
+{"question": "How are data points related over time if the length of the bike trip changes from 252 to 250?", "label": "machine learning"}
+{"question": "Tell me the most purchased other products and their quantities by customers who bought the Google Red Speckled Tee each month for the three months starting from November 2020.", "label": "retrieval"}
+{"question": "What outliers might be expected in relation to affordability deviation from trend over time if smoothed yearly HPI growth shifts from less than 0.039936 to less than 0.04?", "label": "machine learning"}
+{"question": "Flag any unusual behavior related to the rider's year of birth over time, given that the identifier of the arrival station is less than 3295 and the starting station's longitude coordinate is greater than -73.99422366.", "label": "machine learning"}
+{"question": "How would the expected trends in the ending station's latitude coordinate change over time?", "label": "machine learning"}
+{"question": "What is the most likely label for the user's reported gender over time if the trip end time shifts from June 15, 2016, at 08:25:05 to June 14, 2016, at 08:25:05?", "label": "machine learning"}
+{"question": "Which team has a long of 67?", "label": "retrieval"}
+{"question": "What tournement was held in Helsinki, Finland in 2005?", "label": "retrieval"}
+{"question": "Identify deviations from the norm in the standardized deviation of housing affordability over time.", "label": "machine learning"}
+{"question": "Identify the group that the departure station name belongs to over time, if the gender of the user changes from unknown to male and the longitude of the ending station changes from greater than -73.98672378 to greater than -80.69.", "label": "machine learning"}
+{"question": "Which DOB has a Surname of cresswell?", "label": "retrieval"}
+{"question": "Which Draw is the lowest one that has Champs smaller than 0?", "label": "retrieval"}
+{"question": "What is the type for the population in 2011 of 1004?", "label": "retrieval"}
+{"question": "Identify the sessions with the fewest events lacking both '/detail' clicks and '/complete' conversions, considering only non-empty search types. If multiple sessions share the lowest count, include all of them. For each session, display the associated paths and search types.", "label": "retrieval"}
+{"question": "How many group legs were won with player Mark Dudbridge?", "label": "retrieval"}
+{"question": "How will the ending station latitude coordinate change over time if the duration of the ride exceeds 706 and the trip start time shifts from July 11, 2013, 12:51 PM to July 8, 2013, 12:51 PM?", "label": "machine learning"}
+{"question": "Can you identify any unusual behavior in how long the ride lasted over time, considering that the user's reported gender is female?", "label": "machine learning"}
+{"question": "What is the record for April 21?", "label": "retrieval"}
+{"question": "Which titles have 18.73 u.s. viewers.", "label": "retrieval"}
+{"question": "What is the lowest Score, when Place is \"1\"?", "label": "retrieval"}
+{"question": "How can we quantify the expected changes in latitude at the ending station over time, considering that the longitude coordinate of the starting station is less than -73.967416?", "label": "machine learning"}
+{"question": "What unusual behavior can be observed in the numeric code for the starting station over time if the trip start time changes from August 29, 2014, at 14:51:03 to September 1, 2014, at 14:51:03?", "label": "machine learning"}
+{"question": "How will the future values of the latitude of the ending station change over time?", "label": "machine learning"}
+{"question": "How would you predict the future values of the monthly shift in HPI velocity over time?", "label": "machine learning"}
+{"question": "Which Wrestler has an Elimination of 5?", "label": "retrieval"}
+{"question": "Can you identify any unusual behavior in the latitude of the starting station over time, if the rider's year of birth changes from being greater than 1973 to being greater than 1974?", "label": "machine learning"}
+{"question": "What percentage of subway stations in each New York borough have at least one ADA-compliant entrance?", "label": "retrieval"}
+{"question": "What is the most likely label for the ending station over time if the subscription category changes from Customer to Subscriber and the latitude of the starting station changes from less than 40.76500525 to less than 37.46?", "label": "machine learning"}
+{"question": "Can you project the future values of the monthly shift in HPI velocity over time?", "label": "machine learning"}
+{"question": "Can you forecast unusual trends in how long the ride lasted over time, assuming the type of customer is a subscriber?", "label": "machine learning"}
+{"question": "Extract and count the frequency of all package names listed in the require section of JSON-formatted content", "label": "retrieval"}
+{"question": "Estimate how the starting station longitude coordinate will change over time if the type of user shifts from Subscriber to Customer.", "label": "machine learning"}
+{"question": "Can you predict outliers in trip duration in seconds over time, assuming the rider's gender is female?", "label": "machine learning"}
+{"question": "Which target approved symbol has the overall association score closest to the mean score for psoriasis?", "label": "retrieval"}
+{"question": "Can you identify any irregular patterns in the starting station's longitude coordinate over time if the ending station changes from W 52 St & 11 Ave to Duffield St & Willoughby St?", "label": "machine learning"}
+{"question": "How can we identify outliers associated with the numeric code for the ending station over time?", "label": "machine learning"}
+{"question": "Who narrated the lap-by-lap to a 13.4 million audience?", "label": "retrieval"}
+{"question": "Identify the group that the rider's gender belongs to over time, if the trip end time shifts from June 15, 2016, at 08:25:05 to June 14, 2016, at 08:25:05.", "label": "machine learning"}
+{"question": "Which area has a telephone of (052) of 3862279?", "label": "retrieval"}
+{"question": "What is the lowest 1988-89, when Points is greater than 130, when 1987-88 is \"37\", and when Played is less than 114?", "label": "retrieval"}
+{"question": "Which artist was 2003?", "label": "retrieval"}
+{"question": "What outliers can be predicted for the annual percent change in HPI over time if the distance from the HPI long-term trend changes from 0.370064 to 0.38 and the linear trend in HPI changes from -1.056347 to -1.04?", "label": "machine learning"}
+{"question": "Identify any irregular patterns in the starting station latitude coordinate over time, considering that the trip duration is 2418 seconds and the subscription category is Subscriber.", "label": "machine learning"}
+{"question": "I wonder how many days between the first transaction and the first visit both in Feburary 2017 for each transacting visitor, along with the device used in the transaction.", "label": "retrieval"}
+{"question": "How do you anticipate changes in price momentum over time?", "label": "machine learning"}
+{"question": "What would be the appropriate outcome for the metropolitan statistical area identifier as time progresses?", "label": "machine learning"}
+{"question": "Can you predict irregular patterns in the ending station longitude coordinate over time?", "label": "machine learning"}
+{"question": "Have you noticed any unusual behavior in the longitude of the ending station over time?", "label": "machine learning"}
+{"question": "What was the percentage change in post-market close prices for the Magnificent 7 tech companies from January 1 to June 30, 2024?", "label": "retrieval"}
+{"question": "How many customers were in each spending group in 1998, and what percentage of the total customer base does each group represent?", "label": "retrieval"}
+{"question": "What is the title of the most viewed \"how\" question related to Android development on StackOverflow, across specified tags such as 'android-layout', 'android-activity', 'android-intent', and others", "label": "retrieval"}
+{"question": "Could you tell me the number of orders, average payment per order and customer lifespan in weeks of the 3 custumers with the highest average payment per order. Attention: I want the lifespan in float number if it's longer than one week, otherwise set it to be 1.0.", "label": "retrieval"}
+{"question": "How would you organize subsets based on shared characteristics over time if the type of customer is a subscriber and the starting station name is LaGuardia Place and West 3rd Street?", "label": "machine learning"}
+{"question": "Who is the visitor team of the game on March 2, 2008?", "label": "retrieval"}
+{"question": "Can you anticipate similar patterns in the records over time, considering the trip started on May 11, 2018, at 08:23:11 and the trip began at station ID 467?", "label": "machine learning"}
+{"question": "How can we quantify the upcoming changes in the ending station's latitude coordinate over time, if the trip duration is longer than 706 seconds and the start time in NYC local time shifts from July 11, 2013, at 12:51 to July 8, 2013, at 12:51?", "label": "machine learning"}
+{"question": "What would be the correct category for the name of the station where the trip began, over time, if the starting station's longitude coordinate changes from -73.99667444 to -80.47 and the longitude of the ending station changes from greater than -73.99461843 to greater than -72.99?", "label": "machine learning"}
+{"question": "What is the municipality percentage for San Antonio de Lomerio is San Javier municipality percentage is 31?", "label": "retrieval"}
+{"question": "How can we quantify the expected trends in the latitude of the ending station over time, assuming the longitude coordinate of the starting station is less than -73.967416?", "label": "machine learning"}
+{"question": "What district is the parish Milburn in?", "label": "retrieval"}
+{"question": "Can you identify any unusual behavior in the monthly acceleration of the HPI trend over time, if the year-over-year HPI change (smoothed) shifts from 0.183112 to 0.19?", "label": "machine learning"}
+{"question": "Can you identify any deviations from the normal trip duration in seconds over time, considering the type of customer is a subscriber?", "label": "machine learning"}
+{"question": "What is the fewest losses that had an against score of 2190 and more than 0 draws?", "label": "retrieval"}
+{"question": "Can you predict the outliers concerning affordability deviation from the trend over time, if the trend velocity of the Housing Price Index changes from less than 0.039936 to less than 0.04?", "label": "machine learning"}
+{"question": "How many different pairs of roads classified as motorway, trunk, primary, secondary, or residential in California overlap each other without sharing nodes and do not have a bridge tag, where these roads are tagged with 'highway'", "label": "retrieval"}
+{"question": "How would the latitude coordinate of the ending station change over time if the length of the bike trip is greater than 706 and the trip start time shifts from July 11, 2013, at 12:51 PM to July 8, 2013, at 12:51 PM?", "label": "machine learning"}
+{"question": "How do segment groupings across input features change over time if the ending station is Greene Ave & Throop Ave and the trip end time shifts from July 12, 2016, at 6:56 AM to July 10, 2016, at 6:56 AM?", "label": "machine learning"}
+{"question": "What anomalies can be predicted in the latitude of the starting station over time, assuming the name of the station where the trip began is 8 Ave & W 52 St?", "label": "machine learning"}
+{"question": "How many totals have a Bronze of 0, and a Gold smaller than 0?", "label": "retrieval"}
+{"question": "Classify which group the rider's gender belongs to as time progresses.", "label": "machine learning"}
+{"question": "Could you group the natural clusters in the data over time, given that the length of the bike trip changes from 252 to 250?", "label": "machine learning"}
+{"question": "How can we group subsets that share similar characteristics over time, considering the subscription category is Subscriber and the departure station name is LaGuardia Pl & W 3 St?", "label": "machine learning"}
+{"question": "What was the score for the away team of Brentford?", "label": "retrieval"}
+{"question": "Classify which group the user's reported gender falls into over time.", "label": "machine learning"}
+{"question": "What is the highest number of answers received for a single Python 2 specific question on Stack Overflow, excluding any discussions that involve Python 3?", "label": "retrieval"}
+{"question": "Name the most crowd for essendon", "label": "retrieval"}
+{"question": "Can you predict subsets based on shared characteristics over time, considering an annual percent change in HPI of 0.090973 and a standardized HPI deviation of 0.73609?", "label": "machine learning"}
+{"question": "Which modality has the highest count of SOP instances, including MR series with SeriesInstanceUID = \"1.3.6.1.4.1.14519.5.2.1.3671.4754.105976129314091491952445656147\" and all associated segmentation data, along with the total count of instances?", "label": "retrieval"}
+{"question": "How are data points interconnected over time?", "label": "machine learning"}
+{"question": "What classification of user would be assigned over time if the latitude of the ending station is 40.71739973 and the year the rider was born is after 1973?", "label": "machine learning"}
+{"question": "What is the Home with a Time that is 12:00?", "label": "retrieval"}
+{"question": "What is the amount of apperances of the person who had 36 goals?", "label": "retrieval"}
+{"question": "Can you identify any unusual behavior in the monthly acceleration of the HPI trend over time, if the trend velocity of the HPI changes from 0.183112 to 0.19?", "label": "machine learning"}
+{"question": "Where did Geelong play as the away team?", "label": "retrieval"}
+{"question": "What are the anticipated trends in riders' year of birth over time if the numeric code for the starting station changes from greater than 3320 to greater than 293?", "label": "machine learning"}
+{"question": "Name the lowest Rank of carmelita jeter with a Time smaller than 11.08?", "label": "retrieval"}
+{"question": "What are the top 5 states with the highest average median income difference from 2015 to 2018? also provide the average number of vulnerable employees across various industries for these states, using data from the ACS 5-Year Estimates for 2017.", "label": "retrieval"}
+{"question": "Identify the group to which the MSA code belongs over time.", "label": "machine learning"}
+{"question": "Identify outliers associated with the starting station latitude coordinate over time, if the birth year of the user changes from being greater than 1973 to being greater than 1974.", "label": "machine learning"}
+{"question": "Can you identify clusters of subsets that have similar characteristics over time, considering the type of customer is a subscriber and the starting station name is LaGuardia Place and West 3rd Street?", "label": "machine learning"}
+{"question": "What are the expected trends in the linear trend of the Housing Price Index over time if the percentage of income needed for the median home payment changes from 0.464644 to 0.5?", "label": "machine learning"}
+{"question": "What's the minimal number of points scored in any game?", "label": "retrieval"}
+{"question": "What was the least amount of points scored?", "label": "retrieval"}
+{"question": "Can you identify natural clusters within the data over time if the arrival station name is Greene Ave & Throop Ave and the trip end time changes from July 12, 2016, at 6:56 AM to July 10, 2016, at 6:56 AM?", "label": "machine learning"}
+{"question": "Help me calculate the t-statistic based on the Pearson correlation coefficient between all possible pairs of gene `SNORA31` in the RNAseq data (Log10 transformation) and unique identifiers in the microRNA data available in TCGA. The cohort for this analysis consists of BRCA patients that are 80 years old or younger at the time of diagnosis and Stage I,II,IIA as pathological state. And only consider samples of size more than 25 and with absolute Pearson correlation at least 0.3, and less than 1.0.", "label": "retrieval"}
+{"question": "How can we identify outliers in relation to the starting station's latitude coordinate over time, specifically for the departure station named 8 Ave & W 52 St?", "label": "machine learning"}
+{"question": "What's the model of the processor with BGA479 socket and a 5.5 w TDP?", "label": "retrieval"}
+{"question": "What is the Location Attendance with a Record that is 1-4?", "label": "retrieval"}
+{"question": "How many Forfeits have Wins smaller than 8, and Losses larger than 16?", "label": "retrieval"}
+{"question": "Identify which DMA had the highest search scores for the terms that were top rising one year ago", "label": "retrieval"}
+{"question": "What position is associated with the hometown of Olney, Maryland?", "label": "retrieval"}
+{"question": "Can you identify any deviations from normal in the starting station's latitude coordinate over time, considering the departure station name is 8 Ave & W 52 St?", "label": "machine learning"}
+{"question": "What kind of Replaced has a Manner of departure of end of contract on dec. 16, 2008?", "label": "retrieval"}
+{"question": "Who was the director of Pecado Mortal", "label": "retrieval"}
+{"question": "What were the monthly add-to-cart and purchase conversion rates, calculated as a percentage of pageviews on product details, from January to March 2017?", "label": "retrieval"}
+{"question": "Can you identify anomalies in the ending station latitude coordinate over time if the trip start time changes from November 30, 2017, at 4:21:33 PM to November 29, 2017, at 4:21:33 PM?", "label": "machine learning"}
+{"question": "What was Olga Govortsova's score when she played on a clay surface on 19 May 2008?", "label": "retrieval"}
+{"question": "What is the 2003 rank for Los Angeles International airport?", "label": "retrieval"}
+{"question": "Tell me the patent title and abstract, as well as the publication date, the backward citation and forward citation count within 5 years for those published in January 2014. The detailed requirements are provided in `forward_backward_citation.md`.", "label": "retrieval"}
+{"question": "Which Cover model has a Pictorials of brande roderick-pmoy, naked news?", "label": "retrieval"}
+{"question": "Can you identify natural clusters in the data over time, assuming the trip start time is May 11, 2018, at 08:23:11 and the numeric code for the starting station is 467?", "label": "machine learning"}
+{"question": "Could you provide the total number of confirmed COVID-19 cases and the number of cases per 100,000 people, based on the 2020 population, on April 20, 2020, for the US, France, China, Italy, Spain, Germany, and Iran?", "label": "retrieval"}
+{"question": "What is the result when the Indianapolis Colts are the opponents?", "label": "retrieval"}
+{"question": "What is the expected outcome for the MSA code over time?", "label": "machine learning"}
+{"question": "Which two liquor categories, each contributing an average of at least 1% to monthly sales volume over 24 months, have the lowest Pearson correlation coefficient in their sales percentages?", "label": "retrieval"}
+{"question": "What was the lowest 2011 Census population of an area with a land area larger than 908,607.67 km\u00b2?", "label": "retrieval"}
+{"question": "What is the Location when France was the runner-up at club de campo?", "label": "retrieval"}
+{"question": "What trends can be anticipated over time regarding the birth year of the user?", "label": "machine learning"}
+{"question": "What is the 1989 value with F in 1990?", "label": "retrieval"}
+{"question": "What outliers can be predicted regarding the annual percent change in HPI over time, if the distance from the long-term trend in HPI changes from 0.370064 to 0.38 and the long-term HPI trend changes from -1.056347 to -1.04?", "label": "machine learning"}
+{"question": "How can we identify irregular patterns in the longitude coordinates of ending stations over time?", "label": "machine learning"}
+{"question": "What group do you think the MSA code will belong to as time progresses?", "label": "machine learning"}
+{"question": "How would you classify the starting station name over time if the rider's gender changes from unknown to male and the ending station's longitude coordinate changes from greater than -73.98672378 to greater than -80.69?", "label": "machine learning"}
+{"question": "What is the difference in average month-end balance between the month with the most and the month with the fewest customers having a positive balance in 2020?", "label": "retrieval"}
+{"question": "Which Entrepreneur(s) first aired on 24 August 2006?", "label": "retrieval"}
+{"question": " june 10-11 when january 15-16 is january 15, 1991?", "label": "retrieval"}
+{"question": "Please help me compile the critical details on traffic accidents in 2015, as listed in the info document.", "label": "retrieval"}
+{"question": "Identify natural clusters in the data over time, considering the latitude of the ending station is less than 40.69221589 and the trip end time is equal to November 30, 2015, at 08:37:30.", "label": "machine learning"}
+{"question": "For veg whsle data, can you analyze our financial performance over the years 2020 to 2023? I need insights into the average wholesale price, maximum wholesale price, minimum wholesale price, wholesale price difference, total wholesale price, total selling price, average loss rate, total loss, and profit for each category within each year. Round all calculated values to two decimal places.", "label": "retrieval"}
+{"question": "WHAT SAN PAULO CAREER HAD SMALLER THAN 201 APPEARANCES, SMALLER THAN 2 GOALS, AND FOR RICARDO ROCHA?", "label": "retrieval"}
+{"question": "What changes in the distance of the affordability metric from the long-term trend can we expect over time if affordability as a percentage of household income is less than 0.517134 and the standardized HPI deviation shifts from greater than 0.658936 to greater than 0.61?", "label": "machine learning"}
+{"question": "How do you expect the latitude of the ending station to change over time?", "label": "machine learning"}
+{"question": "Which College has a Year smaller than 1962, and a Position of rb?", "label": "retrieval"}
+{"question": "How would you predict the classification of the user's reported gender over time, if the trip end time changes from June 15, 2016, at 8:25 AM to June 14, 2016, at 8:25 AM?", "label": "machine learning"}
+{"question": "What are the expected fluctuations in affordability deviation from trend over time, if the housing affordability payment ratio is less than 0.517134 and the HPI deviation from trend changes from greater than 0.658936 to greater than 0.61?", "label": "machine learning"}
+{"question": "What is the most likely label for the metropolitan statistical area identifier as time progresses?", "label": "machine learning"}
+{"question": "Can you identify the deviations from the typical distance of the affordability metric from the long-term trend over time, if the smoothed yearly HPI growth shifts from less than 0.039936 to less than 0.04?", "label": "machine learning"}
+{"question": "What is the format for the catalogue number GAD 2014 CD on July 6, 1998?", "label": "retrieval"}
+{"question": "Which Round has an Opponent of jorge magalhaes?", "label": "retrieval"}
+{"question": "How many candidates ran in the election where Mike Doyle was the incumbent? ", "label": "retrieval"}
+{"question": "Can you identify any deviations from the normal trip duration in seconds over time for subscribers?", "label": "machine learning"}
+{"question": "Can you group similar patterns from the records over time, considering that the name of the station where the trip ended is Greene Ave & Throop Ave and the time when the trip ended changes from July 12, 2016, at 6:56 AM to July 10, 2016, at 6:56 AM?", "label": "machine learning"}
+{"question": "Can you identify outliers related to the latitude of the starting station over time, if the rider's year of birth changes from greater than 1973 to greater than 1974?", "label": "machine learning"}
+{"question": "Predict which group the rider's gender will belong to over time if the start time in NYC local time changes from January 8, 2018, at 07:09:39 to January 11, 2018, at 07:09:39.", "label": "machine learning"}
+{"question": "Can you identify anomalies in the latitude of the ending station over time, if the trip start time changes from November 30, 2017, at 16:21:33 to November 29, 2017, at 16:21:33?", "label": "machine learning"}
+{"question": "At which tournament did william renshaw begin his lead when he had won 7 titles?", "label": "retrieval"}
+{"question": "How are data points related over time if the identifier of the arrival station changes from 449 to 3238?", "label": "machine learning"}
+{"question": "Given the taxi trip data in Chicago, partition the trips that last no more than 1 hour into 6 quantiles based on trip duration. Please provide the minimum/maximum trip duration (rounded-off to integer minutes), total trips, and average fare for each quantile.", "label": "retrieval"}
+{"question": "Flag any unusual behavior in the longitude of the starting station over time, if the name of the station where the trip began changes from N 6 St & Bedford Ave to Market St & Cherry St and the ending station changes from E 52 St & 2 Ave to Columbia St & Rivington St.", "label": "machine learning"}
+{"question": "Please provide the study instance UIDs for studies that include both T2-weighted axial magnetic resonance imaging and anatomical structure segmentations of the peripheral zone, in prostate repeatability collection.", "label": "retrieval"}
+{"question": "WHo has a Country of united states and a To par of \u20133?", "label": "retrieval"}
+{"question": "What are the monthly statistics for new StackOverflow users created in 2021, including the percentage of new users who asked questions and the percentage of those who asked questions and then answered questions within their first 30 days?", "label": "retrieval"}
+{"question": "Who came in 3rd at Venue?", "label": "retrieval"}
+{"question": "What is the most likely label for the departure station name over time, if the user's reported gender changes from unknown to male and the longitude of the ending station changes from greater than -73.98672378 to greater than -80.69?", "label": "machine learning"}
+{"question": "Name the record for black knights points 54", "label": "retrieval"}
+{"question": "What are the deviations from normal in the latitude of the ending station over time, if the trip start time changes from November 30, 2017, at 16:21:33 to November 29, 2017, at 16:21:33?", "label": "machine learning"}
+{"question": "What is the elected status of the Democratic party in 1989?", "label": "retrieval"}
+{"question": "What was the entrant in round 16 were Ferrari was the constructor?", "label": "retrieval"}
+{"question": "If the site was wallace wade stadium \u2022 durham, nc, what was the result?", "label": "retrieval"}
+{"question": "Please find out how widespread the appeal of our top five actors is. What percentage of our customers have rented films featuring these actors?", "label": "retrieval"}
+{"question": "What was the comment on the Denali area?", "label": "retrieval"}
+{"question": "How do you expect the latitude of the ending station to change over time if the length of the bike trip is greater than 706 and the start time of the trip shifts from July 11, 2013, at 12:51 PM to July 8, 2013, at 12:51 PM?", "label": "machine learning"}
+{"question": "What is the smallest scored with a result of 46-18?", "label": "retrieval"}
+{"question": "List the top 10 countries with respect to the total amount of long-term external debt in descending order, excluding those without a specified region.", "label": "retrieval"}
+{"question": "Which power output had a Build date of 1951\u20131956?", "label": "retrieval"}
+{"question": "What is the daily change in the total market value (formatted as a string in USD currency format) of the USDC token (with a target address of \"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\") in 2023 , considering both Mint (the input starts with 0x42966c68) and Burn (the input starts with 0x40c10f19) transactions?", "label": "retrieval"}
+{"question": "How can we identify anomalies in trip duration in seconds over time, considering the rider's gender is female?", "label": "machine learning"}
+{"question": "What is the sector is the establishment is 110313?", "label": "retrieval"}
+{"question": "Could you determine what percentage of users either did not uninstall our app within seven days or never uninstalled it after installing during August and September 2018?", "label": "retrieval"}
+{"question": "What is the name of the home team when the away team was Melbourne?", "label": "retrieval"}
+{"question": "Can you identify any irregular patterns in the year-over-year change in the housing price index over time, if the standardized HPI deviation changes from 0.370064 to 0.38 and the long-term HPI trend changes from -1.056347 to -1.04?", "label": "machine learning"}
+{"question": "What is the total with a rank less than 5, gold larger than 5 and bronze larger than 8?", "label": "retrieval"}
+{"question": "Can you identify any unusual behavior in the numeric code for the starting station over time, if the trip start time changes from August 29, 2014, at 14:51:03 to September 1, 2014, at 14:51:03?", "label": "machine learning"}
+{"question": "What driver has under 53 laps, a grid smaller than 14, and a time/retired of differential?", "label": "retrieval"}
+{"question": "How are the data points related over time if the duration of the ride changes from 252 to 250?", "label": "machine learning"}
+{"question": "When did the away team score at Punt Road Oval?", "label": "retrieval"}
+{"question": "How can we measure the anticipated changes in the starting station longitude coordinate over time if the type of user shifts from Subscriber to Customer?", "label": "machine learning"}
+{"question": "Can you identify natural clusters in the data over time, assuming the trip duration in seconds is greater than 207 and the starting station longitude coordinate is -73.99392888?", "label": "machine learning"}
+{"question": "Which event has an Opponent of akihiro gono, and a Method of decision?", "label": "retrieval"}
+{"question": "How do you foresee the upcoming fluctuations in the user's birth year over time if the ID of the station where the trip began changes from greater than 3320 to greater than 293?", "label": "machine learning"}
+{"question": "Which team has an away score of 18.14 (122)?", "label": "retrieval"}
+{"question": "How many schools left in 2002-03?", "label": "retrieval"}
+{"question": "Can we identify any unusual behavior in the monthly acceleration of the HPI trend over time if the smoothed yearly HPI growth changes from 0.183112 to 0.19?", "label": "machine learning"}
+{"question": "How are the data points related over time, considering that the ending station latitude coordinate is less than 40.69221589 and the end time in New York City local time is 2015-11-30 08:37:30?", "label": "machine learning"}
+{"question": "What trends do you expect to see in the user's birth year over time if the numeric code for the starting station changes from greater than 3320 to greater than 293?", "label": "machine learning"}
+{"question": "How can we identify anomalies in the starting station latitude coordinate over time, if the departure station name is 8 Ave & W 52 St?", "label": "machine learning"}
+{"question": "For each publication family whose earliest publication was first published in January 2015, please provide the earliest publication date, the distinct publication numbers, their country codes, the distinct CPC and IPC codes, distinct families (namely, the ids) that cite and are cited by this publication family. Please present all lists as comma-separated values, sorted by the first letter of the code for clarity.", "label": "retrieval"}
+{"question": "What rounds did Roy Salvadori drive for David Brown Corporation?", "label": "retrieval"}
+{"question": "How many PATAs does an nForce Professional 3400 MCP have?", "label": "retrieval"}
+{"question": "What is the Pick number of the Player from Syracuse?", "label": "retrieval"}
+{"question": "What is the June 21 ncaat baseball record for Fresno State Bulldogs?", "label": "retrieval"}
+{"question": "How will the user's birth year evolve over time if the trip start time shifts from May 12, 2017, at 6:53:52 AM to May 9, 2017, at 6:53:52 AM and the longitude of the starting station changes from less than -73.99422366 to less than -72.1?", "label": "machine learning"}
+{"question": "Which player went to college at Saint Mary's?", "label": "retrieval"}
+{"question": "In 1948-10-28, what were the lowest Goals in Tehran, Iran?", "label": "retrieval"}
+{"question": "Which away team had a score of 11.11 (77)?", "label": "retrieval"}
+{"question": "How would the distance of the affordability metric from the long-term trend change over time if affordability as a percentage of household income is less than 0.517134 and the distance from the housing price index long-term trend decreases from greater than 0.658936 to greater than 0.61?", "label": "machine learning"}
+{"question": "Can you predict anomalies in the starting station latitude coordinate over time, considering that the departure station name is 8 Ave & W 52 St?", "label": "machine learning"}
+{"question": "Please show information of the hurricane with the third longest total travel distance in the North Atlantic during 2020, including its travel coordinates, the cumulative travel distance at each point, and the maximum sustained wind speed at those times.", "label": "retrieval"}
+{"question": "How do groupings vary across input features over time?", "label": "machine learning"}
+{"question": "Tell me the years competed for panthers", "label": "retrieval"}
+{"question": "How can we identify subsets with common traits as time passes?", "label": "machine learning"}
+{"question": "Tell me the time/retired with Laps of 47 and driver of ren\u00e9 arnoux", "label": "retrieval"}
+{"question": "Can you identify anomalies in the birth year of the user over time if the latitude of the starting station decreases from 40.7806284 to 40.31?", "label": "machine learning"}
+{"question": "Identify any deviations from the normal trend in affordability over time, if the year-over-year HPI change (smoothed) shifts from less than 0.039936 to less than 0.04.", "label": "machine learning"}
+{"question": "What is the most likely label for the type of customer, whether subscriber or casual, over time, if the name of the station where the trip began is Broadway & W 38 St and the identifier of the departure station changes from less than 3565 to less than 3158?", "label": "machine learning"}
+{"question": "How can subsets be organized over time based on their shared characteristics?", "label": "machine learning"}
+{"question": "Can you identify any irregular patterns in the monthly acceleration of the HPI trend over time, given that the percentage of income required for the median home payment is less than 0.41803 and the HPI deviation from the trend changes from 0.738063 to 0.71?", "label": "machine learning"}
+{"question": "What trends in the user's birth year do you expect to see over time if the identifier of the departure station changes from greater than 3320 to greater than 293?", "label": "machine learning"}
+{"question": "How does the classification of customer type, whether subscriber or casual, change over time when the ending station latitude coordinate is 40.71739973 and the user's birth year is greater than 1973?", "label": "machine learning"}
+{"question": "What is the maximum grid when the laps were greater than 22?", "label": "retrieval"}
+{"question": "Identify the CPC technology areas with the highest exponential moving average of patent filings each year (smoothing factor 0.2), and provide the full title and the best year for each CPC group at level 5.", "label": "retrieval"}
+{"question": "Which province has a density of 971.4?", "label": "retrieval"}
+{"question": "What deviations from the normal can be observed in the latitude of the ending station over time if the start time in NYC local time changes from November 30, 2017, at 16:21:33 to November 29, 2017, at 16:21:33?", "label": "machine learning"}
+{"question": "What will be the classification of the departure station name over time if the longitude of the starting station changes from -73.99667444 to -80.47 and the ending station longitude coordinate changes from greater than -73.99461843 to greater than -72.99?", "label": "machine learning"}
+{"question": "How do you anticipate the ending station's latitude coordinate will change over time, assuming the longitude of the starting station is less than -73.967416?", "label": "machine learning"}
+{"question": "What is the retention rate for users two weeks after their initial quickplay event within the period from July 2, 2018, to July 16, 2018, calculated separately for each quickplay event type?", "label": "retrieval"}
+{"question": "Can you group subsets according to their common characteristics over time, considering that the latitude of the ending station is less than 40.69221589 and the end time is set to November 30, 2015, at 08:37:30 in New York City local time?", "label": "machine learning"}
+{"question": "Show the full name of the fastest pitcher on each team with their maximum valid pitch speed, using both regular and post-season data", "label": "retrieval"}
+{"question": "Can you identify anomalies in the longitude of the ending station over time if the type of user changes from Subscriber to Customer?", "label": "machine learning"}
+{"question": "What would be the appropriate category for the starting station name as time progresses, if the longitude of the starting station shifts from -73.99667444 to -80.47 and the ending station's longitude coordinate changes from being greater than -73.99461843 to being greater than -72.99?", "label": "machine learning"}
+{"question": "What is the original air date of the episode that was number 31 in the series? ", "label": "retrieval"}
+{"question": "What would be the correct category for the name of the station where the trip began over time if the longitude of the starting station changes from -73.99667444 to -80.47 and the longitude of the ending station changes from greater than -73.99461843 to greater than -72.99?", "label": "machine learning"}
+{"question": "For the NXT title that had the shortest match (excluding titles with \"title change\"), what were the names of the two wrestlers involved?", "label": "retrieval"}
+{"question": "What potential changes in the standardized deviation of housing affordability can we expect over time if the percent of income required for a median home payment is less than 0.517134 and the standardized HPI deviation changes from greater than 0.658936 to greater than 0.61?", "label": "machine learning"}
+{"question": "How can we identify similar patterns in records as time progresses?", "label": "machine learning"}
+{"question": "What are the expected trends in price momentum over time if model-predicted downside risk decreases from 0.829597 to 0.76?", "label": "machine learning"}
+{"question": "Can you provide the latitude of the final coordinates for the hurricane that traveled the second longest distance in the North Atlantic during 2020?", "label": "retrieval"}
+{"question": "Which College had an Overall pick of 171?", "label": "retrieval"}
+{"question": "What are the maximum and minimum balances across all addresses for different address types on Bitcoin Cash during March 2014?", "label": "retrieval"}
+{"question": "What is the most likely label for the user's reported gender over time if the start time in NYC local time changes from January 8, 2018, at 07:09:39 to January 11, 2018, at 07:09:39?", "label": "machine learning"}
+{"question": "What was the record when the game was at the Rose Garden?", "label": "retrieval"}
+{"question": "Can you predict similar patterns in the records as time goes on?", "label": "machine learning"}
+{"question": "Identify the country with data inserted on nine different days in January 2022. Then, find the longest consecutive period with data insertions for this country during January 2022, and calculate the proportion of entries that are from its capital city within this longest consecutive insertion period.", "label": "retrieval"}
+{"question": "How do data points relate to each other over time if the longitude of the starting station changes from -73.9240312 to -68.35?", "label": "machine learning"}
+{"question": "Could you provide the highest recorded precipitation, minimum temperature, and maximum temperature from the last 15 days of each year from 2013 to 2016 at weather station USW00094846? Ensure each value represents the peak measurement for that period, with precipitation in millimeters and temperatures in degrees Celsius, including only valid and high-quality data.", "label": "retrieval"}
+{"question": "How can we identify the outliers related to the longitude of the ending station over time?", "label": "machine learning"}
+{"question": "How many points did the home team score when the home team scored 18.19 (127)?", "label": "retrieval"}
+{"question": "Can you identify the outliers in affordability deviations from the trend over time?", "label": "machine learning"}
+{"question": "Who is the directed by when 2t6404 is the production code?", "label": "retrieval"}
+{"question": "How would groupings among input features evolve over time if the raw housing price index changes from 33.76 to 33.52?", "label": "machine learning"}
+{"question": "What is the Venue when the score was 1 \u2013 1, and the result was 2 \u2013 2?", "label": "retrieval"}
+{"question": "Given the latest evaluations of timberland and forestland plots, which state within each category has the highest total acreage? Please provide the state code, the evaluation group, the state name, and the total acres for the top state in each category.", "label": "retrieval"}
+{"question": "Can you find the census tracts in the 36047 area that made both the top 20 lists for biggest population and median income increases from 2011 to 2018, and had over 1000 residents each year?", "label": "retrieval"}
+{"question": "What is the game number on April 7?", "label": "retrieval"}
+{"question": "Can you predict similar patterns across records over time, considering that the trip started on 2018-05-11 at 08:23:11 and the departure station identifier is 467?", "label": "machine learning"}
+{"question": "Have you noticed any unusual patterns in the starting station latitude coordinate over time, considering that the length of the bike trip is 2418 and the subscription category is Subscriber?", "label": "machine learning"}
+{"question": "What is the most likely label for the arrival station name over time if the type of user changes from Customer to Subscriber and the latitude of the starting station changes from less than 40.76500525 to less than 37.46?", "label": "machine learning"}
+{"question": "What was the name of the quarterback drafted?", "label": "retrieval"}
+{"question": "How do you anticipate the inherent structure of the dataset will evolve over time?", "label": "machine learning"}
+{"question": "What changes can be anticipated in price momentum over time if model-predicted downside risk decreases from 0.829597 to 0.76?", "label": "machine learning"}
+{"question": "Identify the outliers concerning the monthly acceleration of the HPI trend over time, if the smoothed yearly HPI growth shifts from 0.183112 to 0.19.", "label": "machine learning"}
+{"question": "What is the democratic seat plurality with partisan order of New Hampshire?", "label": "retrieval"}
+{"question": "What is the most likely label for the user's reported gender over time if the trip start time changes from January 8, 2018, at 07:09:39 to January 11, 2018, at 07:09:39?", "label": "machine learning"}
+{"question": "Which type opened in 1982?", "label": "retrieval"}
+{"question": "In my Bitcoin database, there are discrepancies in transaction records. Can you determine the annual differences in average output values calculated from separate input and output records versus a consolidated transactions table, focusing only on the years common to both calculation methods?", "label": "retrieval"}
+{"question": "How can we arrange similar patterns found in records over time?", "label": "machine learning"}
+{"question": "Can you identify any anomalies in the starting station's latitude coordinate over time, given that the starting station name is 8 Ave & W 52 St?", "label": "machine learning"}
+{"question": "What is the attendance number when the result is l 41-37?", "label": "retrieval"}
+{"question": "How can we identify outliers in trip duration in seconds over time for customers classified as subscribers?", "label": "machine learning"}
+{"question": "Who was the opponent on February 28, 1991", "label": "retrieval"}
+{"question": "who had the pole position at rockingham circuit with adam christodoulou having the fastest lap?", "label": "retrieval"}
+{"question": "How can we organize the groupings of input features as time progresses?", "label": "machine learning"}
+{"question": "How can we identify outliers in the starting station latitude coordinates over time, specifically for the starting station name \"8 Ave & W 52 St\"?", "label": "machine learning"}
+{"question": "Who was the winner when Niki Lauda held pole position?", "label": "retrieval"}
+{"question": "What are the five longest types of highways within the multipolygon boundary of Denmark (as defined by Wikidata ID 'Q35') by total length?", "label": "retrieval"}
+{"question": "How do you think data points will be related over time, considering the ending station's latitude is less than 40.69221589 and the end time in New York City local time is 2015-11-30 at 08:37:30?", "label": "machine learning"}
+{"question": "Show the number of Stack Overflow questions asked each day of the week in 2021, and find out how many and what percentage of those were answered within one hour.", "label": "retrieval"}
+{"question": "What is the Location of the Competition with a Rank-Final of 10?", "label": "retrieval"}
+{"question": "What's the most flags that had 473 wins and less than 633 losses?", "label": "retrieval"}
+{"question": "How do you expect the monthly acceleration of the HPI trend to change over time?", "label": "machine learning"}
+{"question": "Who were the guests in the episode with production code 6021? ", "label": "retrieval"}
+{"question": "What future values can we expect for the year the rider was born, over time, if the subscription category is Customer and the latitude of the starting station changes from greater than 40.71336124 to greater than 39.9?", "label": "machine learning"}
+{"question": "How can we identify anomalies in the distance of the affordability metric from the long-term trend over time?", "label": "machine learning"}
+{"question": "How do project changes over time in monthly acceleration of the HPI trend occur if the probability of the HPI being lower a year from now changes from less than 0.829597 to less than 0.76?", "label": "machine learning"}
+{"question": "Can you identify anomalies in the latitude of the starting station over time, considering that the trip duration in seconds is 2418 and the subscription category is Subscriber?", "label": "machine learning"}
+{"question": "How can we identify and organize similar patterns in records over time?", "label": "machine learning"}
+{"question": "How large was the crowd when they played at princes park?", "label": "retrieval"}
+{"question": "What outliers can you predict regarding the longitude of the starting station over time if the name of the station where the trip began changes from N 6 St & Bedford Ave to Market St & Cherry St, and the ending station changes from E 52 St & 2 Ave to Columbia St & Rivington St?", "label": "machine learning"}
+{"question": "What country scored 71-66-66-71=274?", "label": "retrieval"}
+{"question": "What is the expected outcome for the name of the station where the trip began over time, if the starting station's longitude coordinate changes from -73.99667444 to -80.47 and the longitude of the ending station changes from greater than -73.99461843 to greater than -72.99?", "label": "machine learning"}
+{"question": "What unusual behavior might occur in the longitude of the starting station over time if the station where the trip began changes from N 6 St & Bedford Ave to Market St & Cherry St, and the ending station changes from E 52 St & 2 Ave to Columbia St & Rivington St?", "label": "machine learning"}
+{"question": "What was the average crowd size at a home game that had a score of 14.15 (99)?", "label": "retrieval"}
+{"question": "What are the predicted future values of the monthly acceleration of the HPI trend over time?", "label": "machine learning"}
+{"question": "Which Year has a Label-Nr of 88146?", "label": "retrieval"}
+{"question": "When was the build date for c-c wheel arrangement and freight service?", "label": "retrieval"}
+{"question": "Could you provide me with the zip code of the location that has the highest number of bank institutions in Florida?", "label": "retrieval"}
+{"question": "What will be the appropriate outcome for the type of user over time if the starting station name is Broadway & W 38 St and the ID of the station where the trip began changes from less than 3565 to less than 3158?", "label": "machine learning"}
+{"question": "When austin, texas is the hometown what is the lowest age?", "label": "retrieval"}
+{"question": "Identify outliers related to the ID of the station where the trip began over time, if the trip start time changes from 2014-08-29 14:51:03 to 2014-09-01 14:51:03.", "label": "machine learning"}
+{"question": "How much Latitude has a Water (sqmi) of 0.267, and an ANSI code larger than 1759605?", "label": "retrieval"}
+{"question": "What are the future values of the year the rider was born over time, assuming the start time in NYC local time changes from May 12, 2017, at 06:53:52 to May 9, 2017, at 06:53:52, and the starting station longitude coordinate changes from less than -73.99422366 to less than -72.1?", "label": "machine learning"}
+{"question": "Can you tell me which bike trip in New York City on July 15, 2015, started and ended in ZIP Code areas with the highest average temperature for that day, as recorded by the Central Park weather station '94728'? If there's more than one trip that meets these criteria, I'd like to know about the one that starts in the smallest ZIP Code and ends in the largest ZIP Code.", "label": "retrieval"}
+{"question": "What is the example of the Early Modern English ( [x] \u2192 /f/) /\u0254f/?", "label": "retrieval"}
+{"question": "What are the RNA expression levels of the genes MDM2, TP53, CDKN1A, and CCNE1, along with associated clinical information, in bladder cancer patients with CDKN2A mutations in the 'TCGA-BLCA' project?  Use clinical data from the Genomic Data Commons Release 39, data about somatic mutations derived from the hg19 human genome reference in Feb 2017.", "label": "retrieval"}
+{"question": "Analyze the largest copy number of chromosomal aberrations including amplifications, gains, homozygous deletions, heterozygous deletions, and normal copy states across cytogenetic bands in TCGA-KIRC kidney cancer samples. Use segment allelic data to identify the maximum copy number aberrations within each chromosomal segment, and report their frequencies, sorted by chromosome and cytoband.", "label": "retrieval"}
+{"question": "How has the classification of MSA code changed over time?", "label": "machine learning"}
+{"question": "Assign the appropriate category for the user's reported gender as it changes over time.", "label": "machine learning"}
+{"question": "Could you construct a structured clean dataset from `dicom_all` for me? It should retrieve digital slide microscopy (SM) images from the TCGA-LUAD and TCGA-LUSC datasets and meet the requirements in `dicom_dataset_selection.md`. The target labels are tissue type and cancer subtype.", "label": "retrieval"}
+{"question": "What is the most common 4-digit IPC code among US B2 utility patents granted from June to August in 2022?", "label": "retrieval"}
+{"question": "Classify which group the type of user belongs to over time, if the longitude of the ending station changes from greater than -73.94782145 to greater than -69.29.", "label": "machine learning"}
+{"question": "Makarora primary school has a roll less than 141 and what gender?", "label": "retrieval"}
+{"question": "What is the series number for the Golden Frog?", "label": "retrieval"}
+{"question": "Can you provide the details of the top 5 longest bike share trips that started during the second half of 2017, including the trip ID, duration in seconds, start date, start station name, route (start station to end station), bike number, subscriber type, member's birth year, current age, age classification, gender, and the region name of the start station? Please exclude trips where the start station name, member's birth year, or member's gender is not specified.", "label": "retrieval"}
+{"question": "What nation with Rank 1 won the fewest gold medals while winning more than 11 silver but fewer than 7 bronze medals?", "label": "retrieval"}
+{"question": "Name the scores for  chris ramsey and carol vorderman", "label": "retrieval"}
+{"question": "Could you identify any anomalies in the longitude of the ending station over time, assuming the type of customer changes from subscriber to casual?", "label": "machine learning"}
+{"question": "How can we identify natural clusters within the data as time progresses?", "label": "machine learning"}
+{"question": "What is the score for Australia with a place of 4?", "label": "retrieval"}
+{"question": "Notice any unusual behavior in the user's birth year over time if the starting station latitude coordinate changes from less than 40.7806284 to less than 40.31.", "label": "machine learning"}
+{"question": "What was the departure time of the train going to Boston?", "label": "retrieval"}
+{"question": "How does the inherent structure of the dataset evolve over time, considering that the trip started on May 11, 2018, at 08:23:11 and the numeric code for the starting station is 467?", "label": "machine learning"}
+{"question": "state the round that had a game attended attended by 9359 people", "label": "retrieval"}
+{"question": "What is the Release date for the Covered Song named \" sign o' the times \" by prince .?", "label": "retrieval"}
+{"question": "Which IHSAA Football Class has a School of whitko?", "label": "retrieval"}
+{"question": "Identify the anomalies in the longitude of the ending station over time, assuming the type of user changes from Subscriber to Customer.", "label": "machine learning"}
+{"question": "What inherent structure in the dataset can be predicted over time if the trip duration in seconds decreases from 252 to 250?", "label": "machine learning"}
+{"question": "Identify the outliers associated with changes in price momentum over time, if the housing affordability payment ratio is less than 0.41803 and the standardized HPI deviation changes from 0.738063 to 0.71.", "label": "machine learning"}
+{"question": "Can you analyze the yearly average cost of Bitcoin purchases by region, excluding the first year's data? Rank the regions based on these averages each year and calculate the annual percentage change in cost.", "label": "retrieval"}
+{"question": "Can you predict which group the type of user belongs to over time if the name of the station where the trip began is Broadway & W 38 St and the numeric code for the starting station changes from less than 3565 to less than 3158?", "label": "machine learning"}
+{"question": "What would be the suitable outcome for the metropolitan statistical area identifier as time progresses?", "label": "machine learning"}
+{"question": "How do cluster groupings of input features change over time if the latitude of the ending station is less than 40.69221589 and the trip end time is November 30, 2015, at 08:37:30?", "label": "machine learning"}
+{"question": "Help me look at the total number of bike trips, average trip duration (in minutes), average daily temperature, wind speed, and precipitation when trip starts (rounded to 1 decimal), as well as the month with the most trips (e.g., `4`), categorized by different starting and ending neighborhoods in New York City for the year 2014.", "label": "retrieval"}
+{"question": "Can you identify natural clusters in the data over time, considering that the duration of the ride was more than 207 minutes and the longitude of the starting station was -73.99392888?", "label": "machine learning"}
+{"question": "What are the cluster groupings over time for input features, considering that the trip duration in seconds exceeds 207 and the longitude of the starting station is -73.99392888?", "label": "machine learning"}
+{"question": "Can you predict the future variations in trip duration measured in seconds over time?", "label": "machine learning"}
+{"question": "Can you identify any unusual behavior in the year-over-year change in the housing price index over time, if the deviation from trend changes from 0.370064 to 0.38 and the baseline trend of the housing price index changes from -1.056347 to -1.04?", "label": "machine learning"}
+{"question": "How do you think the user's birth year will change over time?", "label": "machine learning"}
+{"question": "How can we measure the upcoming changes in the ending station's latitude coordinate over time, if the starting station's longitude coordinate is less than -73.967416?", "label": "machine learning"}
+{"question": "How would you predict outliers in the latitude of the ending station over time if the start time in NYC local time changes from November 30, 2017, at 4:21:33 PM to November 29, 2017, at 4:21:33 PM?", "label": "machine learning"}
+{"question": "What deviations from normal can be observed in the starting station's longitude coordinate over time if the arrival station name changes from W 52 St & 11 Ave to Duffield St & Willoughby St?", "label": "machine learning"}
+{"question": "Find the top 5 CT scan series ID, including their series number, patient ID, and series size (in MiB), where the series are not classified as 'LOCALIZER' or have the specific JPEG compressed transfer syntaxes '1.2.840.10008.1.2.4.70' or '1.2.840.10008.1.2.4.51'. The series must have consistent slice intervals, exposure levels, image orientation, pixel spacing, image positions, and pixel dimensions. Additionally, the z-axis of the image orientation must align with the expected plane (dot product between 0.99 and 1.01).", "label": "retrieval"}
+{"question": "For each year, which driver and which constructor scored the most points? I want the full name of each driver.", "label": "retrieval"}
+{"question": "What is the percentage of this constellation with an area of 248.885 sq. deg.?", "label": "retrieval"}
+{"question": "How can we identify outliers in the duration of rides over time for users who are subscribers?", "label": "machine learning"}
+{"question": "What is the number of votes when Ron Paul is the candidate with less than 0 counties?", "label": "retrieval"}
+{"question": "How do groupings across input features evolve over time if the nominal housing price index changes from 33.76 to 33.52?", "label": "machine learning"}
+{"question": "What unusual patterns can you identify in the ending station longitude coordinate over time?", "label": "machine learning"}
+{"question": "Which Lost has a Club of club?", "label": "retrieval"}
