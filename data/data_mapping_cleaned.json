@@ -1,0 +1,1905 @@
+{"taxi_trips" : {
+    "unique_key": [
+        "unique trip identifier",
+        "trip's unique ID",
+        "trip key"
+    ],
+    "taxi_id": [
+        "taxi identifier",
+        "ID of the taxi",
+        "which taxi was used"
+    ],
+    "trip_start_timestamp": [
+        "start time of the trip",
+        "when the trip started",
+        "trip starting time"
+    ],
+    "trip_end_timestamp": [
+        "end time of the trip",
+        "when the trip ended",
+        "trip finishing time"
+    ],
+    "trip_seconds": [
+        "trip duration in seconds",
+        "how long the trip lasted in seconds",
+        "time taken for the trip in seconds"
+    ],
+    "trip_miles": [
+        "trip distance in miles",
+        "how far the trip was",
+        "distance of the trip"
+    ],
+    "pickup_census_tract": [
+        "pickup census tract",
+        "where the trip began",
+        "origin census tract"
+    ],
+    "dropoff_census_tract": [
+        "dropoff census tract",
+        "where the trip ended",
+        "destination census tract"
+    ],
+    "pickup_community_area": [
+        "neighborhood where the trip started",
+        "community where the passenger was picked up",
+        "starting neighborhood of the trip"
+    ],
+    "dropoff_community_area": [
+        "neighborhood where the trip ended",
+        "community where the passenger was dropped off",
+        "ending neighborhood of the trip"
+    ],
+    "fare": [
+        "trip fare",
+        "fare amount",
+        "cost of the ride"
+    ],
+    "tips": [
+        "tip amount",
+        "gratuity for the trip",
+        "how much tip was given"
+    ],
+    "tolls": [
+        "toll charges",
+        "amount paid in tolls",
+        "trip tolls"
+    ],
+    "extras": [
+        "extra charges",
+        "additional fees",
+        "miscellaneous charges"
+    ],
+    "trip_total": [
+        "total trip cost",
+        "overall cost of the trip",
+        "sum of all trip charges"
+    ],
+    "payment_type": [
+        "payment method",
+        "how the trip was paid for",
+        "type of payment used"
+    ],
+    "company": [
+        "taxi company",
+        "which company operated the taxi",
+        "cab company"
+    ],
+    "pickup_latitude": [
+        "latitude of the pickup location",
+        "pickup latitude coordinate"
+    ],
+    "pickup_longitude": [
+        "longitude of the pickup location",
+        "pickup longitude coordinate"
+    ],
+    "pickup_location": [
+        "location where the passenger was picked up",
+        "starting point of the trip",
+        "place where the trip began"
+    ],
+    "dropoff_latitude": [
+        "latitude of the dropoff location",
+        "dropoff latitude coordinate"
+    ],
+    "dropoff_longitude": [
+        "longitude of the dropoff location",
+        "dropoff longitude coordinate"
+    ],
+    "dropoff_location": [
+        "location where the passenger was dropped off",
+        "ending point of the trip",
+        "place where the trip finished"
+    ]
+},
+"gsod2020" : {
+    "stn": [
+        "station code",
+        "weather station identifier"
+    ],
+    "wban": [
+        "WBAN station number",
+        "weather bureau station code"
+    ],
+    "date": [
+        "observation date",
+        "date of weather report",
+        "day of recorded weather data"
+    ],
+    "year": [
+        "year of observation",
+        "observation year"
+    ],
+    "mo": [
+        "month of observation",
+        "observation month"
+    ],
+    "da": [
+        "day of the month",
+        "day number"
+    ],
+    "temp": [
+        "average temperature",
+        "mean daily temperature",
+        "daily temperature in Fahrenheit"
+    ],
+    "count_temp": [
+        "number of temperature readings",
+        "temperature observation count"
+    ],
+    "dewp": [
+        "average dew point",
+        "mean daily dew point",
+        "daily dew point in Fahrenheit"
+    ],
+    "count_dewp": [
+        "number of dew point readings",
+        "dew point observation count"
+    ],
+    "slp": [
+        "average sea level pressure",
+        "mean sea-level pressure",
+        "daily sea level pressure in millibars"
+    ],
+    "count_slp": [
+        "number of sea level pressure readings",
+        "sea level pressure observation count"
+    ],
+    "stp": [
+        "average station pressure",
+        "mean station pressure",
+        "daily station pressure in millibars"
+    ],
+    "count_stp": [
+        "number of station pressure readings",
+        "station pressure observation count"
+    ],
+    "visib": [
+        "average visibility",
+        "mean daily visibility",
+        "visibility in miles"
+    ],
+    "count_visib": [
+        "number of visibility readings",
+        "visibility observation count"
+    ],
+    "wdsp": [
+        "average wind speed",
+        "mean wind speed",
+        "daily wind speed in knots"
+    ],
+    "count_wdsp": [
+        "number of wind speed readings",
+        "wind speed observation count"
+    ],
+    "mxpsd": [
+        "maximum sustained wind speed",
+        "highest sustained wind reported"
+    ],
+    "gust": [
+        "maximum wind gust",
+        "highest gust reported during the day"
+    ],
+    "max": [
+        "maximum temperature",
+        "highest temperature during the day"
+    ],
+    "flag_max": [
+        "max temperature source flag",
+        "indicator for max temperature source"
+    ],
+    "min": [
+        "minimum temperature",
+        "lowest temperature during the day"
+    ],
+    "flag_min": [
+        "min temperature source flag",
+        "indicator for min temperature source"
+    ],
+    "prcp": [
+        "daily precipitation",
+        "total rainfall or snowmelt",
+        "precipitation amount"
+    ],
+    "flag_prcp": [
+        "precipitation source flag",
+        "indicator for precipitation data source"
+    ],
+    "sndp": [
+        "snow depth",
+        "reported snow depth",
+        "daily snow level"
+    ],
+    "fog": [
+        "fog occurrence",
+        "whether fog was observed"
+    ],
+    "rain_drizzle": [
+        "rain or drizzle occurrence",
+        "whether rain or drizzle was observed"
+    ],
+    "snow_ice_pellets": [
+        "snow or ice pellets occurrence",
+        "whether snow or ice pellets occurred"
+    ],
+    "hail": [
+        "hail occurrence",
+        "whether hail was observed"
+    ],
+    "thunder": [
+        "thunder occurrence",
+        "whether thunder was heard"
+    ],
+    "tornado_funnel_cloud": [
+        "tornado or funnel cloud occurrence",
+        "whether tornado or funnel cloud was seen"
+    ]
+
+},
+"bikeshare_trips": {
+    "trip_id": [
+        "ID of the trip",
+        "unique identifier of the bike trip",
+        "bike trip number"
+    ],
+    "subscriber_type": [
+        "type of subscriber",
+        "user type",
+        "rider category"
+    ],
+    "bike_id": [
+        "ID of the bike",
+        "identifier of the bike used",
+        "which bike was used"
+    ],
+    "bike_type": [
+        "type of bike used",
+        "bike model or type",
+        "kind of bike"
+    ],
+    "start_time": [
+        "trip start time",
+        "when the trip started",
+        "starting time of the ride"
+    ],
+    "start_station_id": [
+        "identifier for the starting station",
+        "ID of the starting station",
+        "starting station reference number"
+    ],
+    "start_station_name": [
+        "departure station name",
+        "name of the station where the trip started",
+        "starting station"
+    ],
+    "end_station_id": [
+        "identifier for the destination station",
+        "ID of the ending station",
+        "ending station reference number"
+    ],
+    "end_station_name": [
+        "arrival station name",
+        "name of the station where the trip ended",
+        "ending station"
+    ],
+    "duration_minutes": [
+        "trip duration in minutes",
+        "how long the trip lasted",
+        "ride time in minutes"
+    ]
+},
+"summary" : {
+    "date": [
+        "observation date",
+        "reporting date",
+        "date of the report"
+    ],
+    "admin_level_1": [
+        "state abbreviation",
+        "2-letter state code",
+        "postal abbreviation of the state"
+    ],
+    "state": [
+        "state abbreviation",
+        "2-letter state code",
+        "postal code for the state"
+    ],
+    "tests_increase": [
+        "new tests performed",
+        "number of new tests conducted",
+        "increase in total tests"
+    ],
+    "tests_total": [
+        "total tests performed",
+        "cumulative number of tests",
+        "overall test count"
+    ],
+    "tests_pending": [
+        "pending tests",
+        "tests awaiting results",
+        "number of tests still pending"
+    ],
+    "cases_positive_increase": [
+        "new positive cases",
+        "increase in confirmed cases",
+        "number of newly identified positive cases"
+    ],
+    "cases_positive_total": [
+        "total positive cases",
+        "cumulative confirmed cases",
+        "total number of individuals tested positive"
+    ],
+    "cases_negative_increase": [
+        "new negative cases",
+        "increase in negative test results",
+        "number of newly identified negative cases"
+    ],
+    "cases_negative_total": [
+        "total negative cases",
+        "cumulative negative results",
+        "total number of individuals tested negative"
+    ],
+    "deaths_increase": [
+        "newly reported deaths",
+        "increase in death count",
+        "new deaths due to the disease"
+    ],
+    "deaths_total": [
+        "total deaths reported",
+        "cumulative death toll",
+        "total number of fatalities"
+    ],
+    "recovered_total": [
+        "total recoveries",
+        "cumulative number of recovered patients",
+        "number of individuals who tested negative after recovering"
+    ],
+    "hospitilzations_current": [
+        "currently hospitalized individuals",
+        "patients currently in hospital",
+        "number of people hospitalized now"
+    ],
+    "hospitalizations_increase": [
+        "new hospital admissions",
+        "increase in hospitalizations",
+        "number of newly hospitalized individuals"
+    ],
+    "hospitalizations_total": [
+        "total hospitalizations",
+        "cumulative number of hospitalized individuals",
+        "total individuals hospitalized including discharged"
+    ],
+    "icu_current": [
+        "individuals currently in ICU",
+        "patients currently in intensive care",
+        "current ICU occupancy"
+    ],
+    "icu_total": [
+        "total ICU admissions",
+        "cumulative number of ICU cases",
+        "total individuals treated in ICU"
+    ],
+    "ventilator_current": [
+        "individuals currently on ventilators",
+        "patients currently using ventilators",
+        "current ventilator usage"
+    ],
+    "ventilator_total": [
+        "total ventilator usage",
+        "cumulative number of ventilated patients",
+        "total individuals who used a ventilator"
+    ],
+    "last_checked_ts": [
+        "last checked timestamp",
+        "datetime of last update",
+        "last time data was refreshed"
+    ]
+},
+"citibike_trips" : {
+    "tripduration": [
+        "trip duration in seconds",
+        "how long the ride lasted",
+        "length of the bike trip"
+    ],
+    "starttime": [
+        "trip start time",
+        "when the trip started",
+        "start time in NYC local time"
+    ],
+    "stoptime": [
+        "trip end time",
+        "when the trip ended",
+        "end time in NYC local time"
+    ],
+    "start_station_id": [
+        "ID of the station where the trip began",
+        "identifier of the departure station",
+        "numeric code for starting station"
+    ],
+    "start_station_name": [
+        "name of the station where the trip began",
+        "departure station name",
+        "starting station name"
+    ],
+    "start_station_latitude": [
+        "latitude of the starting station",
+        "starting station latitude coordinate"
+    ],
+    "start_station_longitude": [
+        "longitude of the starting station",
+        "starting station longitude coordinate"
+    ],
+    "end_station_id": [
+        "ID of the station where the trip ended",
+        "identifier of the arrival station",
+        "numeric code for ending station"
+    ],
+    "end_station_name": [
+        "name of the station where the trip ended",
+        "arrival station name",
+        "ending station"
+    ],
+    "end_station_latitude": [
+        "latitude of the ending station",
+        "ending station latitude coordinate"
+    ],
+    "end_station_longitude": [
+        "longitude of the ending station",
+        "ending station longitude coordinate"
+    ],
+    "bikeid": [
+        "ID of the bike",
+        "identifier of the bike used",
+        "which bike was used"
+    ],
+    "usertype": [
+        "type of user",
+        "type of customer (subscriber or casual)",
+        "subscription category"
+    ],
+    "birth_year": [
+        "birth year of the user",
+        "rider's year of birth",
+        "year the rider was born"
+    ],
+    "gender": [
+        "rider's gender",
+        "gender of the user",
+        "user's reported gender"
+    ],
+    "customer_plan": [
+        "name of the customer's plan",
+        "pricing plan for the trip",
+        "rate plan used"
+    ]
+},
+"usa_1910_current" : {
+    "state": [
+        "state code",
+        "2-letter state abbreviation",
+        "U.S. state where the name was registered"
+    ],
+    "gender": [
+        "gender of the person",
+        "sex of the individual",
+        "whether the person is male or female"
+    ],
+    "year": [
+        "year of birth",
+        "birth year",
+        "the year the name was recorded"
+    ],
+    "name": [
+        "first name",
+        "given name at birth",
+        "given name"
+    ],
+    "number": [
+        "number of times the name occurred",
+        "count of people with this name",
+        "frequency of the name"
+    ]
+},
+"air_quality_annual_summary" : {
+    "state_code": [
+        "state FIPS code",
+        "FIPS code of the state"
+    ],
+    "county_code": [
+        "county FIPS code",
+        "FIPS code of the county"
+    ],
+    "site_num": [
+        "site number within the county",
+        "monitoring site identifier"
+    ],
+    "parameter_code": [
+        "code for the measured parameter",
+        "AQS parameter code"
+    ],
+    "poc": [
+        "parameter occurrence code",
+        "instrument identifier for same parameter"
+    ],
+    "latitude": [
+        "site latitude",
+        "latitude of the monitoring location"
+    ],
+    "longitude": [
+        "site longitude",
+        "longitude of the monitoring location"
+    ],
+    "parameter_name": [
+        "name of the measured parameter",
+        "pollutant or factor being measured"
+    ],
+    "sample_duration": [
+        "sampling duration",
+        "time span of each air sample"
+    ],
+    "pollutant_standard": [
+        "pollutant standard used",
+        "regulatory air quality standard"
+    ],
+    "method_name": [
+        "measurement method",
+        "equipment or process used for sampling"
+    ],
+    "year": [
+        "reporting year",
+        "year of the annual summary"
+    ],
+    "units_of_measure": [
+        "measurement units",
+        "units used for the parameter"
+    ],
+    "event_type": [
+        "data event type",
+        "indicator of exceptional events"
+    ],
+    "observation_count": [
+        "number of observations",
+        "total samples collected"
+    ],
+    "completeness_indicator": [
+        "data completeness flag",
+        "whether completeness criteria were met"
+    ],
+    "valid_day_count": [
+        "number of valid sampling days",
+        "count of valid days in the year"
+    ],
+    "exceptional_data_count": [
+        "exceptional data points",
+        "samples affected by unusual events"
+    ],
+    "null_data_count": [
+        "missing data points",
+        "number of uncollected samples with reason"
+    ],
+    "secondary_exceedance_count": [
+        "exceedances of secondary standards",
+        "times secondary standards were exceeded"
+    ],
+    "certification_indicator": [
+        "certification status",
+        "indicator of certified data completeness and accuracy"
+    ],
+    "num_obs_below_mdl": [
+        "samples below detection limit",
+        "number of readings under MDL"
+    ],
+    "arithmetic_standard_dev": [
+        "standard deviation of readings",
+        "variation in annual values"
+    ],
+    "first_max_value": [
+        "highest reading of the year",
+        "annual maximum value"
+    ],
+    "first_max_datetime": [
+        "date and time of highest value",
+        "timestamp of max reading"
+    ],
+    "second_max_value": [
+        "second highest reading of the year",
+        "2nd largest annual value"
+    ],
+    "third_max_datetime": [
+        "date and time of third highest value",
+        "timestamp of 3rd max reading"
+    ],
+    "fourth_max_value": [
+        "fourth highest reading of the year",
+        "4th largest annual value"
+    ],
+    "first_max_non_overlapping_value": [
+        "max non-overlapping 8-hour CO value",
+        "highest non-overlapping CO reading"
+    ],
+    "first_no_max_datetime": [
+        "timestamp of max non-overlapping value",
+        "date and time of highest non-overlapping CO value"
+    ],
+    "second_max_non_overlapping_value": [
+        "second highest non-overlapping CO value",
+        "2nd non-overlapping 8-hour CO reading"
+    ],
+    "ninety_nine_percentile": [
+        "99th percentile value",
+        "value below which 99% of data fall"
+    ],
+    "ninety_eight_percentile": [
+        "98th percentile value",
+        "value below which 98% of data fall"
+    ],
+    "ninety_five_percentile": [
+        "95th percentile value",
+        "value below which 95% of data fall"
+    ],
+    "ninety_percentile": [
+        "90th percentile value",
+        "value below which 90% of data fall"
+    ],
+    "seventy_five_percentile": [
+        "75th percentile value",
+        "value below which 75% of data fall"
+    ],
+    "ten_percentile": [
+        "10th percentile value",
+        "value below which 10% of data fall"
+    ],
+    "local_site_name": [
+        "name of the monitoring site",
+        "locally assigned site name"
+    ],
+    "address": [
+        "site address",
+        "street address of the monitoring location"
+    ],
+    "state_name": [
+        "state where the site is located",
+        "name of the state"
+    ],
+    "county_name": [
+        "county where the site is located",
+        "name of the county"
+    ],
+    "city_name": [
+        "city where the site is located",
+        "name of the city"
+    ]
+
+},
+"quick_summary" : {
+    "submission_number": [
+        "submission number",
+        "EDGAR accession number",
+        "unique ID assigned to the filing"
+    ],
+    "company_name": [
+        "name of the company",
+        "registrant name",
+        "company that made the filing"
+    ],
+    "measure_tag": [
+        "XBRL measure tag",
+        "financial metric tag",
+        "taxonomy tag name"
+    ],
+    "period_end_date": [
+        "end date of the reporting period",
+        "date when the period ended",
+        "reporting period end"
+    ],
+    "value": [
+        "reported value",
+        "financial value recorded",
+        "data value in the filing"
+    ],
+    "units": [
+        "units of measurement",
+        "measurement unit for the value",
+        "unit in which the value is expressed"
+    ],
+    "number_of_quarters": [
+        "number of quarters covered",
+        "quarters represented by the data",
+        "reporting period length in quarters"
+    ],
+    "version": [
+        "taxonomy version",
+        "version of the tag used",
+        "filing or taxonomy identifier"
+    ],
+    "central_index_key": [
+        "central index key",
+        "CIK assigned by the SEC",
+        "registrant's SEC ID"
+    ],
+    "ein": [
+        "employer identification number",
+        "IRS EIN of the company",
+        "business tax ID number"
+    ],
+    "sic": [
+        "SIC code",
+        "standard industry classification code",
+        "4-digit business category code"
+    ],
+    "fiscal_year_end": [
+        "fiscal year-end date",
+        "end date of the fiscal year",
+        "company's year-end"
+    ],
+    "form": [
+        "form type",
+        "SEC filing type",
+        "submission form code"
+    ],
+    "fiscal_year": [
+        "fiscal year",
+        "reporting year",
+        "year of the financial report"
+    ],
+    "fiscal_period_focus": [
+        "fiscal period focus",
+        "reporting period (e.g. Q1, FY)",
+        "portion of the fiscal year covered"
+    ],
+    "date_filed": [
+        "filing date",
+        "date submitted to the SEC",
+        "date of official filing"
+    ],
+    "date_accepted": [
+        "acceptance date and time",
+        "when the filing was accepted by the SEC",
+        "timestamp of filing acceptance"
+    ]
+},
+"metadata" : {
+    "allVersions": [
+        "all AFDB versions of this prediction",
+        "list of AFDB versions for this entry"
+    ],
+    "latestVersion": [
+        "latest AFDB version",
+        "most recent version of the prediction"
+    ],
+    "organismCommonNames": [
+        "common names of the organism",
+        "everyday names for the organism"
+    ],
+    "uniprotEnd": [
+        "end position in the UniProt sequence",
+        "last residue index in UniProt"
+    ],
+    "proteinShortNames": [
+        "short names of the protein",
+        "abbreviated protein names"
+    ],
+    "uniprotStart": [
+        "start position in the UniProt sequence",
+        "first residue index in UniProt"
+    ],
+    "fractionPlddtConfident": [
+        "fraction of residues with confident pLDDT",
+        "percent of residues with mid-range confidence"
+    ],
+    "organismSynonyms": [
+        "synonyms for the organism",
+        "alternative organism names"
+    ],
+    "fractionPlddtVeryHigh": [
+        "fraction of residues with very high pLDDT (>90)",
+        "percent of residues with very high confidence"
+    ],
+    "proteinFullNames": [
+        "full names of the protein",
+        "complete protein names"
+    ],
+    "globalMetricValue": [
+        "average pLDDT score",
+        "mean confidence score for the prediction"
+    ],
+    "organismScientificName": [
+        "scientific name of the organism",
+        "Latin name of the organism"
+    ],
+    "uniprotDescription": [
+        "recommended UniProt name",
+        "UniProt protein description"
+    ],
+    "fractionPlddtLow": [
+        "fraction of residues with low pLDDT",
+        "percent of residues with low confidence"
+    ],
+    "uniprotAccession": [
+        "UniProt accession ID",
+        "accession number from UniProt"
+    ],
+    "sequenceChecksum": [
+        "sequence CRC64 hash",
+        "checksum of the protein sequence"
+    ],
+    "taxId": [
+        "NCBI taxonomy ID",
+        "taxonomic identifier for the species"
+    ],
+    "uniprotId": [
+        "UniProt entry name",
+        "entry identifier from UniProt"
+    ],
+    "modelCreatedDate": [
+        "model creation date",
+        "date when the prediction model was created"
+    ],
+    "fractionPlddtVeryLow": [
+        "fraction of residues with very low pLDDT (<50)",
+        "percent of residues with poor confidence"
+    ],
+    "sequenceVersionDate": [
+        "date of last sequence update",
+        "last modified date in UniProt"
+    ],
+    "entryId": [
+        "AFDB entry ID",
+        "identifier of the prediction entry"
+    ],
+    "geneSynonyms": [
+        "gene name synonyms",
+        "alternative gene names"
+    ],
+    "uniprotSequence": [
+        "amino acid sequence",
+        "UniProt protein sequence"
+    ],
+    "gene": [
+        "gene name",
+        "primary name of the gene"
+    ],
+    "isReferenceProteome": [
+        "is part of the reference proteome",
+        "included in reference proteome set"
+    ],
+    "isReviewed": [
+        "is part of SwissProt",
+        "has been manually reviewed in UniProt"
+    ]
+},
+"historical_runups_column_phrases" : {
+        "id": [
+            "record ID",
+            "unique runup identifier"
+        ],
+        "tsevent_id": [
+            "tsunami event ID",
+            "ID of the associated tsunami source"
+        ],
+        "year": [
+            "year of the event",
+            "calendar year the tsunami occurred"
+        ],
+        "month": [
+            "month of the event",
+            "calendar month of occurrence"
+        ],
+        "day": [
+            "day of the event",
+            "calendar day of occurrence"
+        ],
+        "timestamp": [
+            "UTC timestamp of the event",
+            "date and time of the tsunami in UTC"
+        ],
+        "doubtful": [
+            "doubtful event indicator",
+            "uncertainty flag or meteorological source marker"
+        ],
+        "country": [
+            "country affected",
+            "nation where tsunami was observed"
+        ],
+        "state": [
+            "state or province affected",
+            "region within the country"
+        ],
+        "location_name": [
+            "name of the affected location",
+            "city or island impacted"
+        ],
+        "latitude": [
+            "latitude of runup site",
+            "geographic latitude"
+        ],
+        "longitude": [
+            "longitude of runup site",
+            "geographic longitude"
+        ],
+        "region_code": [
+            "regional code of affected area",
+            "numeric region classification"
+        ],
+        "distance_from_source": [
+            "distance to tsunami source",
+            "distance between runup and origin"
+        ],
+        "arr_day": [
+            "arrival day",
+            "day tsunami reached site"
+        ],
+        "arr_hour": [
+            "arrival hour",
+            "hour of tsunami arrival"
+        ],
+        "arr_min": [
+            "arrival minute",
+            "minute of tsunami arrival"
+        ],
+        "travel_time_hours": [
+            "tsunami travel time in hours",
+            "duration to reach site in hours"
+        ],
+        "travel_time_minutes": [
+            "tsunami travel time in minutes",
+            "duration to reach site in minutes"
+        ],
+        "water_ht": [
+            "maximum water height",
+            "peak wave elevation above sea level"
+        ],
+        "horizontal_inundation": [
+            "inundation distance inland",
+            "maximum horizontal flooding"
+        ],
+        "type_measurement_id": [
+            "measurement type ID",
+            "method of runup measurement"
+        ],
+        "period": [
+            "wave period (minutes)",
+            "duration of first wave cycle"
+        ],
+        "first_motion": [
+            "initial wave motion",
+            "whether the first wave was a rise or fall"
+        ],
+        "deaths": [
+            "number of deaths",
+            "fatalities at runup site"
+        ],
+        "deaths_description": [
+            "death severity category",
+            "qualitative death descriptor"
+        ],
+        "injuries": [
+            "number of injuries",
+            "injured individuals"
+        ],
+        "injuries_description": [
+            "injury severity category",
+            "qualitative injury descriptor"
+        ],
+        "damage_millions_dollars": [
+            "damage amount in millions USD",
+            "estimated monetary loss"
+        ],
+        "damage_description": [
+            "damage severity level",
+            "qualitative damage descriptor"
+        ],
+        "houses_damaged": [
+            "number of houses damaged",
+            "damaged residential structures"
+        ],
+        "houses_damaged_description": [
+            "housing damage category",
+            "qualitative damage scale for houses"
+        ],
+        "houses_destroyed": [
+            "number of houses destroyed",
+            "destroyed residences"
+        ],
+        "houses_destroyed_description": [
+            "housing destruction category",
+            "qualitative destruction scale for houses"
+        ]
+},
+"msa_ts" : {
+    "msa": [
+        "MSA code",
+        "metropolitan statistical area identifier",
+        "5-digit code for metro area"
+    ],
+    "month": [
+        "observation month",
+        "month of the time series record",
+        "monthly data point"
+    ],
+    "hpi_value": [
+        "nominal housing price index",
+        "raw housing price index",
+        "HPI before inflation adjustment"
+    ],
+    "hpi_yoy_pct_chg": [
+        "year-over-year change in housing price index",
+        "annual percent change in HPI",
+        "HPI growth over the past year"
+    ],
+    "hpi_distance": [
+        "HPI deviation from trend",
+        "distance from HPI long-term trend",
+        "standardized HPI deviation"
+    ],
+    "hpi_returns": [
+        "monthly HPI return",
+        "month-over-month change in housing price index",
+        "HPI percentage return"
+    ],
+    "hpi_real": [
+        "real housing price index",
+        "inflation-adjusted housing price index",
+        "HPI adjusted for inflation"
+    ],
+    "hpi_trend": [
+        "long-term HPI trend",
+        "baseline trend of housing price index",
+        "linear trend in HPI"
+    ],
+    "afford_detrended": [
+        "affordability deviation from trend",
+        "standardized deviation of housing affordability",
+        "distance of affordability metric from long-term trend"
+    ],
+    "afford_pmt": [
+        "housing affordability payment ratio",
+        "percent of income needed for median home payment",
+        "affordability as percent of household income"
+    ],
+    "acceleration_value": [
+        "change in price momentum",
+        "monthly acceleration of HPI trend",
+        "monthly shift in HPI velocity"
+    ],
+    "velocity_value": [
+        "smoothed yearly HPI growth",
+        "trend velocity of HPI",
+        "year-over-year HPI change (smoothed)"
+    ],
+    "risk": [
+        "risk of price decline in next 12 months",
+        "probability HPI will be lower a year from now",
+        "model-predicted downside risk"
+    ]
+},
+"orders_column_phrases" : {
+    "order_id": [
+        "order ID",
+        "unique order number",
+        "identifier for the order"
+    ],
+    "user_id": [
+        "user ID",
+        "customer identifier",
+        "ID of the user who placed the order"
+    ],
+    "status": [
+        "order status",
+        "current state of the order",
+        "whether the order is delivered, returned, etc."
+    ],
+    "gender": [
+        "gender of the user",
+        "customer's gender"
+    ],
+    "created_at": [
+        "order creation time",
+        "when the order was placed",
+        "timestamp of order submission"
+    ],
+    "returned_at": [
+        "order return time",
+        "when the order was returned",
+        "timestamp of return"
+    ],
+    "shipped_at": [
+        "shipping time",
+        "when the order was shipped",
+        "timestamp of shipment"
+    ],
+    "delivered_at": [
+        "delivery time",
+        "when the order was delivered",
+        "timestamp of delivery"
+    ],
+    "num_of_item": [
+        "number of items in the order",
+        "number of items ordered",
+        "total quantity of products ordered"
+    ]
+},
+"solar_potential_by_postal_code" : {
+    "region_name": [
+        "postal code",
+        "ZIP code"
+    ],
+    "state_name": [
+        "state name",
+        "name of the state"
+    ],
+    "lat_max": [
+        "maximum latitude of the region",
+        "northernmost latitude"
+    ],
+    "lat_min": [
+        "minimum latitude of the region",
+        "southernmost latitude"
+    ],
+    "lng_max": [
+        "maximum longitude of the region",
+        "easternmost longitude"
+    ],
+    "lng_min": [
+        "minimum longitude of the region",
+        "westernmost longitude"
+    ],
+    "lat_avg": [
+        "average latitude of the region",
+        "central latitude"
+    ],
+    "lng_avg": [
+        "average longitude of the region",
+        "central longitude"
+    ],
+    "yearly_sunlight_kwh_kw_threshold_avg": [
+        "average annual sunlight at 75% threshold",
+        "sunlight potential at 75% of optimum"
+    ],
+    "count_qualified": [
+        "number of solar-suitable buildings",
+        "qualified buildings for solar installation"
+    ],
+    "percent_covered": [
+        "percent of buildings covered by Project Sunroof",
+        "coverage of Project Sunroof data"
+    ],
+    "percent_qualified": [
+        "percent of covered buildings suitable for solar",
+        "share of buildings qualified for solar"
+    ],
+    "number_of_panels_n": [
+    "estimated number of panels on north-facing roofs",
+    "solar panel capacity for north-facing rooftops"
+    ],
+    "number_of_panels_s": [
+        "estimated number of panels on south-facing roofs",
+        "solar panel capacity for south-facing rooftops"
+    ],
+    "number_of_panels_e": [
+        "estimated number of panels on east-facing roofs",
+        "solar panel capacity for east-facing rooftops"
+    ],
+    "number_of_panels_w": [
+        "estimated number of panels on west-facing roofs",
+        "solar panel capacity for west-facing rooftops"
+    ],
+    "number_of_panels_f": [
+        "estimated number of panels on flat roofs",
+        "solar panel capacity for flat rooftop surfaces"
+    ],
+    "number_of_panels_median": [
+        "number of panels on a median roof",
+        "median roof panel capacity"
+    ],
+    "number_of_panels_total": [
+        "total solar panel capacity",
+        "total potential number of panels across all roof types"
+    ],
+    "kw_median": [
+        "solar capacity of the median roof",
+        "median building's solar potential (kW)"
+    ],
+    "kw_total": [
+        "total solar capacity",
+        "total kW potential across all roofs"
+    ],
+    "yearly_sunlight_kwh_n": [
+        "annual potential solar energy from north-facing roofs",
+        "yearly potential generation from north-facing panels"
+    ],
+    "yearly_sunlight_kwh_s": [
+        "annual potential solar energy from south-facing roofs",
+        "yearly potential generation from south-facing panels"
+    ],
+    "yearly_sunlight_kwh_e": [
+        "annual potential solar energy from east-facing roofs",
+        "yearly potential generation from east-facing panels"
+    ],
+    "yearly_sunlight_kwh_w": [
+        "annual potential solar energy from west-facing roofs",
+        "yearly potential generation from west-facing panels"
+    ],
+    "yearly_sunlight_kwh_f": [
+        "annual potential solar energy from flat roofs",
+        "yearly potential generation from flat panel installations"
+    ],
+    "yearly_sunlight_kwh_median": [
+        "annual potential solar energy for median roof",
+        "kWh/year for a typical roof in the region"
+    ],
+    "yearly_sunlight_kwh_total": [
+        "total potential annual solar energy generation",
+        "total potential sunlight output across all roof types"
+    ],
+    "install_size_kw_buckets": [
+    "number of candidate buildings by installation size",
+    "number of buildings with potential for each size bucket"
+    ],
+    "carbon_offset_metric_tons": [
+        "potential carbon offset in metric tons",
+        "CO2 emissions reduction potential"
+    ],
+    "existing_installs_count": [
+        "number of existing solar installations",
+        "buildings already using solar power"
+    ],
+    "center_point": [
+        "geographic center point",
+        "location center of the postal region"
+    ]
+},
+"fips" : {
+    "Year": [
+        "reporting year",
+        "data year"
+    ],
+    "GeoFIPS": [
+        "county FIPS code",
+        "geographic identifier"
+    ],
+    "GeoName": [
+        "county name",
+        "FIPS location name"
+    ],
+    "Employer_contrib_pension_and_insurance": [
+        "employer contributions to pensions and insurance",
+        "contributions to employee retirement and insurance benefits"
+    ],
+    "Employer_contrib_govt_and_social_insurance": [
+        "amount of employer contributions to government and social insurance",
+        "employer-paid social insurance"
+    ],
+    "Farm_proprietors_income": [
+        "income from farm proprietors",
+        "farm-related self-employment income"
+    ],
+    "Nonfarm_proprietors_income": [
+        "income from nonfarm proprietors",
+        "nonfarm self-employment income"
+    ],
+    "Farm_proprietors_employment": [
+        "farm proprietor jobs",
+        "number of self-employed in farming"
+    ],
+    "Income_maintenance_benefits": [
+        "income maintenance assistance",
+        "government benefits for income support"
+    ],
+    "Nonfarm_proprietors_employment": [
+        "nonfarm proprietor jobs",
+        "self-employed workers not in farming"
+    ],
+    "Percapita_income_maintenance_benefits": [
+        "income maintenance per capita",
+        "per-person income support benefits"
+    ],
+    "Percapita_retirement_and_other": [
+        "retirement and other income per capita",
+        "per-person retirement benefits"
+    ],
+    "Percapita_unemployment_insurance_compensation": [
+        "unemployment benefits per capita",
+        "per-person unemployment insurance payments"
+    ],
+    "Proprietors_income": [
+        "total proprietors' income",
+        "combined farm and nonfarm self-employment income"
+    ],
+    "Retirement_and_other": [
+        "retirement and miscellaneous benefits",
+        "other personal current transfer receipts"
+    ],
+    "Wages_and_salaries_supplement": [
+        "wage supplements",
+        "employer-paid supplements to wages"
+    ],
+    "Unemployment_insurance": [
+        "unemployment insurance benefits",
+        "government unemployment payments"
+    ],
+    "Wages_and_salaries": [
+        "total salaries",
+        "employee compensation"
+    ],
+    "Nonfarm_proprietors_income_avg": [
+        "average nonfarm proprietor income",
+        "nonfarm self-employment income on average"
+    ],
+    "Wages_and_salaries_avg": [
+        "average wage",
+        "salary on average"
+    ],
+    "Dividends_interest_rent": [
+        "dividend, interest, and rental income",
+        "investment income"
+    ],
+    "Earnings_by_place_of_work": [
+        "earnings depending on work",
+        "income earned by job location"
+    ],
+    "Net_earnings_by_place_of_residence": [
+        "net earnings by residence",
+        "resident-based income after adjustments"
+    ],
+    "Percapita_dividends_interest_rent": [
+        "per capita investment income",
+        "dividend, interest, and rent per person"
+    ],
+    "Percapita_net_earnings": [
+        "average net earnings per person",
+        "net income per capita"
+    ],
+    "Percapita_personal_current_transfer_receipts": [
+        "per capita transfer receipts",
+        "government transfers per person"
+    ],
+    "Percapita_personal_income": [
+        "per capita personal income",
+        "average income per resident"
+    ],
+    "Personal_current_transfer_receipts": [
+        "personal transfer receipts",
+        "government payments to individuals"
+    ],
+    "Population": [
+        "total population",
+        "number of residents"
+    ],
+    "Proprietors_employment": [
+        "total proprietor employment",
+        "self-employed jobs"
+    ],
+    "Wage_and_salary_employment": [
+        "number of wage and salary employment",
+        "number of employee jobs"
+    ],
+    "Earnings_per_job_avg": [
+        "average earnings per job",
+        "earnings per position"
+    ],
+    "Personal_income": [
+        "total personal income",
+        "aggregate income of residents"
+    ],
+    "Total_employment": [
+        "total employment",
+        "all jobs in the county"
+    ]
+},
+
+    "street_trees" : {
+        "tree_id": [
+            "ID of the tree",
+            "unique identifier for the tree"
+        ],
+        "legal_status": [
+            "tree's legal status",
+            "whether the tree is permitted or maintained by DPW"
+        ],
+        "species": [
+            "tree species",
+            "type of tree"
+        ],
+        "address": [
+            "tree address",
+            "location of the tree"
+        ],
+        "site_order": [
+            "tree order at the address",
+            "position of the tree among others at the same address"
+        ],
+        "site_info": [
+            "tree location description",
+            "details about where the tree is planted"
+        ],
+        "plant_type": [
+            "type of planting",
+            "tree or landscaping type"
+        ],
+        "care_taker": [
+            "primary caregiver for the tree",
+            "person or agency responsible for tree care"
+        ],
+        "care_assistant": [
+            "secondary caregiver for the tree",
+            "backup person or agency for tree maintenance"
+        ],
+        "plant_date": [
+            "tree planting date",
+            "when the tree was planted"
+        ],
+        "dbh": [
+            "diameter at breast height",
+            "tree trunk width measurement"
+        ],
+        "plot_size": [
+            "tree plot size",
+            "dimensions of the tree's planting area"
+        ],
+        "permit_notes": [
+            "permit reference",
+            "reference of tree permit"
+        ],
+        "x_coordinate": [
+            "x coordinate (CA State Plane III)",
+            "east-west coordinate"
+        ],
+        "y_coordinate": [
+            "y coordinate (CA State Plane III)",
+            "north-south coordinate"
+        ],
+        "latitude": [
+            "latitude of the tree location",
+            "tree location latitude"
+        ],
+        "longitude": [
+            "longitude of the tree location",
+            "tree location longitude"
+        ],
+        "location": [
+            "formatted location",
+            "tree location in the map"
+        ]
+   
+},
+
+    "natality" : {
+        "source_year": [
+            "source year",
+            "year the data was collected"
+        ],
+        "year": [
+            "birth year",
+            "year the child was born"
+        ],
+        "month": [
+            "birth month",
+            "month the child was born"
+        ],
+        "day": [
+            "day of birth",
+            "birth day"
+        ],
+        "wday": [
+            "day of the week",
+            "weekday of birth"
+        ],
+        "state": [
+            "birth state code",
+            "postal code of birth place"
+        ],
+        "is_male": [
+            "whether the child is male",
+            "the child is male"
+        ],
+        "child_race": [
+            "child's race",
+            "race of the newborn"
+        ],
+        "weight_pounds": [
+            "birth weight in pounds",
+            "newborn's weight at birth"
+        ],
+        "plurality": [
+            "number of babies born as a result of the pregnancy",
+            "how many children were born from the pregnancy"
+        ],
+        "apgar_1min": [
+            "Apgar score at 1 minute",
+            "newborn health score after 1 minute"
+        ],
+        "apgar_5min": [
+            "Apgar score at 5 minutes",
+            "newborn health score after 5 minutes"
+        ],
+        "mother_residence_state": [
+            "mother's state of residence",
+            "where the mother lived at time of birth"
+        ],
+        "mother_race": [
+            "mother's race",
+            "race of the mother"
+        ],
+        "mother_age": [
+            "mother's age at time of birth",
+            "age of the mother"
+        ],
+        "gestation_weeks": [
+            "gestation period in weeks",
+            "pregnancy length"
+        ],
+        "lmp": [
+            "last menstrual period date",
+            "date of last menstruation"
+        ],
+        "mother_married": [
+            "mother was married at time of birth",
+            "marriage status of the mother"
+        ],
+        "mother_birth_state": [
+            "mother's birth state code",
+            "state where the mother was born"
+        ],
+        "cigarette_use": [
+            "whether mother smoked during pregnancy",
+            "maternal cigarette use"
+        ],
+        "cigarettes_per_day": [
+            "cigarettes smoked per day by the mother",
+            "daily cigarette consumption by the mother"
+        ],
+        "alcohol_use": [
+            "whether the mother drank during pregnancy",
+            "maternal alcohol use"
+        ],
+        "drinks_per_week": [
+            "number of alcoholic drinks per week",
+            "weekly alcohol consumption by the mother"
+        ],
+        "weight_gain_pounds": [
+            "mother's weight gain during the pregnancy",
+            "weight gained during pregnancy"
+        ],
+        "born_alive_alive": [
+            "living children previously born",
+            "number of surviving children"
+        ],
+        "born_alive_dead": [
+            "previous children now deceased",
+            "number of children previously born but now dead"
+        ],
+        "born_dead": [
+            "previous stillbirths or miscarriages",
+            "number of children born dead"
+        ],
+        "ever_born": [
+            "total children ever born",
+            "total lifetime births including current one"
+        ],
+        "father_race": [
+            "father's race",
+            "race of the father"
+        ],
+        "father_age": [
+            "father's age at time of birth",
+            "age of the father"
+        ],
+        "record_weight": [
+            "sampling weight of record",
+            "data source classification"
+        ]
+},
+
+    "outpatient_charges_2014" : {
+        "apc": [
+            "APC code and description",
+            "ambulatory payment classification"
+        ],
+        "provider_id": [
+            "ID of the provider",
+            "CMS certification number"
+        ],
+        "provider_name": [
+            "name of the provider",
+            "hospital or facility name"
+        ],
+        "provider_street_address": [
+            "street address of the hospital or facility",
+            "address of the provider's location"
+        ],
+        "provider_city": [
+            "city of the hospital or facility",
+            "city where the provider is located"
+        ],
+        "provider_state": [
+            "state of the hospital or facility",
+            "state where the provider is located"
+        ],
+        "provider_zipcode": [
+            "provider ZIP code",
+            "ZIP code of the provider location"
+        ],
+        "hospital_referral_region": [
+            "hospital referral region",
+            "region where the hospital is located"
+        ],
+        "outpatient_services": [
+            "number of outpatient services billed",
+            "count of billed outpatient procedures"
+        ],
+        "average_estimated_submitted_charges": [
+            "average submitted charges by the provider",
+            "provider's estimated charge per outpatient service"
+        ],
+        "average_total_payments": [
+            "average total payment received by the provider",
+            "total average reimbursement including patient responsibility"
+        ]
+},
+
+    "projects" : {
+        "id": [
+            "ID of the project",
+            "unique identifier for the project"
+        ],
+        "platform": [
+            "package manager name",
+            "platform where the project is hosted"
+        ],
+        "name": [
+            "project name",
+            "name of the project on its platform"
+        ],
+        "created_timestamp": [
+            "project discovery date",
+            "timestamp when the project was first found"
+        ],
+        "updated_timestamp": [
+            "last project update time",
+            "when the project was last modified"
+        ],
+        "description": [
+            "project description",
+            "summary of the project"
+        ],
+        "keywords": [
+            "project keywords",
+            "tags or keywords associated with the project"
+        ],
+        "homepage_url": [
+            "link of homepage",
+            "project's homepage or repository link"
+        ],
+        "licenses": [
+            "project licenses",
+            "declared software licenses"
+        ],
+        "repository_url": [
+            "repository URL",
+            "source code repository link"
+        ],
+        "versions_count": [
+            "number of project versions",
+            "total published versions of the project"
+        ],
+        "sourcerank": [
+            "source rank score",
+            "Libraries.io quality and popularity score"
+        ],
+        "latest_release_publish_timestamp": [
+            "latest release date",
+            "when the latest version was published"
+        ],
+        "latest_release_number": [
+            "latest release version",
+            "version number of the latest release"
+        ],
+        "package_manager_id": [
+            "project ID from package manager",
+            "package manager's internal project ID"
+        ],
+        "dependent_projects_count": [
+            "number of dependent projects",
+            "how many projects depend on this one"
+        ],
+        "language": [
+            "main programming language",
+            "language the project is written in"
+        ],
+        "status": [
+            "project status",
+            "current maintenance status of the project"
+        ],
+        "last_synced_timestamp": [
+            "last sync time",
+            "timestamp of last update from package manager"
+        ],
+        "dependent_repositories_count": [
+            "number of dependent repositories",
+            "open source repos that list the project as a dependency"
+        ],
+        "repository_id": [
+            "ID of the repository",
+            "internal Libraries.io repository identifier"
+        ]
+},
+
+    "disclosures_13" : {
+        "family_id": [
+            "simple patent family ID",
+            "ID linking all publications with shared priority claims"
+        ],
+        "record_id": [
+            "record ID",
+            "unique disclosure record identifier"
+        ],
+        "disclosure_event": [
+            "disclosure grouping event",
+            "event grouping multiple disclosures by the same firm on the same date"
+        ],
+        "sso": [
+            "standard setting organization",
+            "SSO where the disclosure was made"
+        ],
+        "patent_owner_harmonized": [
+            "cleaned patent owner name",
+            "harmonized name of the disclosing company"
+        ],
+        "patent_owner_unharmonized": [
+            "original patent owner name",
+            "company name from the original disclosure"
+        ],
+        "date": [
+            "disclosure date",
+            "date the statement was submitted to the SSO"
+        ],
+        "standard": [
+            "standard name",
+            "name of the disclosed standard"
+        ],
+        "committee_project": [
+            "committee name",
+            "name of the committee related to the disclosure"
+        ],
+        "tc_name": [
+            "technical committee",
+            "technical committee associated with the disclosure"
+        ],
+        "sc_name": [
+            "standards committee",
+            "standard committee involved in the disclosure"
+        ],
+        "wg_name": [
+            "working group",
+            "working group relevant to the disclosure"
+        ],
+        "licensing_commitment": [
+            "licensing terms",
+            "licensing commitment made for the disclosed IP"
+        ],
+        "copyright": [
+            "IP type is copyright",
+            "flag indicating the disclosure is for copyright, not patent"
+        ],
+        "blanket_type": [
+            "blanket disclosure type",
+            "scope of non-specific IP disclosure"
+        ],
+        "blanket_scope": [
+            "scope of blanket disclosure",
+            "targeted project or standard for the blanket claim"
+        ],
+        "third_party": [
+            "third-party disclosure",
+            "indicates whether disclosure was made by a third party"
+        ],
+        "reciprocity": [
+            "reciprocal licensing condition",
+            "licensing commitment depends on reciprocal terms"
+        ],
+        "serial_cleaned": [
+            "cleaned application serial number",
+            "standardized patent application serial number"
+        ],
+        "pub_cleaned": [
+            "cleaned publication number",
+            "standardized patent publication number"
+        ]
+},
+
+"mbb_historical_teams_games" : {
+    "season": [
+        "season year",
+        "year the game was played"
+    ],
+    "scheduled_date": [
+        "game date",
+        "date the game took place"
+    ],
+    "attendance": [
+        "game attendance",
+        "number of attendees"
+    ],
+    "market": [
+        "team school name",
+        "school name"
+    ],
+    "name": [
+        "team name",
+        "name of the team"
+    ],
+    "team_code": [
+        "team school code",
+        "NCAA team code"
+    ],
+    "team_id": [
+        "ID of the team",
+        "Sportradar team identifier"
+    ],
+    "alias": [
+        "team alias",
+        "alternate team name"
+    ],
+    "current_division": [
+        "team's current division",
+        "division the team belongs to"
+    ],
+    "points_game": [
+        "team points",
+        "points scored by the team"
+    ],
+    "win": [
+        "team win",
+        "whether the team won the game"
+    ],
+    "opp_market": [
+        "opponent school name",
+        "opponent's market name"
+    ],
+    "opp_name": [
+        "opponent team name",
+        "name of the opposing team"
+    ],
+    "opp_code": [
+        "opponent school code",
+        "NCAA code for opponent"
+    ],
+    "opp_id": [
+        "opponent ID",
+        "Sportradar ID for opponent"
+    ],
+    "opp_alias": [
+        "opponent alias",
+        "alternate name for opponent"
+    ],
+    "opp_current_division": [
+        "opponent division",
+        "current division of the opponent"
+    ],
+    "opp_points_game": [
+        "opponent points",
+        "points scored by the opponent"
+    ]
+}
+}
+

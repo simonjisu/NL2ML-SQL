@@ -1,0 +1,31 @@
+scenario,llm_type,metric,value
+Type 1,Llama-3.1 8B\n(Fine-tuned),Cost(1K Tkns),2.16
+Type 1,GPT o1-mini,Cost(1K Tkns),2.49
+Type 1,GPT o3-mini,Cost(1K Tkns),2.41
+Type 1,Llama-3.1 8B\n(Fine-tuned),PM,87.68
+Type 1,GPT o1-mini,PM,80.54
+Type 1,GPT o3-mini,PM,89.95
+Type 1,Llama-3.1 8B\n(Fine-tuned),EM,58.09
+Type 1,GPT o1-mini,EM,48.45
+Type 1,GPT o3-mini,EM,63.83
+Type 1,Llama-3.1 8B\n(Fine-tuned),Cost-to-PM,0.0246
+Type 1,GPT o1-mini,Cost-to-PM,0.0309
+Type 1,GPT o3-mini,Cost-to-PM,0.0268
+Type 1,Llama-3.1 8B\n(Fine-tuned),Cost-to-EM,0.0371
+Type 1,GPT o1-mini,Cost-to-EM,0.0514
+Type 1,GPT o3-mini,Cost-to-EM,0.0377
+Type 2,Llama-3.1 8B\n(Fine-tuned),Cost(1K Tkns),2.25
+Type 2,GPT o1-mini,Cost(1K Tkns),3.13
+Type 2,GPT o3-mini,Cost(1K Tkns),3.19
+Type 2,Llama-3.1 8B\n(Fine-tuned),PM,80.08
+Type 2,GPT o1-mini,PM,57.52
+Type 2,GPT o3-mini,PM,72.89
+Type 2,Llama-3.1 8B\n(Fine-tuned),EM,35.14
+Type 2,GPT o1-mini,EM,3.02
+Type 2,GPT o3-mini,EM,17.65
+Type 2,Llama-3.1 8B\n(Fine-tuned),Cost-to-PM,0.0282
+Type 2,GPT o1-mini,Cost-to-PM,0.0545
+Type 2,GPT o3-mini,Cost-to-PM,0.0438
+Type 2,Llama-3.1 8B\n(Fine-tuned),Cost-to-EM,0.0642
+Type 2,GPT o1-mini,Cost-to-EM,1.0378
+Type 2,GPT o3-mini,Cost-to-EM,0.1807

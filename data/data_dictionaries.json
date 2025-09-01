@@ -1,0 +1,2283 @@
+[
+  {
+    "telco": {
+      "columns": {
+        "customerID": {
+          "type": "string",
+          "description": "unique identifier for each customer"
+        },
+        "gender": {
+          "type": "string",
+          "description": "binary feature for gender",
+          "enum_values": [
+            "Male",
+            "Female"
+          ]
+        },
+        "SeniorCitizen": {
+          "type": "integer",
+          "description": "binary feature indicating whether the customer is a senior citizen (1) or not (0)"
+        },
+        "Partner": {
+          "type": "string",
+          "description": "binary feature indicating whether the customer has a partner",
+          "enum_values": [
+            "Yes",
+            "No"
+          ]
+        },
+        "Dependents": {
+          "type": "string",
+          "description": "binary feature indicating whether the customer has dependents",
+          "enum_values": [
+            "Yes",
+            "No"
+          ]
+        },
+        "tenure": {
+          "type": "integer",
+          "description": "number of months the customer has stayed with the company"
+        },
+        "PhoneService": {
+          "type": "string",
+          "description": "binary feature indicating whether the customer has a phone service",
+          "enum_values": [
+            "Yes",
+            "No"
+          ]
+        },
+        "MultipleLines": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has multiple lines",
+          "enum_values": [
+            "No phone service",
+            "No",
+            "Yes"
+          ]
+        },
+        "InternetService": {
+          "type": "string",
+          "description": "categorical feature indicating the type of internet service",
+          "enum_values": [
+            "DSL",
+            "Fiber optic",
+            "No"
+          ]
+        },
+        "OnlineSecurity": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has online security service",
+          "enum_values": [
+            "No internet service",
+            "No",
+            "Yes"
+          ]
+        },
+        "OnlineBackup": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has online backup service",
+          "enum_values": [
+            "No internet service",
+            "No",
+            "Yes"
+          ]
+        },
+        "DeviceProtection": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has device protection service",
+          "enum_values": [
+            "No internet service",
+            "No",
+            "Yes"
+          ]
+        },
+        "TechSupport": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has tech support service",
+          "enum_values": [
+            "No internet service",
+            "No",
+            "Yes"
+          ]
+        },
+        "StreamingTV": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has streaming TV service",
+          "enum_values": [
+            "No internet service",
+            "No",
+            "Yes"
+          ]
+        },
+        "StreamingMovies": {
+          "type": "string",
+          "description": "categorical feature indicating whether the customer has streaming movies service",
+          "enum_values": [
+            "No internet service",
+            "No",
+            "Yes"
+          ]
+        },
+        "Contract": {
+          "type": "string",
+          "description": "categorical feature indicating the contract type",
+          "enum_values": [
+            "Month-to-month",
+            "One year",
+            "Two year"
+          ]
+        },
+        "PaperlessBilling": {
+          "type": "string",
+          "description": "binary feature indicating whether the customer uses paperless billing",
+          "enum_values": [
+            "Yes",
+            "No"
+          ]
+        },
+        "PaymentMethod": {
+          "type": "string",
+          "description": "categorical feature indicating the payment method",
+          "enum_values": [
+            "Electronic check",
+            "Mailed check",
+            "Bank transfer (automatic)",
+            "Credit card (automatic)"
+          ]
+        },
+        "MonthlyCharges": {
+          "type": "float",
+          "description": "amount charged to the customer per month"
+        },
+        "TotalCharges": {
+          "type": "float",
+          "description": "total amount charged to the customer"
+        },
+        "Churn": {
+          "type": "string",
+          "description": "binary target variable indicating whether the customer has churned",
+          "enum_values": [
+            "Yes",
+            "No"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "gsod2020": {
+      "columns": {
+        "stn": {
+          "type": "STRING",
+          "description": "Station identifier (NOAA GSOD format)."
+        },
+        "wban": {
+          "type": "STRING",
+          "description": "Weather Bureau Army Navy (WBAN) station identifier, if applicable."
+        },
+        "date": {
+          "type": "DATE",
+          "description": "Date of the weather observations"
+        },
+        "year": {
+          "type": "INTEGER",
+          "description": "Year of the observation (4-digit)."
+        },
+        "mo": {
+          "type": "STRING",
+          "description": "Month of the observation (2-digit string)."
+        },
+        "da": {
+          "type": "STRING",
+          "description": "Day of the observation (2-digit string)."
+        },
+        "temp": {
+          "type": "FLOAT",
+          "description": "Mean temperature for the day in tenths of degrees Fahrenheit. Missing value = 9999.9"
+        },
+        "count_temp": {
+          "type": "INTEGER",
+          "description": "Number of observations used to calculate mean temperature."
+        },
+        "dewp": {
+          "type": "FLOAT",
+          "description": "Mean dew point in tenths of degrees Fahrenheit. Missing value = 9999.9"
+        },
+        "count_dewp": {
+          "type": "INTEGER",
+          "description": "Number of observations used to calculate mean dew point."
+        },
+        "slp": {
+          "type": "FLOAT",
+          "description": "Mean sea level pressure in tenths of millibars. Missing value = 9999.9"
+        },
+        "count_slp": {
+          "type": "INTEGER",
+          "description": "Number of observations used to calculate mean sea level pressure."
+        },
+        "stp": {
+          "type": "FLOAT",
+          "description": "Mean station pressure in tenths of millibars. Missing value = 9999.9"
+        },
+        "count_stp": {
+          "type": "INTEGER",
+          "description": "Number of observations used to calculate mean sea level pressure."
+        },
+        "visib": {
+          "type": "FLOAT",
+          "description": "Mean visibility in tenths of miles. Missing value = 999.9"
+        },
+        "count_visib": {
+          "type": "INTEGER",
+          "description": "Number of observations used to calculate mean visibility."
+        },
+        "wdsp": {
+          "type": "FLOAT",
+          "description": "Mean wind speed in tenths of knots. Missing value = 999.9"
+        },
+        "count_wdsp": {
+          "type": "INTEGER",
+          "description": "Number of observations used to calculate mean wind speed."
+        },
+        "mxpsd": {
+          "type": "FLOAT",
+          "description": "Maximum sustained wind speed for the day in tenths of knots. Missing value = 999.9"
+        },
+        "gust": {
+          "type": "FLOAT",
+          "description": "Maximum wind gust for the day in tenths of knots. Missing value = 999.9"
+        },
+        "max": {
+          "type": "FLOAT",
+          "description": "Maximum temperature during the day in tenths of degrees Fahrenheit. Time of max varies by region. Missing value = 9999.9"
+        },
+        "flag_max": {
+          "type": "BOOL",
+          "description": "Blank means the max temperature was derived from max temp report; '*' means it was derived from hourly data (highest hourly/synoptic value)."
+        },
+        "min": {
+          "type": "FLOAT",
+          "description": "Minimum temperature during the day in tenths of degrees Fahrenheit. Time of min varies by region. Missing value = 9999.9"
+        },
+        "flag_min": {
+          "type": "BOOL",
+          "description": "Blank means that the min temperature was derived from min temp report; '*' means it was derived from hourly data (lowest hourly/synoptic value)."
+        },
+        "prcp": {
+          "type": "FLOAT",
+          "description": "Total daily precipitation (rain/melted snow) in hundredths of inches. May span parts of adjacent days. .00 = no measurable precipitation. Missing = 99.99"
+        },
+        "flag_prcp": {
+          "type": "STRING",
+          "description": "Precipitation report type: A\u2013G = 6/12/24-hour sums, H = 0 reported but some precip seen hourly, I = no precip data reported."
+        },
+        "sndp": {
+          "type": "FLOAT",
+          "description": "Snow depth in tenths of inches. Missing = 999.9"
+        },
+        "fog": {
+          "type": "BOOL",
+          "description": "Indicator. 1 = fog occurred during the day; 0 = did not occur or not reported."
+        },
+        "rain_drizzle": {
+          "type": "BOOL",
+          "description": "Indicator. 1 = rain or drizzle occurred during the day; 0 = did not occur or not reported."
+        },
+        "snow_ice_pellets": {
+          "type": "BOOL",
+          "description": "Indicator. 1 = snow or ice pellets occurred during the day; 0 = did not occur or not reported."
+        },
+        "hail": {
+          "type": "BOOL",
+          "description": "Indicator. 1 = hail occurred during the day; 0 = did not occur or not reported."
+        },
+        "thunder": {
+          "type": "BOOL",
+          "description": "Indicator. 1 = thunder occurred during the day; 0 = did not occur or not reported."
+        },
+        "tornado_funnel_cloud": {
+          "type": "BOOL",
+          "description": "Indicator. 1 = tornado or funnel cloud occurred; 0 = did not occur or not reported."
+        }
+      }
+    }
+  },
+  {
+    "solar_potential_by_postal_code": {
+      "columns": {
+        "region_name": {
+          "type": "STRING",
+          "description": "Postal code of the region."
+        },
+        "state_name": {
+          "type": "STRING",
+          "description": "U.S. state where the postal code is located."
+        },
+        "lat_max": {
+          "type": "FLOAT",
+          "description": "Maximum latitude within the region."
+        },
+        "lat_min": {
+          "type": "FLOAT",
+          "description": "Minimum latitude within the region."
+        },
+        "lng_max": {
+          "type": "FLOAT",
+          "description": "Maximum longitude within the region."
+        },
+        "lng_min": {
+          "type": "FLOAT",
+          "description": "Minimum longitude within the region."
+        },
+        "lat_avg": {
+          "type": "FLOAT",
+          "description": "Average latitude of the region."
+        },
+        "lng_avg": {
+          "type": "FLOAT",
+          "description": "Average longitude of the region."
+        },
+        "yearly_sunlight_kwh_kw_threshold_avg": {
+          "type": "FLOAT",
+          "description": "Average annual sunlight received per kW for qualified buildings, expressed as 75% of the optimum solar potential in the containing county."
+        },
+        "count_qualified": {
+          "type": "INTEGER",
+          "description": "Number of buildings in Google Maps considered suitable for solar installation."
+        },
+        "percent_covered": {
+          "type": "FLOAT",
+          "description": "Percentage of buildings in the region covered by Project Sunroof."
+        },
+        "percent_qualified": {
+          "type": "FLOAT",
+          "description": "Percentage of covered buildings suitable for solar installation."
+        },
+        "number_of_panels_n": {
+          "type": "INTEGER",
+          "description": "Estimated number of solar panels that fit on north-facing roof space, assuming panel size 1.650m x 0.992m."
+        },
+        "number_of_panels_s": {
+          "type": "INTEGER",
+          "description": "Estimated number of solar panels that fit on south-facing roof space, assuming panel size 1.650m x 0.992m."
+        },
+        "number_of_panels_e": {
+          "type": "INTEGER",
+          "description": "Estimated number of solar panels that fit on east-facing roof space, assuming panel size 1.650m x 0.992m."
+        },
+        "number_of_panels_w": {
+          "type": "INTEGER",
+          "description": "Estimated number of solar panels that fit on west-facing roof space, assuming panel size 1.650m x 0.992m."
+        },
+        "number_of_panels_f": {
+          "type": "INTEGER",
+          "description": "Estimated number of solar panels that fit on flat roof space, assuming panel size 1.650m x 0.992m."
+        },
+        "number_of_panels_median": {
+          "type": "INTEGER",
+          "description": "Median number of solar panels that fit on a typical roof."
+        },
+        "number_of_panels_total": {
+          "type": "INTEGER",
+          "description": "Total estimated number of solar panels that could be installed in the region."
+        },
+        "kw_median": {
+          "type": "FLOAT",
+          "description": "Estimated solar capacity in kilowatts for a median building, assuming 250W per panel."
+        },
+        "kw_total": {
+          "type": "FLOAT",
+          "description": "Total estimated solar capacity in kilowatts for all suitable buildings in the region."
+        },
+        "yearly_sunlight_kwh_n": {
+          "type": "FLOAT",
+          "description": "Annual solar energy generation potential from north-facing roofs."
+        },
+        "yearly_sunlight_kwh_s": {
+          "type": "FLOAT",
+          "description": "Annual solar energy generation potential from south-facing roofs."
+        },
+        "yearly_sunlight_kwh_e": {
+          "type": "FLOAT",
+          "description": "Annual solar energy generation potential from east-facing roofs."
+        },
+        "yearly_sunlight_kwh_w": {
+          "type": "FLOAT",
+          "description": "Annual solar energy generation potential from west-facing roofs."
+        },
+        "yearly_sunlight_kwh_f": {
+          "type": "FLOAT",
+          "description": "Annual solar energy generation potential from flat roofs."
+        },
+        "yearly_sunlight_kwh_median": {
+          "type": "FLOAT",
+          "description": "Annual solar generation potential per kW for the median roof, in DC terms."
+        },
+        "yearly_sunlight_kwh_total": {
+          "type": "FLOAT",
+          "description": "Total solar energy generation potential for all rooftops in the region."
+        },
+        "install_size_kw_buckets": {
+          "type": "STRING",
+          "description": "List of lists representing ranges of installation sizes (in kW) and number of buildings in each range."
+        },
+        "carbon_offset_metric_tons": {
+          "type": "FLOAT",
+          "description": "Estimated carbon dioxide offset potential (metric tons) for all technically feasible solar capacity, based on eGRID emissions factors."
+        },
+        "existing_installs_count": {
+          "type": "INTEGER",
+          "description": "Estimated number of buildings with existing solar installations at the time of data collection."
+        },
+        "center_point": {
+          "type": "GEOGRAPHY",
+          "description": "Geospatial point representing the center of the region."
+        }
+      }
+    }
+  },
+  {
+    "orders": {
+      "columns": {
+        "order_id": {
+          "type": "STRING",
+          "description": "Unique identifier for the order."
+        },
+        "user_id": {
+          "type": "STRING",
+          "description": "Unique identifier for the user who placed the order."
+        },
+        "status": {
+          "type": "STRING",
+          "description": "Current status of the order. Possible values: 'cancelled', 'complete', 'processing', 'returned', or 'shipped'."
+        },
+        "gender": {
+          "type": "STRING",
+          "description": "Gender of the customer associated with the order."
+        },
+        "created_at": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp when the order was created."
+        },
+        "returned_at": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp when the order was returned, if applicable."
+        },
+        "shipped_at": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp when the order was shipped."
+        },
+        "delivered_at": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp when the order was delivered to the customer."
+        },
+        "num_of_item": {
+          "type": "INTEGER",
+          "description": "Total number of items included in the order."
+        }
+      }
+    }
+  },
+  {
+    "citibike_trips": {
+      "columns": {
+        "tripduration": {
+          "type": "INTEGER",
+          "description": "Duration of the trip in seconds."
+        },
+        "starttime": {
+          "type": "DATETIME",
+          "description": "Trip start time in New York City local time."
+        },
+        "stoptime": {
+          "type": "DATETIME",
+          "description": "Trip end time in New York City local time."
+        },
+        "start_station_id": {
+          "type": "STRING",
+          "description": "Unique identifier for the station where the trip started."
+        },
+        "start_station_name": {
+          "type": "STRING",
+          "description": "Name of the station where the trip started."
+        },
+        "start_station_latitude": {
+          "type": "FLOAT",
+          "description": "Latitude of the start station."
+        },
+        "start_station_longitude": {
+          "type": "FLOAT",
+          "description": "Longitude of the start station."
+        },
+        "end_station_id": {
+          "type": "STRING",
+          "description": "Unique identifier for the station where the trip ended."
+        },
+        "end_station_name": {
+          "type": "STRING",
+          "description": "Name of the station where the trip ended."
+        },
+        "end_station_latitude": {
+          "type": "FLOAT",
+          "description": "Latitude of the end station."
+        },
+        "end_station_longitude": {
+          "type": "FLOAT",
+          "description": "Longitude of the end station."
+        },
+        "bikeid": {
+          "type": "STRING",
+          "description": "Identifier of the bike used for the trip."
+        },
+        "usertype": {
+          "type": "STRING",
+          "description": "User type: 'Customer' for short-term passes (24-hour or 7-day), 'Subscriber' for annual members."
+        },
+        "birth_year": {
+          "type": "INTEGER",
+          "description": "Year of birth of the user."
+        },
+        "gender": {
+          "type": "STRING",
+          "description": "Gender of the user (e.g., 'male', 'female', or 'unknown')."
+        },
+        "customer_plan": {
+          "type": "STRING",
+          "description": "Name of the pricing plan applied to the trip."
+        }
+      }
+    }
+  },
+  {
+    "fips": {
+      "columns": {
+        "Year": {
+          "type": "DATE",
+          "description": "Federal Information Processing Standards(FIPS) reporting year."
+        },
+        "GeoFIPS": {
+          "type": "STRING",
+          "description": "FIPS code (GeoID) for the U.S. county."
+        },
+        "GeoName": {
+          "type": "STRING",
+          "description": "Description of the U.S. county corresponding to the FIPS code."
+        },
+        "Employer_contrib_pension_and_insurance": {
+          "type": "INTEGER",
+          "description": "Employer contributions to pension and insurance (thousands of dollars), including both actual and actuarially imputed contributions."
+        },
+        "Employer_contrib_govt_and_social_insurance": {
+          "type": "INTEGER",
+          "description": "Employer contributions to government and social insurance programs (thousands of dollars)."
+        },
+        "Farm_proprietors_income": {
+          "type": "INTEGER",
+          "description": "Farm proprietors' income (thousands of dollars)."
+        },
+        "Nonfarm_proprietors_income": {
+          "type": "INTEGER",
+          "description": "Nonfarm proprietors' income (thousands of dollars)."
+        },
+        "Farm_proprietors_employment": {
+          "type": "INTEGER",
+          "description": "Number of farm proprietorship jobs (excludes limited partners)."
+        },
+        "Income_maintenance_benefits": {
+          "type": "INTEGER",
+          "description": "Income maintenance benefits (thousands of dollars), including SSI, EITC, SNAP, WIC, and other assistance programs."
+        },
+        "Nonfarm_proprietors_employment": {
+          "type": "INTEGER",
+          "description": "Number of nonfarm proprietorship jobs."
+        },
+        "Percapita_income_maintenance_benefits": {
+          "type": "INTEGER",
+          "description": "Per capita income maintenance benefits (in dollars)."
+        },
+        "Percapita_retirement_and_other": {
+          "type": "INTEGER",
+          "description": "Per capita retirement and other income (in dollars)."
+        },
+        "Percapita_unemployment_insurance_compensation": {
+          "type": "INTEGER",
+          "description": "Per capita unemployment insurance compensation (in dollars)."
+        },
+        "Proprietors_income": {
+          "type": "INTEGER",
+          "description": "Total proprietors' income (thousands of dollars)."
+        },
+        "Retirement_and_other": {
+          "type": "INTEGER",
+          "description": "Retirement and other personal current transfer receipts (thousands of dollars)."
+        },
+        "Wages_and_salaries_supplement": {
+          "type": "INTEGER",
+          "description": "Wages and salaries supplements (thousands of dollars)."
+        },
+        "Unemployment_insurance": {
+          "type": "INTEGER",
+          "description": "Unemployment insurance benefits (thousands of dollars)."
+        },
+        "Wages_and_salaries": {
+          "type": "INTEGER",
+          "description": "Total wages and salaries (thousands of dollars)."
+        },
+        "Nonfarm_proprietors_income_avg": {
+          "type": "INTEGER",
+          "description": "Average nonfarm proprietors' income (in dollars)."
+        },
+        "Wages_and_salaries_avg": {
+          "type": "INTEGER",
+          "description": "Average wages and salaries (in dollars)."
+        },
+        "Dividends_interest_rent": {
+          "type": "INTEGER",
+          "description": "Dividends, interest, and rent income (thousands of dollars), including capital consumption adjustment."
+        },
+        "Earnings_by_place_of_work": {
+          "type": "INTEGER",
+          "description": "Total earnings by place of work (thousands of dollars)."
+        },
+        "Net_earnings_by_place_of_residence": {
+          "type": "INTEGER",
+          "description": "Net earnings by place of residence (thousands of dollars)."
+        },
+        "Percapita_dividends_interest_rent": {
+          "type": "INTEGER",
+          "description": "Per capita income from dividends, interest, and rent (in dollars)."
+        },
+        "Percapita_net_earnings": {
+          "type": "INTEGER",
+          "description": "Per capita net earnings (in dollars)."
+        },
+        "Percapita_personal_current_transfer_receipts": {
+          "type": "INTEGER",
+          "description": "Per capita personal current transfer receipts (in dollars)."
+        },
+        "Percapita_personal_income": {
+          "type": "INTEGER",
+          "description": "Per capita personal income (in dollars)."
+        },
+        "Personal_current_transfer_receipts": {
+          "type": "INTEGER",
+          "description": "Total personal current transfer receipts (thousands of dollars)."
+        },
+        "Population": {
+          "type": "INTEGER",
+          "description": "Estimated population for the county (Census Bureau estimate). Estimates for 2010-2018 reflect county population estimates available as of March 2019."
+        },
+        "Proprietors_employment": {
+          "type": "INTEGER",
+          "description": "Total number of proprietorship jobs (farm and nonfarm)."
+        },
+        "Wage_and_salary_employment": {
+          "type": "INTEGER",
+          "description": "Total number of wage and salary jobs."
+        },
+        "Earnings_per_job_avg": {
+          "type": "INTEGER",
+          "description": "Average earnings per job (in dollars)."
+        },
+        "Personal_income": {
+          "type": "INTEGER",
+          "description": "Total personal income (thousands of dollars)."
+        },
+        "Total_employment": {
+          "type": "INTEGER",
+          "description": "Total employment including wage/salary and proprietors' jobs."
+        }
+      }
+    }
+  },
+  {
+    "historical_runups": {
+      "columns": {
+        "id": {
+          "type": "STRING",
+          "description": "Unique numeric identifier of the runup record."
+        },
+        "tsevent_id": {
+          "type": "STRING",
+          "description": "Identifier of the associated tsunami source event."
+        },
+        "year": {
+          "type": "INTEGER",
+          "description": "Year of the event (-2000 to present). Negative values represent B.C. years."
+        },
+        "month": {
+          "type": "STRING",
+          "description": "Month of the event (1\u201312). Times are in UTC."
+        },
+        "day": {
+          "type": "STRING",
+          "description": "Day of the event (1\u201331)"
+        },
+        "timestamp": {
+          "type": "DATETIME",
+          "description": "Event timestamp in UTC."
+        },
+        "doubtful": {
+          "type": "STRING",
+          "description": "'?' indicates a doubtful runup. 'M' indicates the wave likely had a meteorological source."
+        },
+        "country": {
+          "type": "STRING",
+          "description": "Country where the tsunami effects were observed."
+        },
+        "state": {
+          "type": "STRING",
+          "description": "State where tsunami effects were observed."
+        },
+        "location_name": {
+          "type": "STRING",
+          "description": "The location (city, province or island) where the tsunami effects were observed."
+        },
+        "latitude": {
+          "type": "FLOAT",
+          "description": "Latitude of the runup location (-90 to 90)."
+        },
+        "longitude": {
+          "type": "FLOAT",
+          "description": "Longitude of the runup location (-180 to 180)."
+        },
+        "region_code": {
+          "type": "STRING",
+          "description": "Region code based on tsunami frequency, geophysical relations, and political boundaries."
+        },
+        "distance_from_source": {
+          "type": "INTEGER",
+          "description": "Distance from the tsunami source to the runup location (in km, if available)."
+        },
+        "arr_day": {
+          "type": "INTEGER",
+          "description": "Exact day the tsunami arrived."
+        },
+        "arr_hour": {
+          "type": "INTEGER",
+          "description": "Exact hour the tsunami arrived."
+        },
+        "arr_min": {
+          "type": "INTEGER",
+          "description": "Exact minute the tsunami arrived."
+        },
+        "travel_time_hours": {
+          "type": "INTEGER",
+          "description": "Wave travel time in hours from source to runup location."
+        },
+        "travel_time_minutes": {
+          "type": "INTEGER",
+          "description": "Wave travel time in minutes from source to runup location."
+        },
+        "water_ht": {
+          "type": "FLOAT",
+          "description": "Maximum water height above sea level (meters), based on measurement type (e.g., tide gauge, post-event survey)."
+        },
+        "horizontal_inundation": {
+          "type": "FLOAT",
+          "description": "Maximum horizontal inland flood distance (meters)."
+        },
+        "type_measurement_id": {
+          "type": "STRING",
+          "description": "Measurement type code (1-10), indicating how water height was determined (e.g., eyewitness, tide gauge, splash mark)."
+        },
+        "period": {
+          "type": "FLOAT",
+          "description": "Period of the first wave cycle, in minutes (if available)."
+        },
+        "first_motion": {
+          "type": "STRING",
+          "description": "First wave motion: 'R' = Rise, 'F' = Fall."
+        },
+        "deaths": {
+          "type": "INTEGER",
+          "description": "Number of deaths at the runup location."
+        },
+        "deaths_description": {
+          "type": "STRING",
+          "description": "Death severity code (0 to 4)."
+        },
+        "injuries": {
+          "type": "INTEGER",
+          "description": "Number of injuries at the runup location."
+        },
+        "injuries_description": {
+          "type": "STRING",
+          "description": "Injury severity code (0 to 4)."
+        },
+        "damage_millions_dollars": {
+          "type": "FLOAT",
+          "description": "Estimated property damage in millions of U.S. dollars (at the time of the event)."
+        },
+        "damage_description": {
+          "type": "STRING",
+          "description": "Damage severity code: 0=None, 1=Limited (<$1M), 2=Moderate (~$1 to 5M), 3=Severe (~$5 to 24M), 4=Extreme (\u2265$25M)."
+        },
+        "houses_damaged": {
+          "type": "INTEGER",
+          "description": "Number of houses damaged at the runup location."
+        },
+        "houses_damaged_description": {
+          "type": "STRING",
+          "description": "Damage severity code for houses: 0=None, 1=Few, 2=Some, 3=Many, 4=Very Many."
+        },
+        "houses_destroyed": {
+          "type": "INTEGER",
+          "description": "Number of houses destroyed at the runup location."
+        },
+        "houses_destroyed_description": {
+          "type": "STRING",
+          "description": "Destruction severity code for houses: 0=None, 1=Few, 2=Some, 3=Many, 4=Very Many."
+        }
+      }
+    }
+  },
+  {
+    "disclosures_13": {
+      "columns": {
+        "family_id": {
+          "type": "STRING",
+          "description": "ID for the simple patent family. Empty if the disclosure was not matched to any patents. All publications in a simple family share the same priority claims."
+        },
+        "record_id": {
+          "type": "STRING",
+          "description": "Unique identifier for each record in the database."
+        },
+        "disclosure_event": {
+          "type": "STRING",
+          "description": "Unique disclosure event from a firm to an SSO on a given date. May include multiple patents or blanket disclosures."
+        },
+        "sso": {
+          "type": "STRING",
+          "description": "Standard Setting Organization (SSO) where the disclosure was made."
+        },
+        "patent_owner_harmonized": {
+          "type": "STRING",
+          "description": "Cleaned and standardized name of the patent owner. Accounts for variations in spelling but not for post-disclosure mergers or acquisitions."
+        },
+        "patent_owner_unharmonized": {
+          "type": "STRING",
+          "description": "Original name of the patent owner as reported in the disclosure."
+        },
+        "date": {
+          "type": "STRING",
+          "description": "Date of the original disclosure submission to the SSO, in YYYYMMDD format."
+        },
+        "standard": {
+          "type": "STRING",
+          "description": "Name of the standard associated with the disclosed IPR, if available."
+        },
+        "committee_project": {
+          "type": "STRING",
+          "description": "Committee name under which the standard or IPR was disclosed."
+        },
+        "tc_name": {
+          "type": "STRING",
+          "description": "Technical Committee name relevant to the disclosure."
+        },
+        "sc_name": {
+          "type": "STRING",
+          "description": "Standard Committee name relevant to the disclosure."
+        },
+        "wg_name": {
+          "type": "STRING",
+          "description": "Working Group name relevant to the disclosure."
+        },
+        "licensing_commitment": {
+          "type": "STRING",
+          "description": "Stated licensing commitment for the disclosed patents."
+        },
+        "copyright": {
+          "type": "STRING",
+          "description": "Equals 1 if the disclosure is for a copyright instead of a patent."
+        },
+        "blanket_type": {
+          "type": "STRING",
+          "description": "Indicates if this is a blanket disclosure and the scope. (0 = No blanket, 1 = All SDO activities, 2 = Committee/project, 3 = Specific standard)."
+        },
+        "blanket_scope": {
+          "type": "STRING",
+          "description": "Specific scope of the blanket disclosure if blanket_type is 2 or 3 (e.g., project or standard name)."
+        },
+        "third_party": {
+          "type": "BOOL",
+          "description": "Indicates whether the disclosure was made by a third party (1) or not (0)."
+        },
+        "reciprocity": {
+          "type": "BOOL",
+          "description": "Indicates if the licensing commitment is conditional on reciprocity (1) or not (0). May be explicitly stated or implied depending on SSO rules."
+        },
+        "serial_cleaned": {
+          "type": "STRING",
+          "description": "Cleaned serial number of the patent application (standardized format for US/EP patents)."
+        },
+        "pub_cleaned": {
+          "type": "STRING",
+          "description": "Cleaned publication number of the patent (standardized format for US/EP patents)."
+        }
+      }
+    }
+  },
+  {
+    "quick_summary": {
+      "columns": {
+        "submission_number": {
+          "type": "STRING",
+          "description": "Accession number: a 20-character identifier formed from the 18-digit number assigned by the SEC to each EDGAR submission. [adsh]"
+        },
+        "company_name": {
+          "type": "STRING",
+          "description": "Legal name of the registrant company as recorded in EDGAR on the filing date."
+        },
+        "measure_tag": {
+          "type": "STRING",
+          "description": "Unique name for a tag in a specific taxonomy release. [tag]"
+        },
+        "period_end_date": {
+          "type": "STRING",
+          "description": "End date of the reported period, rounded to the nearest month-end. [ddate]"
+        },
+        "value": {
+          "type": "FLOAT",
+          "description": "Reported data value, unscaled and rounded to four decimal places."
+        },
+        "units": {
+          "type": "STRING",
+          "description": "Unit of measurement associated with the value. [uom]"
+        },
+        "number_of_quarters": {
+          "type": "INTEGER",
+          "description": "Number of fiscal quarters represented by the value. '0' indicates a point-in-time value. [qtrs]"
+        },
+        "version": {
+          "type": "STRING",
+          "description": "If a standard tag, the taxonomy version; otherwise, the accession number where the tag is defined."
+        },
+        "central_index_key": {
+          "type": "STRING",
+          "description": "Central Index Key (CIK): a 10-digit number assigned by the SEC to each registrant. [cik]"
+        },
+        "ein": {
+          "type": "STRING",
+          "description": "Employer Identification Number (EIN): a 9-digit IRS-assigned identifier for U.S. business entities."
+        },
+        "sic": {
+          "type": "STRING",
+          "description": "Standard Industrial Classification (SIC): a 4-digit business type code assigned by the SEC. [sic]"
+        },
+        "fiscal_year_end": {
+          "type": "STRING",
+          "description": "Fiscal year-end date. [fye]"
+        },
+        "form": {
+          "type": "STRING",
+          "description": "Submission type of the filing (e.g., 10-K, 10-Q)."
+        },
+        "fiscal_year": {
+          "type": "INTEGER",
+          "description": "Fiscal year to which the filing relates. [fy]"
+        },
+        "fiscal_period_focus": {
+          "type": "STRING",
+          "description": "Fiscal period focus within the fiscal year (e.g., Q1, H1, M9, FY). [fp]"
+        },
+        "date_filed": {
+          "type": "STRING",
+          "description": "Filing date of the submission with the SEC, in YYYYMMDD format. [filed]"
+        },
+        "date_accepted": {
+          "type": "TIMESTAMP",
+          "description": "Date and time when the filing was accepted by the SEC. Filings after 5:30pm EST are considered filed the next business day. [accepted]"
+        }
+      }
+    }
+  },
+  {
+    "taxi_trips": {
+      "columns": {
+        "unique_key": {
+          "type": "STRING",
+          "description": "A unique identifier for the trip record."
+        },
+        "taxi_id": {
+          "type": "STRING",
+          "description": "A unique identifier for the taxi vehicle."
+        },
+        "trip_start_timestamp": {
+          "type": "TIMESTAMP",
+          "description": "The start time of the trip, rounded to the nearest 15 minutes."
+        },
+        "trip_end_timestamp": {
+          "type": "TIMESTAMP",
+          "description": "The end time of the trip, rounded to the nearest 15 minutes."
+        },
+        "trip_seconds": {
+          "type": "INTEGER",
+          "description": "Duration of the trip in seconds."
+        },
+        "trip_miles": {
+          "type": "FLOAT",
+          "description": "Distance of the trip in miles."
+        },
+        "pickup_census_tract": {
+          "type": "STRING",
+          "description": "The Census Tract where the trip began. This value may be omitted for privacy in some records."
+        },
+        "dropoff_census_tract": {
+          "type": "STRING",
+          "description": "The Census Tract where the trip ended. This value may be omitted for privacy in some records."
+        },
+        "pickup_community_area": {
+          "type": "STRING",
+          "description": "The Chicago Community Area where the trip began."
+        },
+        "dropoff_community_area": {
+          "type": "STRING",
+          "description": "The Chicago Community Area where the trip ended."
+        },
+        "fare": {
+          "type": "FLOAT",
+          "description": "The base fare charged for the trip."
+        },
+        "tips": {
+          "type": "FLOAT",
+          "description": "The tip for the trip. Cash tips generally will not be recorded."
+        },
+        "tolls": {
+          "type": "FLOAT",
+          "description": "Total toll charges for the trip."
+        },
+        "extras": {
+          "type": "FLOAT",
+          "description": "Additional charges such as surcharges or fees applied to the trip."
+        },
+        "trip_total": {
+          "type": "FLOAT",
+          "description": "Total cost of the trip, including fare, tips, tolls, and extras."
+        },
+        "payment_type": {
+          "type": "STRING",
+          "description": "The method of payment used for the trip (e.g., card, cash)."
+        },
+        "company": {
+          "type": "STRING",
+          "description": "The name of the taxi company providing the service."
+        },
+        "pickup_latitude": {
+          "type": "FLOAT",
+          "description": "Latitude of the center of the pickup Census Tract or Community Area, if the tract is hidden for privacy."
+        },
+        "pickup_longitude": {
+          "type": "FLOAT",
+          "description": "Longitude of the center of the pickup Census Tract or Community Area, if the tract is hidden for privacy."
+        },
+        "pickup_location": {
+          "type": "GEOGRAPHY",
+          "description": "Geographic location (e.g., coordinates or point label) for the pickup site, based on Census Tract or Community Area."
+        },
+        "dropoff_latitude": {
+          "type": "FLOAT",
+          "description": "Latitude of the center of the dropoff Census Tract or Community Area, if the tract is hidden for privacy."
+        },
+        "dropoff_longitude": {
+          "type": "FLOAT",
+          "description": "Longitude of the center of the dropoff Census Tract or Community Area, if the tract is hidden for privacy."
+        },
+        "dropoff_location": {
+          "type": "GEOGRAPHY",
+          "description": "Geographic location (e.g., coordinates or point label) for the dropoff site, based on Census Tract or Community Area."
+        }
+      }
+    }
+  },
+  {
+    "mbb_historical_teams_games": {
+      "columns": {
+        "season": {
+          "type": "INTEGER",
+          "description": "[Game data] Season in which the game was played (e.g., 2023)."
+        },
+        "scheduled_date": {
+          "type": "STRING",
+          "description": "[Game data] Date the game was played"
+        },
+        "attendance": {
+          "type": "FLOAT",
+          "description": "[Game data] Reported attendance for the game."
+        },
+        "market": {
+          "type": "STRING",
+          "description": "[Team data] Team school name (using Sportradar names)"
+        },
+        "name": {
+          "type": "STRING",
+          "description": "[Team data] Full team name."
+        },
+        "team_code": {
+          "type": "STRING",
+          "description": "[Team data] NCAA school code for the team."
+        },
+        "team_id": {
+          "type": "STRING",
+          "description": "[Team data] Sportradar identifier for the team."
+        },
+        "alias": {
+          "type": "STRING",
+          "description": "[Team data] Team alias used in data feeds."
+        },
+        "current_division": {
+          "type": "STRING",
+          "description": "[Team data] NCAA division the team currently belongs to."
+        },
+        "points_game": {
+          "type": "INTEGER",
+          "description": "[Game data] Points scored by the team in this game."
+        },
+        "win": {
+          "type": "BOOL",
+          "description": "[Game data] true if the team won the game, false otherwise."
+        },
+        "opp_market": {
+          "type": "STRING",
+          "description": "[Opponent data] Opponent school name (Sportradar format)."
+        },
+        "opp_name": {
+          "type": "STRING",
+          "description": "[Opponent data] Full name of the opponent team."
+        },
+        "opp_code": {
+          "type": "STRING",
+          "description": "[Opponent data] NCAA school code for the opponent."
+        },
+        "opp_id": {
+          "type": "STRING",
+          "description": "[Opponent data] Sportradar identifier for the opponent."
+        },
+        "opp_alias": {
+          "type": "STRING",
+          "description": "[Opponent data] Opponent alias used in data feeds."
+        },
+        "opp_current_division": {
+          "type": "STRING",
+          "description": "[Opponent data] NCAA division the opponent currently belongs to."
+        },
+        "opp_points_game": {
+          "type": "INTEGER",
+          "description": "[Opponent data] Points scored by the opponent in this game."
+        }
+      }
+    }
+  },
+  {
+    "metadata": {
+      "columns": {
+        "allVersions": {
+          "type": "INTEGER",
+          "description": "Count of all AlphaFold DB (AFDB) versions this prediction has been part of."
+        },
+        "latestVersion": {
+          "type": "STRING",
+          "description": "Most recent AlphaFold DB version associated with this prediction."
+        },
+        "organismCommonNames": {
+          "type": "STRING",
+          "description": "List of common names for the organism."
+        },
+        "uniprotEnd": {
+          "type": "INTEGER",
+          "description": "Index of the last residue in this entry, relative to the UniProt entry. Equals the protein length unless the entry is a fragment."
+        },
+        "proteinShortNames": {
+          "type": "STRING",
+          "description": "Short names for the protein."
+        },
+        "uniprotStart": {
+          "type": "INTEGER",
+          "description": "Index of the first residue in this entry, relative to the UniProt entry. Typically 1, unless dealing with fragments."
+        },
+        "fractionPlddtConfident": {
+          "type": "FLOAT",
+          "description": "Fraction of residues with predicted local distance difference test (pLDDT) scores between 70 and 90."
+        },
+        "organismSynonyms": {
+          "type": "STRING",
+          "description": "List of alternative or synonymous names for the organism."
+        },
+        "fractionPlddtVeryHigh": {
+          "type": "FLOAT",
+          "description": "Fraction of residues with pLDDT scores greater than 90."
+        },
+        "proteinFullNames": {
+          "type": "STRING",
+          "description": "Full names for the protein."
+        },
+        "globalMetricValue": {
+          "type": "FLOAT",
+          "description": "Mean pLDDT score for the prediction."
+        },
+        "organismScientificName": {
+          "type": "STRING",
+          "description": "Scientific (Latin) name of the organism."
+        },
+        "uniprotDescription": {
+          "type": "STRING",
+          "description": "Recommended protein name from the UniProt consortium."
+        },
+        "fractionPlddtLow": {
+          "type": "FLOAT",
+          "description": "Fraction of residues with pLDDT scores between 50 and 70."
+        },
+        "uniprotAccession": {
+          "type": "STRING",
+          "description": "UniProt accession ID."
+        },
+        "sequenceChecksum": {
+          "type": "STRING",
+          "description": "CRC64 hash of the sequence, used for fast lookups and integrity verification."
+        },
+        "taxId": {
+          "type": "STRING",
+          "description": "NCBI taxonomic identifier for the organism."
+        },
+        "uniprotId": {
+          "type": "STRING",
+          "description": "UniProt entry name (EntryName field)."
+        },
+        "modelCreatedDate": {
+          "type": "DATE",
+          "description": "Date the prediction model was created (e.g., '2022-06-01')."
+        },
+        "fractionPlddtVeryLow": {
+          "type": "FLOAT",
+          "description": "Fraction of residues with pLDDT scores below 50."
+        },
+        "sequenceVersionDate": {
+          "type": "DATE",
+          "description": "Date of the last sequence update in UniProt."
+        },
+        "entryId": {
+          "type": "STRING",
+          "description": "AlphaFold DB entry ID (e.g., 'AF-Q1HGU3-F1')."
+        },
+        "geneSynonyms": {
+          "type": "STRING",
+          "description": "Alternate names or aliases for the gene."
+        },
+        "uniprotSequence": {
+          "type": "STRING",
+          "description": "Amino acid sequence used for the prediction."
+        },
+        "gene": {
+          "type": "STRING",
+          "description": "Gene name associated with the protein (if known), e.g., 'COII'."
+        },
+        "isReferenceProteome": {
+          "type": "BOOL",
+          "description": "Indicates whether the protein belongs to the reference proteome."
+        },
+        "isReviewed": {
+          "type": "BOOL",
+          "description": "Indicates whether the protein entry is reviewed (i.e., part of SwissProt)."
+        }
+      }
+    }
+  },
+  {
+    "air_quality_annual_summary": {
+      "columns": {
+        "state_code": {
+          "type": "STRING",
+          "description": "FIPS code for the state where the monitoring site is located."
+        },
+        "county_code": {
+          "type": "STRING",
+          "description": "FIPS code for the county where the monitoring site is located."
+        },
+        "site_num": {
+          "type": "STRING",
+          "description": "Unique identifier for the site within the county."
+        },
+        "parameter_code": {
+          "type": "STRING",
+          "description": "AQS code identifying the parameter measured (e.g., pollutant)."
+        },
+        "poc": {
+          "type": "STRING",
+          "description": "Parameter Occurrence Code (POC) distinguishing instruments measuring the same parameter at a site."
+        },
+        "latitude": {
+          "type": "FLOAT",
+          "description": "Latitude of the monitoring site in decimal degrees."
+        },
+        "longitude": {
+          "type": "FLOAT",
+          "description": "Longitude of the monitoring site in decimal degrees."
+        },
+        "parameter_name": {
+          "type": "STRING",
+          "description": "Name or description of the parameter being measured."
+        },
+        "sample_duration": {
+          "type": "STRING",
+          "description": "Duration over which air is sampled before analysis."
+        },
+        "pollutant_standard": {
+          "type": "STRING",
+          "description": "Ambient air quality standard associated with the parameter."
+        },
+        "method_name": {
+          "type": "STRING",
+          "description": "Description of equipment and processes used to collect and measure the sample."
+        },
+        "year": {
+          "type": "INTEGER",
+          "description": "Year the summary data represents."
+        },
+        "units_of_measure": {
+          "type": "STRING",
+          "description": "Measurement units for the parameter (standardized in AQS)."
+        },
+        "event_type": {
+          "type": "STRING",
+          "description": "Indicates if exceptional events were included in the summary."
+        },
+        "observation_count": {
+          "type": "INTEGER",
+          "description": "Total number of samples collected during the year."
+        },
+        "completeness_indicator": {
+          "type": "BOOL",
+          "description": "Indicates if completeness criteria were met for valid summary data."
+        },
+        "valid_day_count": {
+          "type": "INTEGER",
+          "description": "Number of valid days contributing to the annual summary."
+        },
+        "exceptional_data_count": {
+          "type": "INTEGER",
+          "description": "Count of data points affected by exceptional events."
+        },
+        "null_data_count": {
+          "type": "INTEGER",
+          "description": "Count of scheduled samples with missing data and a reported reason."
+        },
+        "secondary_exceedance_count": {
+          "type": "INTEGER",
+          "description": "Number of samples exceeding the secondary air quality standard."
+        },
+        "certification_indicator": {
+          "type": "STRING",
+          "description": "Indicates if the summary data was certified by the submitting agency."
+        },
+        "num_obs_below_mdl": {
+          "type": "INTEGER",
+          "description": "Count of samples below the method detection limit (MDL)."
+        },
+        "arithmetic_standard_dev": {
+          "type": "FLOAT",
+          "description": "Standard deviation of all valid measurements for the year."
+        },
+        "first_max_value": {
+          "type": "FLOAT",
+          "description": "Highest recorded value during the year."
+        },
+        "first_max_datetime": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the highest recorded value."
+        },
+        "second_max_value": {
+          "type": "FLOAT",
+          "description": "Second highest recorded value during the year."
+        },
+        "third_max_datetime": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the third highest recorded value."
+        },
+        "fourth_max_value": {
+          "type": "FLOAT",
+          "description": "Fourth highest recorded value during the year."
+        },
+        "first_max_non_overlapping_value": {
+          "type": "FLOAT",
+          "description": "Highest 8-hour average value for the year (non-overlapping)."
+        },
+        "first_no_max_datetime": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the highest non-overlapping value."
+        },
+        "second_max_non_overlapping_value": {
+          "type": "FLOAT",
+          "description": "Second highest 8-hour average value (non-overlapping)."
+        },
+        "ninety_nine_percentile": {
+          "type": "FLOAT",
+          "description": "99th percentile value of all valid measurements."
+        },
+        "ninety_eight_percentile": {
+          "type": "FLOAT",
+          "description": "98th percentile value of all valid measurements."
+        },
+        "ninety_five_percentile": {
+          "type": "FLOAT",
+          "description": "95th percentile value of all valid measurements."
+        },
+        "ninety_percentile": {
+          "type": "FLOAT",
+          "description": "90th percentile value of all valid measurements."
+        },
+        "seventy_five_percentile": {
+          "type": "FLOAT",
+          "description": "75th percentile value of all valid measurements."
+        },
+        "ten_percentile": {
+          "type": "FLOAT",
+          "description": "10th percentile value of all valid measurements."
+        },
+        "local_site_name": {
+          "type": "STRING",
+          "description": "Name of the site, if provided by the managing agency."
+        },
+        "address": {
+          "type": "STRING",
+          "description": "Approximate street address of the monitoring site."
+        },
+        "state_name": {
+          "type": "STRING",
+          "description": "Name of the U.S. state where the monitoring site is located."
+        },
+        "county_name": {
+          "type": "STRING",
+          "description": "Name of the county where the monitoring site is located."
+        },
+        "city_name": {
+          "type": "STRING",
+          "description": "Name of the city where the monitoring site is located."
+        }
+      }
+    }
+  },
+  {
+    "street_trees": {
+      "columns": {
+        "tree_id": {
+          "type": "STRING",
+          "description": "Unique identifier for the tree."
+        },
+        "legal_status": {
+          "type": "STRING",
+          "description": "Legal status of the tree, such as 'Permitted Site' or 'DPW Maintained'."
+        },
+        "species": {
+          "type": "STRING",
+          "description": "Botanical species of the tree."
+        },
+        "address": {
+          "type": "STRING",
+          "description": "Street address where the tree is located."
+        },
+        "site_order": {
+          "type": "INTEGER",
+          "description": "Order of the tree at a given address (used when multiple trees exist at the same location).Trees are ordered in ascending address order"
+        },
+        "site_info": {
+          "type": "STRING",
+          "description": "Description of the tree's exact location on site."
+        },
+        "plant_type": {
+          "type": "STRING",
+          "description": "Indicates whether the plant is a tree or other landscaping."
+        },
+        "care_taker": {
+          "type": "STRING",
+          "description": "Primary agency or individual responsible for the tree."
+        },
+        "care_assistant": {
+          "type": "STRING",
+          "description": "Secondary agency or individual assisting with tree care."
+        },
+        "plant_date": {
+          "type": "TIMESTAMP",
+          "description": "Date the tree was planted."
+        },
+        "dbh": {
+          "type": "STRING",
+          "description": "Diameter at breast height (DBH) of the tree trunk."
+        },
+        "plot_size": {
+          "type": "STRING",
+          "description": "Dimensions of the tree planting plot."
+        },
+        "permit_notes": {
+          "type": "STRING",
+          "description": "Reference to tree permit number or notes related to permitting."
+        },
+        "x_coordinate": {
+          "type": "FLOAT",
+          "description": "X coordinate in California State Plane Zone III projection."
+        },
+        "y_coordinate": {
+          "type": "FLOAT",
+          "description": "Y coordinate in California State Plane Zone III projection."
+        },
+        "latitude": {
+          "type": "FLOAT",
+          "description": "Geographic latitude (WGS84)."
+        },
+        "longitude": {
+          "type": "FLOAT",
+          "description": "Geographic longitude (WGS84)."
+        },
+        "location": {
+          "type": "GEOGRAPHY",
+          "description": "Formatted address or map location string for mapping purposes."
+        }
+      }
+    }
+  },
+  {
+    "msa_ts": {
+      "columns": {
+        "msa": {
+          "type": "STRING",
+          "description": "Five-digit Metropolitan Statistical Area (MSA) code."
+        },
+        "month": {
+          "type": "DATE",
+          "description": "Date of the time series observation (format: YYYY-MM-DD, day always set to 01)."
+        },
+        "hpi_value": {
+          "type": "FLOAT",
+          "description": "Nominal Housing Price Index (HPI) value for the given month."
+        },
+        "hpi_yoy_pct_chg": {
+          "type": "FLOAT",
+          "description": "Year-over-year percentage change in nominal HPI. Computed as: [HPI(t) / HPI(t-12)] - 1."
+        },
+        "hpi_distance": {
+          "type": "FLOAT",
+          "description": "The normalized distance of hpi_value from a long term linear trend. Units are in standard deviations from the mean"
+        },
+        "hpi_returns": {
+          "type": "FLOAT",
+          "description": "Monthly return of the nominal HPI. Computed as: HPI(t) / HPI(t-1)."
+        },
+        "hpi_real": {
+          "type": "FLOAT",
+          "description": "Real (inflation-adjusted) Housing Price Index, calculated by adjusting the nominal HPI for CPI-based inflation."
+        },
+        "hpi_trend": {
+          "type": "FLOAT",
+          "description": "Long-term linear trend in the nominal HPI."
+        },
+        "afford_detrended": {
+          "type": "FLOAT",
+          "description": "Normalized distance of the affordability metric (afford_pmt) relative to its long-term trend. Units are standard deviations."
+        },
+        "afford_pmt": {
+          "type": "FLOAT",
+          "description": "Affordability value, defined as the percentage of median household income needed to afford the median home payment on a 30-year fixed mortgage with 20% down."
+        },
+        "acceleration_value": {
+          "type": "FLOAT",
+          "description": "Monthly change in the velocity of the HPI. Represents second-order rate of change."
+        },
+        "velocity_value": {
+          "type": "FLOAT",
+          "description": "Smoothed year-over-year change in the nominal HPI."
+        },
+        "risk": {
+          "type": "FLOAT",
+          "description": "Model-derived probability that HPI will be lower in 12 months. Formally: P[HPI(t) < HPI(t+12)]."
+        }
+      }
+    }
+  },
+  {
+    "natality": {
+      "columns": {
+        "source_year": {
+          "type": "INTEGER",
+          "description": "Four-digit year in which the birth occurred (e.g., 1975)."
+        },
+        "year": {
+          "type": "INTEGER",
+          "description": "Redundant four-digit year of birth. Matches source_year."
+        },
+        "month": {
+          "type": "STRING",
+          "description": "Month of birth, where 1 = January and 12 = December."
+        },
+        "day": {
+          "type": "STRING",
+          "description": "Day of birth (starting from 1)."
+        },
+        "wday": {
+          "type": "STRING",
+          "description": "Day of the week for the birth, where 1 = Sunday and 7 = Saturday."
+        },
+        "state": {
+          "type": "STRING",
+          "description": "Two-letter postal abbreviation for the state where the birth occurred. Not available after 2004."
+        },
+        "is_male": {
+          "type": "BOOL",
+          "description": "TRUE if the child is male; FALSE if female."
+        },
+        "child_race": {
+          "type": "STRING",
+          "description": "Race of the child. Example codes: 1=White, 2=Black, 3=American Indian, 4=Chinese, etc."
+        },
+        "weight_pounds": {
+          "type": "FLOAT",
+          "description": "Birth weight of the child, in pounds."
+        },
+        "plurality": {
+          "type": "INTEGER",
+          "description": "Number of children born from the pregnancy. 1 = single birth, 2 = twins, 3 = triplets, etc."
+        },
+        "apgar_1min": {
+          "type": "INTEGER",
+          "description": "Apgar score at 1 minute after birth (scale 0-10). Available for births from 1978\u20132002."
+        },
+        "apgar_5min": {
+          "type": "INTEGER",
+          "description": "Apgar score at 5 minutes after birth (scale 0-10). Available for births from 1978\u20132002."
+        },
+        "mother_residence_state": {
+          "type": "STRING",
+          "description": "Two-letter postal code of the mother\u2019s state of residence at the time of birth."
+        },
+        "mother_race": {
+          "type": "STRING",
+          "description": "Race of the mother. Uses the same coding as child_race."
+        },
+        "mother_age": {
+          "type": "INTEGER",
+          "description": "Reported age of the mother at the time of birth."
+        },
+        "gestation_weeks": {
+          "type": "INTEGER",
+          "description": "Length of the pregnancy in completed weeks."
+        },
+        "lmp": {
+          "type": "STRING",
+          "description": "Last menstrual period (LMP) date in MMDDYYYY format. Unknown values may appear as '99' or '9999'."
+        },
+        "mother_married": {
+          "type": "BOOL",
+          "description": "true if the mother was married at the time of birth; false otherwise."
+        },
+        "mother_birth_state": {
+          "type": "STRING",
+          "description": "Two-letter postal code for the state where the mother was born."
+        },
+        "cigarette_use": {
+          "type": "BOOL",
+          "description": "true if the mother reported cigarette use during pregnancy. Available from 2003 onward."
+        },
+        "cigarettes_per_day": {
+          "type": "INTEGER",
+          "description": "Average number of cigarettes the mother smoked per day. Available from 2003 onward."
+        },
+        "alcohol_use": {
+          "type": "BOOL",
+          "description": "true if the mother reported alcohol use during pregnancy. Available from 1989 onward."
+        },
+        "drinks_per_week": {
+          "type": "INTEGER",
+          "description": "Average number of alcoholic drinks per week consumed by the mother. Available from 1989 onward."
+        },
+        "weight_gain_pounds": {
+          "type": "INTEGER",
+          "description": "Mother's weight gain during pregnancy, in pounds."
+        },
+        "born_alive_alive": {
+          "type": "INTEGER",
+          "description": "Number of children previously born to the mother who are now living."
+        },
+        "born_alive_dead": {
+          "type": "INTEGER",
+          "description": "Number of children previously born to the mother who are now dead."
+        },
+        "born_dead": {
+          "type": "INTEGER",
+          "description": "Number of children who were born dead (i.e. miscarriages)"
+        },
+        "ever_born": {
+          "type": "INTEGER",
+          "description": "Total number of children ever born to the mother, including the current birth."
+        },
+        "father_race": {
+          "type": "STRING",
+          "description": "Race of the father. Uses the same coding as child_race."
+        },
+        "father_age": {
+          "type": "INTEGER",
+          "description": "Age of the father at the time of the child's birth."
+        },
+        "record_weight": {
+          "type": "STRING",
+          "description": "1 or 2, where 1 is a row from a full-reporting area, and 2 is a row from a 50% sample area."
+        }
+      }
+    }
+  },
+  {
+    "bikeshare_trips": {
+      "columns": {
+        "trip_id": {
+          "type": "STRING",
+          "description": "Unique identifier for the bike trip."
+        },
+        "subscriber_type": {
+          "type": "STRING",
+          "description": "Type of subscriber."
+        },
+        "bike_id": {
+          "type": "STRING",
+          "description": "Identifier of the bike used for the trip."
+        },
+        "bike_type": {
+          "type": "STRING",
+          "description": "Type of bike used (e.g., electric, classic)."
+        },
+        "start_time": {
+          "type": "TIMESTAMP",
+          "description": "Start time of the trip."
+        },
+        "start_station_id": {
+          "type": "STRING",
+          "description": "Numeric ID of the station where the trip started."
+        },
+        "start_station_name": {
+          "type": "STRING",
+          "description": "Name of the station where the trip started."
+        },
+        "end_station_id": {
+          "type": "STRING",
+          "description": "Numeric ID of the station where the trip ended."
+        },
+        "end_station_name": {
+          "type": "STRING",
+          "description": "Name of the station where the trip ended."
+        },
+        "duration_minutes": {
+          "type": "INTEGER",
+          "description": "Duration of the trip in minutes."
+        }
+      }
+    }
+  },
+  {
+    "projects": {
+      "columns": {
+        "id": {
+          "type": "STRING",
+          "description": "Unique identifier for the project in the Libraries.io database."
+        },
+        "platform": {
+          "type": "STRING",
+          "description": "Name of the package manager where the project is hosted (e.g., npm, PyPI, Maven)."
+        },
+        "name": {
+          "type": "STRING",
+          "description": "Project name, unique per platform (case-sensitive)."
+        },
+        "created_timestamp": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp when the project was first discovered by Libraries.io."
+        },
+        "updated_timestamp": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the last saved update to the project by Libraries.io."
+        },
+        "description": {
+          "type": "STRING",
+          "description": "Description from the package manager, or fallback to repository description if not available."
+        },
+        "keywords": {
+          "type": "STRING",
+          "description": "Comma-separated list of project keywords (if supported by the package manager)."
+        },
+        "homepage_url": {
+          "type": "STRING",
+          "description": "Homepage or repository URL provided by the package manager."
+        },
+        "licenses": {
+          "type": "STRING",
+          "description": "Comma-separated SPDX license identifiers, either from the package manager or manually submitted."
+        },
+        "repository_url": {
+          "type": "STRING",
+          "description": "URL of the source code repository, either from metadata or user submission."
+        },
+        "versions_count": {
+          "type": "INTEGER",
+          "description": "Number of published versions of the project discovered by Libraries.io."
+        },
+        "sourcerank": {
+          "type": "INTEGER",
+          "description": "Libraries.io-defined score based on quality, popularity, and community metrics."
+        },
+        "latest_release_publish_timestamp": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the most recent release, based on semantic versioning or publish date."
+        },
+        "latest_release_number": {
+          "type": "STRING",
+          "description": "Version number of the most recent release, based on semantic versioning."
+        },
+        "package_manager_id": {
+          "type": "STRING",
+          "description": "Project identifier from the package manager API (used by specific platforms like PlatformIO)."
+        },
+        "dependent_projects_count": {
+          "type": "INTEGER",
+          "description": "Number of projects that declare this project as a dependency."
+        },
+        "language": {
+          "type": "STRING",
+          "description": "Primary programming language used in the project (from GitHub if applicable)."
+        },
+        "status": {
+          "type": "STRING",
+          "description": "Current project status: Active, Deprecated, Unmaintained, Help Wanted, Removed. Blank also implies Active."
+        },
+        "last_synced_timestamp": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the last sync with the package manager API."
+        },
+        "dependent_repositories_count": {
+          "type": "INTEGER",
+          "description": "Total number of repositories that list this project as a dependency."
+        },
+        "repository_id": {
+          "type": "STRING",
+          "description": "Identifier for the project's associated repository in the Libraries.io database."
+        }
+      }
+    }
+  },
+  {
+    "adult": {
+      "columns": {
+        "age": {
+          "type": "integer",
+          "description": "Individual's age"
+        },
+        "workclass": {
+          "type": "string",
+          "description": "Employment type",
+          "enum_values": [
+            "Private",
+            "Self-emp-not-inc",
+            "Self-emp-inc",
+            "Federal-gov",
+            "Local-gov",
+            "State-gov",
+            "Without-pay",
+            "Never-worked"
+          ]
+        },
+        "fnlwgt": {
+          "type": "integer",
+          "description": "Sampling weight assigned to each individual "
+        },
+        "education": {
+          "type": "string",
+          "description": "Education level",
+          "enum_values": [
+            "Bachelors",
+            "Some-college",
+            "11th",
+            "HS-grad",
+            "Prof-school",
+            "Assoc-acdm",
+            "Assoc-voc",
+            "9th",
+            "7th-8th",
+            "12th",
+            "Masters",
+            "1st-4th",
+            "10th",
+            "Doctorate",
+            "5th-6th",
+            "Preschool"
+          ]
+        },
+        "educational-num": {
+          "type": "integer",
+          "description": "Number of years of education"
+        },
+        "marital-status": {
+          "type": "string",
+          "description": "Marital status",
+          "enum_values": [
+            "Married-civ-spouse",
+            "Divorced",
+            "Never-married",
+            "Separated",
+            "Widowed",
+            "Married-spouse-absent",
+            "Married-AF-spouse"
+          ]
+        },
+        "occupation": {
+          "type": "string",
+          "description": "Job type",
+          "enum_values": [
+            "Tech-support",
+            "Craft-repair",
+            "Other-service",
+            "Sales",
+            "Exec-managerial",
+            "Prof-specialty",
+            "Handlers-cleaners",
+            "Machine-op-inspct",
+            "Adm-clerical",
+            "Farming-fishing",
+            "Transport-moving",
+            "Priv-house-serv",
+            "Protective-serv",
+            "Armed-Forces"
+          ]
+        },
+        "relationship": {
+          "type": "string",
+          "description": "Family role",
+          "enum_values": [
+            "Wife",
+            "Own-child",
+            "Husband",
+            "Not-in-family",
+            "Other-relative",
+            "Unmarried"
+          ]
+        },
+        "race": {
+          "type": "string",
+          "description": "Race",
+          "enum_values": [
+            "White",
+            "Asian-Pac-Islander",
+            "Amer-Indian-Eskimo",
+            "Other",
+            "Black"
+          ]
+        },
+        "gender": {
+          "type": "string",
+          "description": "Gender",
+          "enum_values": [
+            "Female",
+            "Male"
+          ]
+        },
+        "capital-gain": {
+          "type": "integer",
+          "description": "Capital gains from investment income"
+        },
+        "capital-loss": {
+          "type": "integer",
+          "description": "Capital losses from investment income"
+        },
+        "hours-per-week": {
+          "type": "integer",
+          "description": "Number of hours worked per week"
+        },
+        "native-country": {
+          "type": "string",
+          "description": "Country of origin",
+          "enum_values": [
+            "United-States",
+            "Cambodia",
+            "England",
+            "Puerto-Rico",
+            "Canada",
+            "Germany",
+            "Holand-Netherlands"
+          ]
+        },
+        "income": {
+          "type": "string",
+          "description": "Income level",
+          "enum_values": [
+            "<=50K",
+            ">50K"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "taxi": {
+      "columns": {
+        "VendorID": {
+          "type": "integer",
+          "description": "Code for the taxi company that provided the trip",
+          "enum_values": [
+            1,
+            2
+          ]
+        },
+        "tpep_pickup_datetime": {
+          "type": "datetime",
+          "description": "Pickup date and time in the format YYYY-MM-DD HH:MM:SS"
+        },
+        "tpep_dropoff_datetime": {
+          "type": "datetime",
+          "description": "Dropoff date and time in the format YYYY-MM-DD HH:MM:SS"
+        },
+        "passenger_count": {
+          "type": "integer",
+          "description": "Number of passengers in the taxi"
+        },
+        "trip_distance": {
+          "type": "float",
+          "description": "Trip distance in miles"
+        },
+        "pickup_longitude": {
+          "type": "float",
+          "description": "Longitude of the pickup location"
+        },
+        "pickup_latitude": {
+          "type": "float",
+          "description": "Latitude of the pickup location"
+        },
+        "RateCodeID": {
+          "type": "integer",
+          "description": "Rate code for the trip",
+          "enum_values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "store_and_fwd_flag": {
+          "type": "string",
+          "description": "Indicates whether the trip record was stored and forwarded",
+          "enum_values": [
+            "Y",
+            "N"
+          ]
+        },
+        "dropoff_longitude": {
+          "type": "float",
+          "description": "Longitude of the dropoff location"
+        },
+        "dropoff_latitude": {
+          "type": "float",
+          "description": "Latitude of the dropoff location"
+        },
+        "payment_type": {
+          "type": "integer",
+          "description": "Payment method used for the trip",
+          "enum_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "fare_amount": {
+          "type": "float",
+          "description": "Base fare in USD"
+        },
+        "extra": {
+          "type": "float",
+          "description": "Additional charges (e.g., surcharges, airport fees) in USD"
+        },
+        "mta_tax": {
+          "type": "float",
+          "description": "MTA tax in USD"
+        },
+        "tip_amount": {
+          "type": "float",
+          "description": "Tip amount in USD"
+        },
+        "tolls_amount": {
+          "type": "float",
+          "description": "Toll charges in USD"
+        },
+        "improvement_surcharge": {
+          "type": "float",
+          "description": "Improvement surcharge in USD"
+        },
+        "total_amount": {
+          "type": "float",
+          "description": "Total amount charged to the passenger in USD"
+        }
+      }
+    }
+  },
+  {
+    "summary": {
+      "columns": {
+        "date": {
+          "type": "DATE",
+          "description": "Date of the recorded observations."
+        },
+        "admin_level_1": {
+          "type": "STRING",
+          "description": "Numeric code representing a first-level administrative division (e.g., state, province, territory)."
+        },
+        "state": {
+          "type": "STRING",
+          "description": "Two-letter postal abbreviation of the U.S. state or territory."
+        },
+        "tests_increase": {
+          "type": "INTEGER",
+          "description": "Number of new COVID-19 tests performed on the given date."
+        },
+        "tests_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of COVID-19 tests performed."
+        },
+        "tests_pending": {
+          "type": "INTEGER",
+          "description": "Number of tests currently pending results."
+        },
+        "cases_positive_increase": {
+          "type": "INTEGER",
+          "description": "Number of new positive COVID-19 cases identified."
+        },
+        "cases_positive_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of positive COVID-19 cases."
+        },
+        "cases_negative_increase": {
+          "type": "INTEGER",
+          "description": "Number of new negative COVID-19 test results."
+        },
+        "cases_negative_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of negative COVID-19 test results."
+        },
+        "deaths_increase": {
+          "type": "INTEGER",
+          "description": "Number of new deaths reported due to COVID-19."
+        },
+        "deaths_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of confirmed COVID-19-related deaths."
+        },
+        "recovered_total": {
+          "type": "INTEGER",
+          "description": "Cumulative number of individuals who recovered after a positive test."
+        },
+        "hospitilzations_current": {
+          "type": "INTEGER",
+          "description": "Current number of individuals hospitalized due to COVID-19."
+        },
+        "hospitalizations_increase": {
+          "type": "INTEGER",
+          "description": "Number of new COVID-19-related hospitalizations reported."
+        },
+        "hospitalizations_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of individuals ever hospitalized due to COVID-19."
+        },
+        "icu_current": {
+          "type": "INTEGER",
+          "description": "Current number of individuals in intensive care units (ICU)."
+        },
+        "icu_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of individuals admitted to the ICU."
+        },
+        "ventilator_current": {
+          "type": "INTEGER",
+          "description": "Current number of individuals on ventilators."
+        },
+        "ventilator_total": {
+          "type": "INTEGER",
+          "description": "Cumulative total number of individuals who have been on ventilators."
+        },
+        "last_checked_ts": {
+          "type": "TIMESTAMP",
+          "description": "Timestamp of the most recent update from the state health department."
+        }
+      }
+    }
+  },
+  {
+    "usa_1910_current": {
+      "columns": {
+        "state": {
+          "type": "STRING",
+          "description": "Two-letter U.S. state or territory abbreviation."
+        },
+        "gender": {
+          "type": "STRING",
+          "description": "Gender associated with the name: 'M' for male or 'F' for female."
+        },
+        "year": {
+          "type": "INTEGER",
+          "description": "Year of birth (4-digit format)."
+        },
+        "name": {
+          "type": "STRING",
+          "description": "Given name assigned at birth."
+        },
+        "number": {
+          "type": "INTEGER",
+          "description": "Count of individuals given this name in the specified year and state."
+        }
+      }
+    }
+  },
+  {
+    "outpatient_charges_2014": {
+      "columns": {
+        "apc": {
+          "type": "STRING",
+          "description": "Ambulatory Payment Classification (APC) code and description. APCs group HCPCS codes based on clinical and cost similarities."
+        },
+        "provider_id": {
+          "type": "STRING",
+          "description": "CMS Certification Number (CCN) of the provider billing for outpatient hospital services."
+        },
+        "provider_name": {
+          "type": "STRING",
+          "description": "Name of the provider submitting the outpatient hospital claim."
+        },
+        "provider_street_address": {
+          "type": "STRING",
+          "description": "Street address of the provider's physical location."
+        },
+        "provider_city": {
+          "type": "STRING",
+          "description": "City in which the provider is physically located."
+        },
+        "provider_state": {
+          "type": "STRING",
+          "description": "Two-letter postal code for the state where the provider is located."
+        },
+        "provider_zipcode": {
+          "type": "INTEGER",
+          "description": "ZIP code of the provider's physical location."
+        },
+        "hospital_referral_region": {
+          "type": "STRING",
+          "description": "Hospital Referral Region (HRR) in which the provider is located."
+        },
+        "outpatient_services": {
+          "type": "INTEGER",
+          "description": "Number of outpatient hospital services billed by the provider for the APC."
+        },
+        "average_estimated_submitted_charges": {
+          "type": "FLOAT",
+          "description": "Provider's average estimated submitted charges for Medicare-covered outpatient services under the APC."
+        },
+        "average_total_payments": {
+          "type": "FLOAT",
+          "description": "Average total payments to the provider for the APC, including Medicare payments, co-pays, and deductibles."
+        }
+      }
+    }
+  }
+]
