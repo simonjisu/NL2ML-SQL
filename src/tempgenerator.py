@@ -19,11 +19,20 @@ class TemplateGenerator():
         return match.group(1) if match else ""
     
     def format_val(self, val: str) -> str:
+        if val is None:
+            return "NULL"
+        s = str(val).strip()
+        if not s:
+            return "''"
+        if s.upper() == "NULL":
+            return "NULL"
+        if (s.startswith("'") and s.endswith("'")) or (s.startswith('"') and s.endswith('"')):
+            return s
         try:
-            float(val)
-            return val
+            float(s)
+            return s
         except ValueError:
-            return f"'{val}'"
+            return f"'{s}'"
 
     def parse_cond(self, cond: str) -> tuple[str, str, str]:
         col = self.extract_tag_value(cond, "col")
@@ -98,53 +107,79 @@ class BigQueryTemplateGenerator(TemplateGenerator):
             "anomaly_detection": ["KMEANS"]
         }
     }
-    def __init__(self, platform_type, google_project_id, google_data_id):
-        super().__init__(platform_type)
+    def __init__(self, google_project_id, google_data_id):
+        super().__init__(platform_type="bigquery")
         self.google_project_id = google_project_id
         self.google_data_id = google_data_id
 
     def generate_hash(self, name: str) -> str:
         return hashlib.md5(name.encode()).hexdigest()[:6]
 
-    def gen(self, dataset_name: str, table_name: str, schema: dict, intent: dict, is_train: bool, model_name: str, table_specific_exclusions: dict[str, list[str]]) -> str:
+    def gen(self, 
+            dataset_name: str, 
+            table_name: str, 
+            schema: dict, 
+            intent: dict, 
+            is_train: bool, 
+            model_name: str, 
+            auto_preprocess: bool=False, 
+            exclude_cols: Optional[list[str]]=[], 
+            test_size: Optional[float|None]=0.1, 
+            **kwargs) -> str:
         # dataset_name = intent["dataset_name"]
         # table_name = intent["table_id"]
         full_table = f"`{self.google_data_id}.{dataset_name}.{table_name}`"
 
-        output = intent["output"]
-        task = output["task"]
-        is_time_series = output.get("time_series", "False") == "True"
-        target_col = self.extract_tag_value(output.get("target_column", ""), "col")
-        inference_conds_raw = output.get("inference_condition", [])
-        update_conds_raw = output.get("update_condition", [])
+        task = intent["task"]
+        is_time_series = intent.get("time_series", "False") == "True"
+        target_col = self.extract_tag_value(intent.get("target_column", ""), "col")
+        target_col_ident = self.quote_ident(target_col) if target_col else ""
+        inference_conds_raw = sorted(intent.get("inference_condition", []) or [])
+        update_conds_raw = sorted(intent.get("update_condition", []) or [])
 
-        model_prefix = f"{self.google_project_id}.sql_knowledge_base.{target_col or task}"
+        model_prefix = f"{self.google_project_id}.{task}.{target_col}"
         base_model_name = f"{model_prefix}_{model_name.lower().replace('-', '_')}"
         full_model_name = f"{base_model_name}_{self.generate_hash(base_model_name)}"
 
+        table_columns_meta = schema['tables'][table_name]['columns']
+        table_column_names = list(table_columns_meta.keys())
+
         # Separate update conditions
-        filter_like_updates, true_updates = [], []
-        for cond in update_conds_raw:
-            (filter_like_updates if self.extract_tag_value(cond, "op") in self.comparison_ops else true_updates).append(cond)
+        filter_like_updates, _ = self.split_update_conditions(update_conds_raw)
+        override_map = {
+            self.parse_cond(cond)[0]: self.parse_cond(cond)[2]
+            for cond in update_conds_raw
+            if self.parse_cond(cond)[0]
+        }
 
-        updated_cols = {self.extract_tag_value(cond, "col") for cond in true_updates}
-        filtered_inference_conds = [cond for cond in inference_conds_raw if self.extract_tag_value(cond, "col") not in updated_cols]
-        all_filters = filtered_inference_conds + filter_like_updates
+        # Build WHERE clause merging comparison-style updates with inference filters
+        remaining_inference_conds = [
+            cond for cond in inference_conds_raw
+            if self.parse_cond(cond)[0] not in override_map
+        ]
+        where_terms: list[str] = []
+        for cond in filter_like_updates:
+            col_u, op_u, val_u = self.parse_cond(cond)
+            where_terms.append(
+                f"{self.quote_ident(col_u)} {op_u} {self.format_val(val_u)}"
+            )
 
-        where_clause = " AND ".join(
-            f"{self.quote_ident(self.extract_tag_value(c, 'col'))} {self.extract_tag_value(c, 'op')} {self.format_val(self.extract_tag_value(c, 'val'))}"
-            for c in all_filters
-        )
+        for cond in remaining_inference_conds:
+            col_i, op_i, val_i = self.parse_cond(cond)
+            where_terms.append(
+                f"{self.quote_ident(col_i)} {op_i} {self.format_val(val_i)}"
+            )
+
+        where_clause = " AND ".join(where_terms)
 
         needs_label = target_col and task not in ["clustering", "anomaly_detection"]
         label_opt = f", INPUT_LABEL_COLS=['{target_col}']" if needs_label else ""
-        where_filter = f"WHERE {target_col} IS NOT NULL" if needs_label else ""
+        where_filter = f"WHERE {target_col_ident} IS NOT NULL" if needs_label else ""
 
         # Identify time column
-        data_dict = intent.get("data_dictionary", {})
         timestamp_cols_by_priority = {"TIMESTAMP": [], "DATETIME": [], "DATE": []}
-        for col, meta in data_dict.items():
-            col_type = meta.get("type")
+        for col, meta in table_columns_meta.items():
+            col_type = meta.get("type").upper()
             if col_type in timestamp_cols_by_priority:
                 timestamp_cols_by_priority[col_type].append(col)
 
@@ -156,23 +191,33 @@ class BigQueryTemplateGenerator(TemplateGenerator):
                     break
             if not time_col:
                 raise ValueError("No time column found for time-series model.")
-            if not target_col:
-                raise ValueError("No target_col provided for time-series model.")
+        time_col_ident = self.quote_ident(time_col) if time_col else ""
 
         # Excluded columns
-        timestamp_cols = {col for col, meta in data_dict.items() if meta.get("type") in {"TIMESTAMP", "DATE", "DATETIME"}}
-        excluded_cols = timestamp_cols
+        timestamp_cols = {col for col, meta in table_columns_meta.items() if meta.get("type") in {"TIMESTAMP", "DATE", "DATETIME"}}
+        excluded_cols = list(timestamp_cols)
         if is_time_series:
-            excluded_cols.update({time_col, target_col})
-
-        excluded_cols.update(table_specific_exclusions.get(table_name, []))
-        excluded_cols = {c for c in excluded_cols if c}
-
-        exclude_clause = ", ".join(sorted(excluded_cols))
-        select_clause = f"* EXCEPT({exclude_clause})" if excluded_cols else "*"
+            if time_col:
+                excluded_cols.append(time_col)
+            if target_col:
+                excluded_cols.append(target_col)
+        excluded_set = {col for col in excluded_cols if col}
+        training_columns = [col for col in table_column_names if col not in excluded_set]
+        training_select_items = [self.quote_ident(col) for col in training_columns]
+        training_select_clause = ", ".join(training_select_items)
 
         # Subquery for inference
-        subquery = f"(SELECT * FROM {full_table}"
+        inference_select_items = []
+        for col in table_column_names:
+            if target_col and col == target_col:
+                continue
+            if col in override_map:
+                inference_select_items.append(
+                    f"{self.format_val(override_map[col])} AS {self.quote_ident(col)}"
+                )
+            else:
+                inference_select_items.append(self.quote_ident(col))
+        subquery = f"(SELECT {', '.join(inference_select_items)} FROM {full_table}"
         if where_clause:
             subquery += f" WHERE {where_clause}"
         subquery += ")"
@@ -185,11 +230,18 @@ class BigQueryTemplateGenerator(TemplateGenerator):
                     f"TIME_SERIES_DATA_COL='{target_col}'"
                 ]
                 if "xreg" in model_name.lower():
+                    xreg_select_items = []
+                    if time_col_ident:
+                        xreg_select_items.append(time_col_ident)
+                    if target_col_ident:
+                        xreg_select_items.append(target_col_ident)
+                    xreg_select_items.extend(training_select_items)
+                    select_section = ", ".join(xreg_select_items)
                     training_sql = f"""
                     CREATE MODEL IF NOT EXISTS `{full_model_name}`
                     OPTIONS(model_type='ARIMA_PLUS_XREG', {", ".join(ts_opts)})
                     AS
-                    (SELECT {time_col}, {target_col}, {select_clause} FROM {full_table}
+                    (SELECT {select_section} FROM {full_table}
                     {where_filter})
                     """.strip()
                 else:
@@ -197,17 +249,19 @@ class BigQueryTemplateGenerator(TemplateGenerator):
                     CREATE MODEL IF NOT EXISTS `{full_model_name}`
                     OPTIONS(model_type='ARIMA_PLUS', {", ".join(ts_opts)})
                     AS
-                    (SELECT {time_col}, {target_col} FROM {full_table}
+                    (SELECT {time_col_ident}, {target_col_ident} FROM {full_table}
                     {where_filter})
                     """.strip()
             else:
+                if not training_select_items:
+                    raise ValueError("No columns available for BigQuery model training after exclusions.")
                 training_sql = f"""
                 CREATE MODEL IF NOT EXISTS `{full_model_name}`
                 OPTIONS(model_type='{model_name}'{label_opt},
                 DATA_SPLIT_METHOD='RANDOM',
                 DATA_SPLIT_EVAL_FRACTION=0.10)
                 AS
-                (SELECT {select_clause} FROM {full_table}
+                (SELECT {training_select_clause} FROM {full_table}
                 {where_filter})
                 """.strip()
             return training_sql
@@ -330,10 +384,17 @@ class PostgresTemplateGenerator(TemplateGenerator):
 
         return result
     
-    def gen(self, dataset_name: str, table_name: str, schema: dict, intent: dict, is_train: bool, model_name: str, 
+    def gen(self, 
+            dataset_name: str, 
+            table_name: str, 
+            schema: dict, 
+            intent: dict, 
+            is_train: bool, 
+            model_name: str, 
             auto_preprocess: bool=False, 
             exclude_cols: Optional[list[str]]=[], 
-            test_size: Optional[float|None]=0.1, **kwargs) -> dict:
+            test_size: Optional[float|None]=0.1, 
+            **kwargs) -> dict:
         """
         Generate the SQL queries and view definitions for the given parameters.
         
@@ -371,7 +432,10 @@ class PostgresTemplateGenerator(TemplateGenerator):
         project_name = f"{dataset_name}/{table_name}/{task}/{model_name}/{target_col or 'no_target'}"
         short_name = hashlib.md5(project_name.encode()).hexdigest()
 
-        input_feature_cols = self.get_input_feature_columns_from_schema(schema, [target_col]+exclude_cols)
+        exclude_for_features = list(exclude_cols or [])
+        if target_col:
+            exclude_for_features.append(target_col)
+        input_feature_cols = self.get_input_feature_columns_from_schema(schema['tables'], exclude_for_features)
 
         # === TRAINING ===
         if is_train:

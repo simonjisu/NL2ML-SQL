@@ -1,9 +1,11 @@
 import os
 import json
+import random
 from typing import Any, Dict, List
 from dotenv import find_dotenv, load_dotenv
 from tqdm import tqdm
 from loguru import logger
+from pathlib import Path
 
 # Import template generators
 try:
@@ -12,6 +14,32 @@ try:
 except Exception:  # pragma: no cover - fallback if run as a plain script
     # When executed as `python src/gen_sqls.py`
     from tempgenerator import BigQueryTemplateGenerator, PostgresTemplateGenerator
+
+DATASET_TABLE_MAPPINGS = {
+    "uci_adult_census_income": "adult",
+    "nyc_yellow_taxi_trip": "taxi",
+    "telco_customer_churn": "telco",
+    "austin_bikeshare": "bikeshare_trips",
+    "chicago_taxi_trips": "taxi_trips",
+    "covid19_covidtracking": "summary",
+    "deepmind_alphafold": "metadata",
+    "epa_historical_air_quality": "air_quality_annual_summary",
+    "libraries_io": "projects",
+    "medicare": "outpatient_charges_2014",
+    "ncaa_basketball": "mbb_historical_teams_games",
+    "noaa_gsod": "gsod2020",
+    "noaa_tsunami": "historical_runups",
+    "patents_dsep": "disclosures_13",
+    "sdoh_bea_cainc30": "fips",
+    "sec_quarterly_financials": "quick_summary",
+    "sunroof_solar": "solar_potential_by_postal_code",
+    "thelook_ecommerce": "orders",
+    "usa_names": "usa_1910_current",
+    "new_york_citibike": "citibike_trips",
+    "samples": "natality",
+    "san_francisco_trees": "street_trees",
+    "us_res_real_est_data": "msa_ts"
+}
 
 _ = load_dotenv(find_dotenv())  # read local .env if present
 
@@ -80,7 +108,6 @@ def build_generator(platform: str):
         if not project_id:
             raise EnvironmentError("PROJECT_ID environment variable is required for BigQuery generator.")
         return BigQueryTemplateGenerator(
-            platform_type="bigquery",
             google_project_id=project_id,
             google_data_id=data_id,
         )
@@ -95,7 +122,8 @@ def main(args=None):
     parser.add_argument("--input_path", type=str, required=True, help="Path to JSON/JSONL with dataset records.")
     parser.add_argument("--output_path", type=str, required=True, help="Path to write JSONL outputs.")
     parser.add_argument("--platform", type=str, choices=["postgres", "bigquery"], default="postgres")
-
+    parser.add_argument("--use_all_algos", action="store_true", help="Use all algorithms for generation.")
+    parser.add_argument("--output_errors", action="store_true", help="Output errors to a separate file.")
     # Postgres-specific options
     parser.add_argument("--test_size", type=float, default=0.1, help="Evaluation split for PostgresML training.")
     parser.add_argument("--auto_preprocess", action="store_true", help="Auto-generate preprocess args for PostgresML.")
@@ -108,68 +136,94 @@ def main(args=None):
     records = _load_records(ns.input_path)
     generator = build_generator(ns.platform)
 
-    if ns.exclusions_json and os.path.exists(ns.exclusions_json):
+    if ns.exclusions_json and Path(ns.exclusions_json).exists():
         with open(ns.exclusions_json, "r", encoding="utf-8") as f:
             table_specific_exclusions = json.load(f)
     else:
         table_specific_exclusions = _default_exclusions()
 
-    out_path = ns.output_path
-    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+    filename = Path(ns.input_path).stem + f".sqlgen.jsonl"
+    out_path = Path(ns.output_path) / ns.platform / filename
+    if not out_path.parent.exists():
+        out_path.parent.mkdir(parents=True, exist_ok=True)
 
     written = 0
     errors: List[Dict[str, Any]] = []
 
     with open(out_path, "w", encoding="utf-8") as fout:
-        for x in tqdm(records, total=len(records)):
+        for idx, x in tqdm(enumerate(records), total=len(records)):
             try:
                 exclude_cols = table_specific_exclusions.get(x.get("table_name", ""), [])
+                is_time_series = x['intent'].get('time_series', False)
+                task = x['intent'].get('task', '')
+                if isinstance(is_time_series, str):
+                    if is_time_series.lower() in ('true', '1', 'yes'):
+                        is_time_series = True
+                    else:
+                        is_time_series = False
 
-                train_output = generator.gen(
-                    dataset_name=x["dataset_name"],
-                    table_name=x["table_name"],
-                    schema=x["schema"],
-                    intent=x["intent"],
-                    is_train=True,
-                    model_name=x["model_name"],
-                    exclude_cols=exclude_cols,
-                    test_size=ns.test_size,
-                    auto_preprocess=ns.auto_preprocess,
-                )
+                if ns.platform == "bigquery":
+                    # support time series model
+                    if is_time_series:
+                        model_families = generator.model_families.get("Time Series", None)
+                    else:
+                        model_families = generator.model_families.get("Non Time Series", None)
+                    if ns.use_all_algos:
+                        iterator = model_families.get(task, [])
+                    else:
+                        iterator = [random.choice(model_families.get(task, []))]
+                else:
+                    if task in ("anomaly_detection",):
+                        raise ValueError("PostgresML generator does not support anomaly detection task.")
+                    if ns.use_all_algos:
+                        iterator = generator.model_families.get(task, [])
+                    else:
+                        iterator = [random.choice(generator.model_families.get(task, []))]
+                for algo in iterator:
+                    train_output = generator.gen(
+                        dataset_name=x['dataset_name'],
+                        table_name=x["table_name"],
+                        schema=x["schema"], 
+                        intent=x["intent"],
+                        is_train=True,
+                        model_name=algo,
+                        exclude_cols=exclude_cols,
+                        test_size=ns.test_size,
+                        auto_preprocess=ns.auto_preprocess,
+                    )
 
-                inference_output = generator.gen(
-                    dataset_name=x["dataset_name"],
-                    table_name=x["table_name"],
-                    schema=x["schema"],
-                    intent=x["intent"],
-                    is_train=False,
-                    model_name=x["model_name"],
-                    exclude_cols=exclude_cols,
-                )
+                    inference_output = generator.gen(
+                        dataset_name=x['dataset_name'],
+                        table_name=x["table_name"],
+                        schema=x["schema"],
+                        intent=x["intent"],
+                        is_train=False,
+                        model_name=algo,
+                        exclude_cols=exclude_cols,
+                    )
 
-                rec_out = {
-                    "dataset_name": x.get("dataset_name"),
-                    "table_name": x.get("table_name"),
-                    "model_name": x.get("model_name"),
-                    "task": (x.get("intent", {}) or {}).get("task"),
-                    "train_output": _wrap_output(train_output),
-                    "inference_output": _wrap_output(inference_output),
-                }
-                fout.write(json.dumps(rec_out, ensure_ascii=False) + "\n")
-                written += 1
+                    rec_out = {
+                        "id": x.get("id", written),
+                        "train_sql": _wrap_output(train_output),
+                        "inference_sql": _wrap_output(inference_output),
+                    }
+                    fout.write(json.dumps(rec_out, ensure_ascii=False) + "\n")
+                    written += 1
             except Exception as e:
                 errors.append({
-                    "record": x,
+                    "index": idx,
+                    "intent": x.get("intent", {}),
+                    "table_name": x.get("table_name", ""),
+                    "dataset_name": x.get("dataset_name", ""),
                     "error": str(e),
                 })
 
-    if errors:
+    if errors and ns.output_errors:
         err_path = os.path.splitext(out_path)[0] + ".errors.json"
         with open(err_path, "w", encoding="utf-8") as ef:
             json.dump(errors, ef, indent=2, ensure_ascii=False)
 
     logger.info(f"Wrote {written} records to {out_path}. Errors: {len(errors)}")
-
 
 if __name__ == "__main__":
     main()

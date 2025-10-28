@@ -4,6 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
+from brokenaxes import brokenaxes
+
 plt.style.use("ggplot")
 
 def pick_first_existing(candidates, df):
@@ -236,7 +238,7 @@ def plot_confusion_matrix(y_true, y_pred):
     plt.show()
 
 def plot_intent_detection():
-    df = pd.read_csv("full_test.csv") 
+    df = pd.read_csv("./exps/full_test.csv") 
     df["scenario"] = df["scenario"].astype(str).str.replace(" ", "", regex=False)
 
     scenarios = ["Type1", "Type2"]
@@ -312,7 +314,7 @@ def plot_intent_detection():
         ax.tick_params(axis="y", labelsize=11)
 
         ax.set_xticks(x)
-        ax.set_xticklabels(['Llama-3.1 8B\n(Fine-tuned)', 'GPT o1-mini', 'GPT o3-mini'])
+        ax.set_xticklabels(['Llama-3.1 8B\n(Fine-tuned)', 'OpenAI o1-mini', 'OpenAI o3-mini'])
         ax.tick_params(axis="x", labelsize=11)
 
         ax_r = ax.twinx()
@@ -340,3 +342,96 @@ def plot_intent_detection():
     plt.subplots_adjust(left=0.08, right=0.92, top=0.92, bottom=0.12, hspace=0.3)
     plt.show()
     fig.savefig("full_test.pdf", dpi=300, bbox_inches="tight")
+
+
+def test_time_compute():
+    df = pd.read_csv("./exps/test-time_compute.csv")
+
+    baselines = {
+        "Zero-shot CoT": {
+            "style": {"linestyle": "--"},
+            "text": "0-shot CoT (Fine-tuned)",
+        },
+        "Baseline Agent": {
+            "style": {"linestyle": "-."},
+            "text": "Baseline Agent (GPT-4o)",
+        },
+    }
+    exps = ['pm', 'em', 'cost-to-pm', 'cost-to-em']
+    exps2names = {
+        'pm': 'Partial Match',
+        'em': 'Exact Match',
+        'cost-to-pm': 'Cost-to-PM',
+        'cost-to-em': 'Cost-to-EM'
+    }
+    methods = ['Self-Consistency', 'Best-of-N']
+    methods2labels = {
+        'Self-Consistency': 'Majority Voting',
+        'Best-of-N': 'Best-of-N',
+    }
+    fig = plt.figure(figsize=(8, 8))
+    gs  = fig.add_gridspec(2, 1, height_ratios=[1, 1], hspace=0.15)
+    ax1 = fig.add_subplot(gs[0])
+    bax = brokenaxes(ylims=((-0.05, 0.5), (6.1,  df.loc[df["exp"] == "cost-to-em", "Baseline Agent"].to_numpy().max()*1.03)),
+                    hspace=.05, subplot_spec=gs[1])
+
+    for exp, this_ax in zip(['em', 'cost-to-em'], [ax1, bax]):
+        exp_df = df.loc[df["exp"] == exp, :]
+        
+        # 2-a) method curves
+        for col in methods:
+            this_ax.plot(exp_df['n_gen'], exp_df[col],
+                        marker="o", linewidth=2, label=methods2labels[col])
+        
+        # 2-b) baselines
+        for col, baseline_dict in baselines.items():
+            y = exp_df[col].iloc[0]
+
+            # exp=cost-to-em: brokenaxes returns a list of real matplotlib Axes – .axhline works
+            this_ax.axhline(y, color="k", linewidth=1, **baseline_dict["style"])
+            for subax in getattr(this_ax, "axs", [this_ax]):   # BrokenAxes has .axs list
+                y0, y1 = subax.get_ylim()
+                if y0 < y < y1:
+                    print(y, col)
+                    increase_y = 0.05 if col == "Zero-shot CoT" else 0.02
+                    if exp == 'em':
+                        increase_y += 1 
+                    subax.text(
+                        0.02, y+increase_y,
+                        baseline_dict["text"],
+                        transform=subax.get_yaxis_transform(),
+                        ha="left", va="bottom",
+                        fontsize=12,
+                    )
+                    break     # done – no need to check the other segment
+        
+        this_ax.set_ylabel(f"{exps2names[exp]}{' (%)' if exp == 'em' else ' ratio'}", fontsize=14)
+        this_ax.set_xscale("log", base=2)
+        this_ax.set_xticks(exp_df["n_gen"], exp_df["n_gen_label"], fontsize=12)
+        if exp != "em":
+            this_ax.set_xlabel("Number of generations per sample", labelpad=30, fontsize=14)
+        
+    ax1.tick_params(axis="y", labelsize=12)
+    for subax in getattr(bax, "axs", [bax]):  # loop over its internal axes
+        subax.tick_params(axis="y", labelsize=12)
+
+    handles, labels = ax1.get_legend_handles_labels()
+    leg = fig.legend(handles, labels,
+                    loc="lower center",
+                    ncol=len(labels),          # 2 columns here (Self-Consistency, Best-of-N)
+                    frameon=True,
+                    bbox_to_anchor=(0.5, -0.03),   # x-center, slight bump below canv.
+                    fontsize=12)
+
+    leg.get_frame().set_facecolor("white")
+    leg.get_frame().set_edgecolor("gray")
+    leg.get_frame().set_alpha(1.0)
+
+    ax1.set_ylim(-5, 100)
+    # plt.tight_layout()
+    plt.show()
+    fig.savefig("test_time_compute.pdf",
+                dpi=300,
+                bbox_inches="tight",
+                pad_inches=0,
+                transparent=False)

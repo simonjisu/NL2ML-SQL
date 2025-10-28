@@ -1,4 +1,4 @@
-exp,n_gen,n_gen_label,Typical Agent,Zero-shot CoT,Self-Consistency,Best-of-N
+exp,n_gen,n_gen_label,Baseline Agent,Zero-shot CoT,Self-Consistency,Best-of-N
 pm,1,$2^0$,56.6772,93.3056,0.0000,0.0000
 pm,2,$2^1$,56.6772,93.3056,84.6686,93.0954
 pm,4,$2^2$,56.6772,93.3056,89.3442,93.0964

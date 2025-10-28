@@ -48,7 +48,7 @@ After showing your step-by-step reasoning, end with a JSON format:
 }}
 """
 
-INTENT_INSTRUCTION = """We aim to extract structured machine learning configuration arguments and conditions from a natural language question and a given data dictionary.
+INTENT_INSTRUCTION = """We aim to extract structured intent dictionary from a natural language question and a given data dictionary.
 These arguments are essential for automatically generating BigQuery ML SQL code.
 The output must strictly follow the specified format and use the keys as described below.
 The output must use column names from the Data Dictionary when using <col></col> tags in inference and update conditions.

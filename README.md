@@ -127,12 +127,16 @@ Generate training and inference SQL using the TemplateGenerators on pre-computed
   - `model_name` (algorithm name supported by the chosen platform)
 - Output: JSONL; each line holds `train_output` and `inference_output`.
 
-Usage (PostgresML):
-- `python -m src.gen_sqls --input_path exps/dataset_for_templates.jsonl --output_path exps/gen_sqls_postgres.jsonl --platform postgres --auto_preprocess --test_size 0.1`
+```bash
+# BigQuery
+$ uv run src/gen_sqls.py --input_path "./data/train_dataset_cots.jsonl" --output_path "./data/sqls/bigquery/train_dataset_cots" --platform bigquery
 
-Usage (BigQuery ML):
-- `export PROJECT_ID=your-gcp-project`
-- `python -m src.gen_sqls --input_path exps/dataset_for_templates.jsonl --output_path exps/gen_sqls_bigquery.jsonl --platform bigquery`
+# Postgres
+$ uv run src/gen_sqls.py --input_path "./data/train_dataset_cots.jsonl" --output_path "./data/sqls/postgres/train_dataset_cots" --platform postgres --auto_preprocess
+
+```
+
+dataset avaliable to run: `preliminary.jsonl`, `test_dataset.jsonl`, `train_dataset_cots.jsonl`, `train_seed_cots.jsonl`
 
 Notes
 - Table-specific column exclusions default to a built-in map; override via `--exclusions_json <file.json>` (map: `{table_name: [cols...]}`).
@@ -221,3 +225,8 @@ Use `draw_figures.py` to reproduce figures from experiment outputs.
 - `exps/` experiment outputs (CSV/JSON)
 - Top-level scripts: `exp_typical.py`, `exp_router.py`, `exp_mlselection.py`, `intent_train.py`, `intent_eval.py`, `draw_figures.py`
  - Utility: `src/gen_sqls.py` to batch-generate training/inference SQL from TemplateGenerators
+
+
+
+```
+uv run src/gen_sqls.py --input_path "./data/preliminary.jsonl" --output_path "./data/sqls/bigquery/preliminary" --platform bigquery --auto_preprocess
